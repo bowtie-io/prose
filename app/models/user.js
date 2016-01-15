@@ -21,7 +21,19 @@ module.exports = Backbone.Model.extend({
   authenticate: function(options) {
     var match;
 
-    if (cookie.get('oauth-token')) {
+    if(auth.type == 'bowtie-v1') {
+      bowtie.user.profile(function(profile){
+        if(profile.key){
+          auth.type = 'basic';
+          auth.username = profile.key;
+          auth.password = '';
+
+          if (_.isFunction(options.success)) options.success();
+        }else{
+          if (_.isFunction(options.error)) options.error();
+        }
+      });
+    } else if (cookie.get('oauth-token') || auth.type == 'basic') {
       if (_.isFunction(options.success)) options.success();
     } else {
       match = window.location.href.match(/\?code=([a-z0-9]*)/);
@@ -47,9 +59,14 @@ module.exports = Backbone.Model.extend({
     var id = cookie.get('id');
     var token = cookie.get('oauth-token');
 
-    // Return '/user' if authenticated but no user id cookie has been set yet
-    // or if this model's id matches authenticated user id
-    return auth.api + ((token && _.isUndefined(id)) || (id && this.get('id') === id) ?
-      '/user' : '/users/' + this.get('login'));
+    if(auth.type == 'basic'){
+      return auth.api + '/user';
+
+    }else{
+      // Return '/user' if authenticated but no user id cookie has been set yet
+      // or if this model's id matches authenticated user id
+      return auth.api + ((token && _.isUndefined(id)) || (id && this.get('id') === id) ?
+        '/user' : '/users/' + this.get('login'));
+    }
   }
 });

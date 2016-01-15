@@ -75,8 +75,6 @@ module.exports = Backbone.View.extend({
 
   newFile: function() {
     var path = [
-      this.repo.get('owner').login,
-      this.repo.get('name'),
       'new',
       this.branch,
       this.path ? this.path : this.rooturl
@@ -94,8 +92,6 @@ module.exports = Backbone.View.extend({
     var drafts;
 
     var url = [
-      this.repo.get('owner').login,
-      this.repo.get('name'),
       'tree',
       this.branch
     ].join('/');

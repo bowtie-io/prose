@@ -10,11 +10,13 @@ window.Backbone = Backbone;
 var $ = require('jquery-browserify');
 var _ = require('underscore');
 var Backbone = require('backbone');
+var Base64 = require('js-base64').Base64;
 
 Backbone.$ = $;
 
 var Router = require('./router');
 var User = require('./models/user');
+var Repo = require('./models/repo');
 var NotificationView = require('./views/notification');
 var config = require('./config');
 var cookie = require('./cookie');
@@ -34,7 +36,8 @@ if (app.locale && app.locale !== 'en') {
   });
 }
 
-var user = new User();
+var user = new User({ });
+var repo = new Repo({ });
 
 user.authenticate({
   success: function() {
@@ -51,48 +54,32 @@ user.authenticate({
       // Set an 'authenticated' class to #prose
       $('#prose').addClass('authenticated');
 
-      // Set User model id and login from cookies
-      var id = cookie.get('id');
-      if (id) user.set('id', id);
+      $.when(user.fetch(), repo.fetch()).then(function(){
+        window.router = new Router({ user: user, repo: repo });
 
-      var login = cookie.get('login');
-      if (login) user.set('login', login);
-
-      user.fetch({
-        success: function(model, res, options) {
-          // Set authenticated user id and login cookies
-          cookie.set('id', user.get('id'));
-          cookie.set('login', user.get('login'));
-
-          // Initialize router
-          window.router = new Router({ user: model });
-
-          // Start responding to routes
-          Backbone.history.start();
-        },
-        error: function(model, res, options) {
-          var apiStatus = status.githubApi(function(res) {
-
-            var error = new NotificationView({
-              'message': t('notification.error.github'),
-              'options': [
-                {
-                  'title': t('notification.back'),
-                  'link': '/'
-                },
-                {
-                  'title': t('notification.githubStatus', {
-                    status: res.status
-                  }),
-                  'link': '//status.github.com',
-                  'className': res.status
-                }
-              ]
-            });
-
-            $('#prose').html(error.render().el);
+        // Start responding to routes
+        Backbone.history.start();
+      }).fail(function(){
+        var apiStatus = status.githubApi(function(res) {
+          var error = new NotificationView({
+            'message': t('notification.error.github'),
+            'options': [
+              {
+                'title': t('notification.back'),
+                'link': '/'
+              },
+              {
+                'title': t('notification.githubStatus', {
+                  status: res.status
+                }),
+                'link': '//status.github.com',
+                'className': res.status
+              }
+            ]
           });
-        }
+
+          $('#prose').html(error.render().el);
+        });
       });
     } else {
       var upgrade = new NotificationView({
@@ -107,6 +94,8 @@ user.authenticate({
     }
   },
   error: function() {
+    console.log("some error");
+
     // Initialize router
     window.router = new Router();
 

@@ -5,6 +5,7 @@ var Backbone = require('backbone');
 var User = require('./models/user');
 var Users = require('./collections/users');
 var Orgs = require('./collections/orgs');
+var Repos = require('./collections/repos');
 
 var Repo = require('./models/repo');
 var File = require('./models/file');
@@ -31,29 +32,36 @@ auth.scope = cookie.get('scope') || 'repo';
 module.exports = Backbone.Router.extend({
 
   routes: {
+    '(/)': 'project',
     'about(/)': 'about',
     'chooselanguage(/)': 'chooseLanguage',
-    ':user(/)': 'profile',
-    ':user/:repo(/)': 'repo',
-    ':user/:repo/*path(/)': 'path',
-    '*default': 'start'
+    '*path(/)': 'path'
   },
 
   initialize: function(options) {
     options = _.clone(options) || {};
 
-    this.users = new Users();
-
-    if (options.user) {
-      this.user = options.user;
-      this.users.add(this.user);
+    if (!options.user){
+      throw "`options` must include `user`";
     }
+
+    if (!options.repo){
+      throw "`options` must include `repo`";
+    }
+
+    this.models = {
+      user: options.user,
+      users: (new Users([options.user])),
+      repo: options.repo,
+      repos: (new Repos([options.repo], { user: options.user })),
+      orgs: (new Orgs([], { user: options.user }))
+    };
 
     // Load up the main layout
     this.app = new AppView({
       el: '#prose',
       model: {},
-      user: this.user
+      user: this.models.user
     });
 
     this.app.render();
@@ -84,139 +92,51 @@ module.exports = Backbone.Router.extend({
     this.app.loader.done();
   },
 
-  // #example-user
-  // #example-organization
-  profile: function(login) {
+  project: function(branch, path){
     if (this.view) this.view.remove();
 
-    this.app.loader.start(t('loading.repos'));
-    this.app.nav.mode('repos');
+    var user = this.models.user,
+        repo = this.models.repo;
 
-    util.documentTitle(login);
-
-    var user = this.users.findWhere({ login: login });
-    if (_.isUndefined(user)) {
-      user = new User({ login: login });
-      this.users.add(user);
-    }
-
-    var search = new SearchView({
-      model: user.repos,
-      mode: 'repos'
-    });
-
-    var repos = new ReposView({
-      model: user.repos,
-      search: search
-    });
-
-    var content = new ProfileView({
-      auth: this.user,
-      search: search,
-      sidebar: this.app.sidebar,
-      repos: repos,
-      router: this,
-      user: user
-    });
-
-    user.fetch({
-      success: (function(model, res, options) {
-        this.view = content;
-        this.app.$el.find('#main').html(this.view.render().el);
-
-        model.repos.fetch({
-          success: repos.render,
-          error: (function(model, xhr, options) {
-            this.error(xhr);
-          }).bind(this),
-          complete: this.app.loader.done
-        });
-      }).bind(this),
-      error: (function(model, xhr, options) {
-        this.error(xhr);
-      }).bind(this)
-    });
-  },
-
-  // #example-user/example-repo
-  // #example-user/example-repo/tree/example-branch/example-path
-  repo: function(login, repoName, branch, path) {
-    if (this.view instanceof RepoView &&
-      this.view.model.get('owner').login === login &&
-      this.view.model.get('name') === repoName &&
-      (this.view.branch === branch ||
-        (_.isUndefined(branch) &&
-        this.view.branch === this.view.model.get('default_branch'))
-      )) {
-      this.view.files.path = path || '';
-      return this.view.files.render();
-    } else if (this.view) this.view.remove();
-
-    this.app.loader.start(t('loading.repo'));
     this.app.nav.mode('repo');
 
-    var title = repoName;
-    if (branch) title = repoName + ': /' + path + ' at ' + branch;
+    var title = repo.name;
+    if (branch) title = '/' + path + ' at ' + branch;
     util.documentTitle(title);
 
-    var user = this.users.findWhere({ login: login });
-    if (_.isUndefined(user)) {
-      user = new User({ login: login });
-      this.users.add(user);
-    }
-
-    var repo = user.repos.findWhere({ name: repoName });
-    if (_.isUndefined(repo)) {
-      repo = new Repo({
-        name: repoName,
-        owner: {
-          login: login
-        }
-      });
-      user.repos.add(repo);
-    }
-
-    repo.fetch({
-      success: (function(model, res, options) {
-        var content = new RepoView({
-          app: this.app,
-          branch: branch,
-          model: repo,
-          nav: this.app.nav,
-          path: path,
-          router: this,
-          sidebar: this.app.sidebar
-        });
-
-        this.view = content;
-        this.app.$el.find('#main').html(this.view.render().el);
-      }).bind(this),
-      error: (function(model, xhr, options) {
-        this.error(xhr);
-      }).bind(this),
-      complete: this.app.loader.done
+    var content = new RepoView({
+      app: this.app,
+      branch: branch,
+      model: repo,
+      nav: this.app.nav,
+      path: path,
+      router: this,
+      sidebar: this.app.sidebar
     });
+
+    this.view = content;
+    this.app.$el.find('#main').html(this.view.render().el);
   },
 
-  path: function(login, repoName, path) {
+  path: function(path) {
     var url = util.extractURL(path);
 
     switch(url.mode) {
       case 'tree':
-        this.repo(login, repoName, url.branch, url.path);
+        this.project(url.branch, url.path);
         break;
       case 'new':
       case 'blob':
       case 'edit':
       case 'preview':
-        this.post(login, repoName, url.mode, url.branch, url.path);
+        this.post(url.mode, url.branch, url.path);
         break;
       default:
         throw url.mode;
     }
   },
 
-  post: function(login, repoName, mode, branch, path) {
+  post: function(mode, branch, path) {
     if (this.view) this.view.remove();
 
     this.app.nav.mode('file');
@@ -233,22 +153,8 @@ module.exports = Backbone.Router.extend({
         break;
     }
 
-    var user = this.users.findWhere({ login: login });
-    if (_.isUndefined(user)) {
-      user = new User({ login: login });
-      this.users.add(user);
-    }
-
-    var repo = user.repos.findWhere({ name: repoName });
-    if (_.isUndefined(repo)) {
-      repo = new Repo({
-        name: repoName,
-        owner: {
-          login: login
-        }
-      });
-      user.repos.add(repo);
-    }
+    var user = this.models.user;
+    var repo = this.models.repo;
 
     var file = {
       app: this.app,
@@ -263,88 +169,9 @@ module.exports = Backbone.Router.extend({
       sidebar: this.app.sidebar
     };
 
-    // TODO: defer this success function until both user and repo have been fetched
-    // in paralell rather than in series
-    user.fetch({
-      success: (function(model, res, options) {
-        repo.fetch({
-          success: (function(model, res, options) {
-            this.view = new FileView(file);
-            this.app.$el.find('#main').html(this.view.el);
-          }).bind(this),
-          error: (function(model, xhr, options) {
-            this.error(xhr);
-          }).bind(this),
-          complete: this.app.loader.done
-        });
-      }).bind(this),
-      error: (function(model, xhr, options) {
-        this.error(xhr);
-      }).bind(this)
-    });
-  },
-
-  preview: function(login, repoName, mode, branch, path) {
-    if (this.view) this.view.remove();
-
-    this.app.loader.start(t('loading.preview'));
-
-    var user = this.users.findWhere({ login: login });
-    if (_.isUndefined(user)) {
-      user = new User({ login: login });
-      this.users.add(user);
-    }
-
-    var repo = user.repos.findWhere({ name: repoName });
-    if (_.isUndefined(repo)) {
-      repo = new Repo({
-        name: repoName,
-        owner: {
-          login: login
-        }
-      });
-      user.repos.add(repo);
-    }
-
-    var file = {
-      branch: branch,
-      branches: repo.branches,
-      mode: mode,
-      nav: this.app.nav,
-      name: util.extractFilename(path)[1],
-      path: path,
-      repo: repo,
-      router: this,
-      sidebar: this.app.sidebar
-    };
-
-    repo.fetch({
-      success: (function(model, res, options) {
-        // TODO: should this still pass through File view?
-        this.view = new Preview(file);
-        this.app.$el.find('#main').html(this.view.el);
-      }).bind(this),
-      error: (function(model, xhr, options) {
-        this.error(xhr);
-      }).bind(this),
-      complete: this.app.loader.done
-    });
-  },
-
-  start: function() {
-    if (this.view) this.view.remove();
-
-    // If user has authenticated
-    if (this.user) {
-      router.navigate(this.user.get('login'), {
-        trigger: true,
-        replace: true
-      });
-    } else {
-      this.app.nav.mode('start');
-      this.view = new StartView();
-      this.app.$el.find('#main').html(this.view.render().el);
-    }
+    this.view = new FileView(file);
+    this.app.$el.find("#main").html(this.view.el);
+    this.app.loader.done();
   },
 
   notify: function(message, error, options) {

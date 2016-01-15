@@ -42,7 +42,7 @@ module.exports = Backbone.View.extend({
 
   createPost: function (e) {
     var hash = window.location.hash.split('/');
-    hash[2] = 'new';
+    hash[0] = 'new';
 
     var path = hash[hash.length - 1].split('?');
     hash[hash.length - 1] = path[0] + '?file=' + path[0];

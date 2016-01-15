@@ -1,17 +1,19 @@
 <% if (data.alterable) { %>
-  <div class='round avatar'>
-    <%= data.avatar %>
+  <div class='avatar round'><%= data.avatar %></div>
+    <a href="#"><%= data.path %></a>
   </div>
   <div class='fl details'>
-    <h4 class='parent-trail'><a href='#<%= data.user %>'><%= data.user %></a> / <a href='#<%= data.user %>/<%= data.repo.name %>'><%= data.repo.name %></a><% if (data.isPrivate) { %><span class='ico small inline private' title='Private Project'></span><% } %></h4>
+    <h4 class='parent-trail'><a>&nbsp;</a></h4>
     <!-- if (isNew() && !translate) placeholder, not value -->
     <input type='text' class='headerinput' data-mode='<%= data.mode %>' <% print((data.placeholder ? 'placeholder=' : 'value=') + '"' + data.input + '"') %>>
     <div class='mask'></div>
   </div>
 <% } else { %>
-  <div class='avatar round'><%= data.avatar %></div>
-  <div class='fl details'>
-    <h4><a class='user' href='#<%= data.user %>'><%= data.user %></a></h4>
-    <h2><a class='repo' href='#<%= data.path %>'><%= data.title %></a></h2>
+  <div style="display:none;">
+    <div class='avatar round'><%= data.avatar %></div>
+    <div class='fl details'>
+      <h4><a>&nbsp;</a></h4>
+      <h2><a class='repo' href='#<%= data.path %>'><%= data.title %></a></h2>
+    </div>
   </div>
 <% } %>

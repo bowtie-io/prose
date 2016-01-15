@@ -116,8 +116,6 @@ module.exports = Backbone.View.extend({
           // We may be trying to preview a new file that only has
           // stashed information lets check and create a dummy model
           var previewPath = this.absolutePathFromComponents (
-            this.repo.get('owner').login,
-            this.repo.get('name'),
             this.branch,
             this.path
           );
@@ -160,8 +158,6 @@ module.exports = Backbone.View.extend({
           {
             'title': t('notification.back'),
             'link': '#' + _.compact([
-              this.repo.get('owner').login,
-              this.repo.get('name'),
               'tree',
               this.branch,
               util.extractFilename(this.path)[0]
@@ -296,7 +292,7 @@ module.exports = Backbone.View.extend({
           path = /^\//.test(path) ? path.slice(1) :
             util.extractFilename(this.model.get('path'))[0] + '/' + path;
 
-          var url = auth.site + '/' + this.repo.get('owner').login + '/' + this.repo.get('name') + '/blob/' +  this.branch + '/' + window.escape(path) + '?raw=true';
+          var url = auth.site + '/blob/' +  this.branch + '/' + window.escape(path) + '?raw=true';
 
           content = content.replace(r, '![' + parts[1] + '](' + url + ')');
         }
@@ -794,8 +790,6 @@ module.exports = Backbone.View.extend({
       this.model.destroy({
         success: (function() {
           this.router.navigate([
-            this.repo.get('owner').login,
-            this.repo.get('name'),
             'tree',
             this.branch
           ].join('/'), true);
@@ -809,8 +803,6 @@ module.exports = Backbone.View.extend({
 
   updateURL: function() {
     var url = _.compact([
-      this.repo.get('owner').login,
-      this.repo.get('name'),
       this.mode,
       this.branch,
       this.path
@@ -939,8 +931,6 @@ module.exports = Backbone.View.extend({
 
   absoluteFilepath: function() {
     return this.absolutePathFromComponents(
-      this.repo.get('owner').login,
-      this.repo.get('name'),
       this.branch,
       this.filepath()
     );
@@ -948,8 +938,6 @@ module.exports = Backbone.View.extend({
 
   absolutePathFromFile: function(file) {
     return this.absolutePathFromComponents(
-      file.collection.repo.get('owner').login,
-      file.collection.repo.get('name'),
       file.collection.branch.get('name'),
       file.get('path')
     );
@@ -980,8 +968,6 @@ module.exports = Backbone.View.extend({
     this.path = path;
 
     url = _.compact([
-      this.repo.get('owner').login,
-      this.repo.get('name'),
       this.mode,
       this.branch,
       this.path
@@ -1019,8 +1005,6 @@ module.exports = Backbone.View.extend({
     this.path = path;
 
     url = _.compact([
-      this.repo.get('owner').login,
-      this.repo.get('name'),
       this.mode,
       this.branch,
       this.path
@@ -1086,8 +1070,6 @@ module.exports = Backbone.View.extend({
     this.path = path;
 
     url = _.compact([
-      this.repo.get('owner').login,
-      this.repo.get('name'),
       this.mode,
       this.branch,
       this.path

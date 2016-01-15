@@ -16,8 +16,7 @@ module.exports = Backbone.View.extend({
     this.branch = options.branch;
 
     this.$el.attr('data-index', options.index);
-    this.$el.attr('data-navigate', '#' + this.repo.get('owner').login + '/' +
-      this.repo.get('name') + '/tree/' + this.branch + '/' +
+    this.$el.attr('data-navigate', '#tree/' + this.branch + '/' +
       this.model.get('path'));
   },
 

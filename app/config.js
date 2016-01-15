@@ -2,11 +2,10 @@ var cookie = require('./cookie');
 var oauth = require('../oauth.json');
 
 module.exports = {
-  api: oauth.api || 'https://api.github.com',
-  apiStatus: oauth.status || 'https://status.github.com/api/status.json',
+  api: oauth.api || 'https://api.bowtie.io',
+  apiStatus: oauth.status || 'https://api.bowtie.io/status',
   site: oauth.site || 'https://github.com',
   id: oauth.clientId,
-  url: oauth.gatekeeperUrl,
-  username: cookie.get('username'),
-  auth: 'oauth'
+  username: oauth.user || cookie.get('username'),
+  type: oauth.type || 'oauth'
 };

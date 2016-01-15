@@ -6,21 +6,27 @@ var config = require('../config');
 
 module.exports = Backbone.Model.extend({
   constructor: function(attributes, options) {
-    Backbone.Model.call(this, {
+    var props = {
       id: attributes.id,
       description: attributes.description,
       fork: attributes.fork,
       homepage: attributes.homepage,
       default_branch: attributes.default_branch,
       name: attributes.name,
-      owner: {
-        id: attributes.owner.id,
-        login: attributes.owner.login
-      },
       permissions: attributes.permissions,
       private: attributes.private,
-      updated_at: attributes.updated_at
-    });
+      updated_at: attributes.updated_at,
+      url: attributes.url
+    };
+
+    if(attributes.owner){
+      props.owner = {
+        id: attributes.owner.id,
+        login: attributes.owner.login
+      }
+    }
+
+    Backbone.Model.call(this, props);
   },
 
   initialize: function(attributes, options) {
@@ -80,6 +86,6 @@ module.exports = Backbone.Model.extend({
   },
 
   url: function() {
-    return config.api + '/repos/' + this.get('owner').login + '/' + this.get('name');
+    return config.api + '/projects/_';
   }
 });

@@ -14,7 +14,6 @@ module.exports = Backbone.Collection.extend({
   },
 
   url: function() {
-    return this.user ? config.api + '/users/' + this.user.get('login') + '/orgs' :
-      '/user/orgs';
+    return this.user ? this.user.get('organizations_url') : '/user/orgs';
   }
 });

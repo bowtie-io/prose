@@ -51,9 +51,7 @@ module.exports = Backbone.Collection.extend({
 
     switch(type) {
       case 'User':
-        path = (id && this.user.get('id') === id) ? '/user' :
-          ('/users/' + this.user.get('login'))
-        break;
+        return this.user.get('repos_url') + '?per_page=100';
       case 'Organization':
         path = '/orgs/' + this.user.get('login');
         break;

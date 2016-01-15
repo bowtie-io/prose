@@ -31,7 +31,7 @@ module.exports = Backbone.View.extend({
     var isPrivate = this.repo && this.repo.get('private') ? true : false;
     var title = t('heading.explore');
     var avatar;
-    var path = user;
+    var path = '';
 
     if (this.user) {
       avatar = '<img src="' + this.user.get('avatar_url') + '" width="40" height="40" alt="Avatar" />';
@@ -44,7 +44,6 @@ module.exports = Backbone.View.extend({
       var lock = (isPrivate) ? ' private' : '';
 
       title = this.repo.get('name');
-      path = path + '/' + title;
       avatar = '<div class="avatar round"><span class="icon round repo' + lock + '"></span></div>';
     }
 
