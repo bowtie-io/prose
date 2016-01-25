@@ -1,5 +1,5 @@
 {
-    "login": "GitHub로 로그인",
+    "login": "BowTie로 로그인",
     "docheader": {
         "editing": "수정하기",
         "error": "에러",
@@ -12,7 +12,7 @@
         "settings": "셋팅",
         "meta": "메타 데이터",
         "save": "저장",
-        "login": "GitHub로 로그인",
+        "login": "BowTie로 로그인",
         "about": "소개",
         "develop": "개발자",
         "logout": "로그아웃",
@@ -97,7 +97,7 @@
     },
     "main": {
         "start": {
-            "content": "Prose는 웹사이트 관리 목적으로 디자인된 GitHub용 컨텐트 에디터입니다. ",
+            "content": "Prose는 웹사이트 관리 목적으로 디자인된 BowTie용 컨텐트 에디터입니다. ",
             "learn": "더 많이 배우기"
         },
         "repos": {
@@ -129,14 +129,14 @@
         }
     },
     "notification": {
-        "loginDescription": "해당 프로젝트에 접근하기 위해서는 본인의 GitHub 계정으로 로그인 하기 바랍니다.",
+        "loginDescription": "해당 프로젝트에 접근하기 위해서는 본인의 BowTie 계정으로 로그인 하기 바랍니다.",
         "create": "생성하기",
         "home": "메인 페이지로",
         "back": "돌아가기",
-        "githubStatus": "GitHub 상태 ({status})",
+        "bowtieStatus": "BowTie 상태 ({status})",
         "error": {
             "label": "에러",
-            "github": "Github로부터 데이터 로딩 중에 에러 발생. 일시적인 문제일 수 있으므로 나중에 다시 시도해 보기 바랍니다. ",
+            "bowtie": "Github로부터 데이터 로딩 중에 에러 발생. 일시적인 문제일 수 있으므로 나중에 다시 시도해 보기 바랍니다. ",
             "exists": "이 파일은 존재하기 않습니다.",
             "notFound": "페이지를 찾을 수 없음"
         }
@@ -225,7 +225,7 @@
                 "content": {
                     "links": {
                         "title": "링크",
-                        "content": "마크다운은 두가지 종류의 링크를 지원합니다. <strong>inline</strong>과 <strong>reference</strong>입니다. 이 둘 모두에서 나타내고자하는 텍스트는 꺽은 괄호 안에 두면 됩니다. 예를 들어, 링크에  &ldquo;GitHub&rdquo; 텍스트를 나타내고자 한다면, <code>[GitHub]</code>와 같이 작성하면 됩니다.</p><p>inline 링크를 작성하기 위해서는, 꺽은 괄호 바로 다음에 한쌍의 괄호를 추가하고 그 안에 URL을 작성하면 됩니다(예., <code>[GitHub](http://github.com/)</code>). inline 링크에 상대경로도 사용할 수 있습니다. reference 링크를 작성하기 위해서는 두 쌍의 꺽은 괄호를 사용하면 됩니다. <code>[my internal link][internal-ref]</code>는 내부참조 <code>internal-ref</code>로 연결할 것입니다.</p>\n"
+                        "content": "마크다운은 두가지 종류의 링크를 지원합니다. <strong>inline</strong>과 <strong>reference</strong>입니다. 이 둘 모두에서 나타내고자하는 텍스트는 꺽은 괄호 안에 두면 됩니다. 예를 들어, 링크에  &ldquo;BowTie&rdquo; 텍스트를 나타내고자 한다면, <code>[BowTie]</code>와 같이 작성하면 됩니다.</p><p>inline 링크를 작성하기 위해서는, 꺽은 괄호 바로 다음에 한쌍의 괄호를 추가하고 그 안에 URL을 작성하면 됩니다(예., <code>[BowTie](http://bowtie.io/)</code>). inline 링크에 상대경로도 사용할 수 있습니다. reference 링크를 작성하기 위해서는 두 쌍의 꺽은 괄호를 사용하면 됩니다. <code>[my internal link][internal-ref]</code>는 내부참조 <code>internal-ref</code>로 연결할 것입니다.</p>\n"
                     },
                     "emphasis": {
                         "title": "강조",
@@ -237,7 +237,7 @@
                     },
                     "images": {
                         "title": "이미지",
-                        "content": "<p>마크다운 이미지 문장은 링크 문법과 매우 비슷합니다. 즉, 똑같은 문법을 사용하지만 앞에 느낌표시 (<code>!</code>)를 붙이기만 하면 됩니다. 예를 들어, <code>My Unicorn</code>라는 alt 텍스트와 함께 <code>http://github.com/unicorn.png</code> 이미지를 삽입할 경우 <code>![My Unicorn](http://github.com/unicorn.png)</code>와 같이 작성하면 됩니다.</p>\n"
+                        "content": "<p>마크다운 이미지 문장은 링크 문법과 매우 비슷합니다. 즉, 똑같은 문법을 사용하지만 앞에 느낌표시 (<code>!</code>)를 붙이기만 하면 됩니다. 예를 들어, <code>My Unicorn</code>라는 alt 텍스트와 함께 <code>http://bowtie.io/unicorn.png</code> 이미지를 삽입할 경우 <code>![My Unicorn](http://bowtie.io/unicorn.png)</code>와 같이 작성하면 됩니다.</p>\n"
                     }
                 }
             },
@@ -246,7 +246,7 @@
                 "content": {
                     "automaticLinks": {
                         "title": "자동 링크",
-                        "content": "<p>실제 URL을 나타내는 하나의 링크를 만들기 위해서는 마크다운을 이용하여 <code>&lt;</code>와 <code>&gt;</code> 사이에 URL을 삽입하면 됩니다. 예를 들어 <a href=\"javascript:void(0);\">http://github.com/</a> 링크는 <code>&lt;http://github.com/&gt;</code>와 같이 작성하여 쉽게 만들 수 있습니다.</p>\n"
+                        "content": "<p>실제 URL을 나타내는 하나의 링크를 만들기 위해서는 마크다운을 이용하여 <code>&lt;</code>와 <code>&gt;</code> 사이에 URL을 삽입하면 됩니다. 예를 들어 <a href=\"javascript:void(0);\">http://bowtie.io/</a> 링크는 <code>&lt;http://bowtie.io/&gt;</code>와 같이 작성하여 쉽게 만들 수 있습니다.</p>\n"
                     },
                     "escaping": {
                         "title": "Escaping",
@@ -261,6 +261,6 @@
         "description": "Prose는 다양한 언어로 번역되어 서비스되는 어플리케이션입니다. 리스트 중에 원하는 언어가 없거나 철자 오류가 있거나 번역이 누락된 경우에는 <a href='https://www.transifex.com/projects/p/prose'>프로젝트 번역에 참여</a>해 보세요.\n"
     },
     "about": {
-        "content": "# 소개\nProse는 [CMS가 없는 웹사이트](http://developmentseed.org/blog/2012/07/27/build-cms-free-websites/)에 \n멋지고 간결한 컨텐츠 제작 환경을 제공해 줍니다.\nProse는 [GitHub](http://github.com) 상의 컨텐츠를 관리하는 웹기반의 \n인터페이스를 제공해 줍니다. \nProse를 이용하면 파일을 생성 수정 삭제하고 변경내용을 GitHub에 \n직접 저정할 수 있습니다. \n웹사이트를 [GitHub Pages](http://pages.github.com)에 무료로 호스팅하거나 \n직접 [GitHub webhook server](http://developmentseed.org/blog/2013/05/01/introducing-jekyll-hook/)를 셋업하기 바랍니다.\n\nProse는 [Jekyll](http://jekyllrb.com/) 사이트와 [markdown content](http://daringfireball.net/projects/markdown/)에 대한 지원을 향상시켜왔습니다. \nProse는 Jekyll 사이트 내의 마크다운 글들을 찾아서 해당 사이트의 \n전체 레이아웃 상에서 문법 하이라이팅, 툴바, 초안 미리보기를 제공해 줍니다. \n\n개발자는 Jekyll 사이트를 설정하여 이러한 장점과 컨텐트 편집을 \n커스터마이징할 수 있는 많은 기능들을 사용할 수 있습니다. \n\n## 구성하기\n\nProse는 Jekyll 사이트의 `_config.yml` 파일이나 별도의 `prose.yml` 파일에 \n메타데이터를 추가해 주어 저장소 별로 설정을 달리 할 수 있습니다. \n우리는 가장 최신 버전의 Prose.io를 호스팅 서비스로 제공합니다만, \n소스코드를 다운로드 받아 직접 서버환경을 구축하여 사용할 수도 있습니다. \n개발자용 문서에 대해서는 [the wiki page on GitHub](https://github.com/prose/prose/wiki)를 참고하기 바랍니다. \n\n## 개발하기\n\nProse는 오픈소스 프로젝트입니다. 따라서 마음껏 기여하여 이 어플리케이션의 기능을 향상시키도록  도와 주거나 여러분들의 요구사항에 맞게 얼마든지 보완하셔도 됩니다.  \nProse 개발에 대한 내용은 [Prose contributing guidelines](https://github.com/prose/prose/blob/gh-pages/CONTRIBUTING.md)를 참고하기 바랍니다.\n\n## 도움받기\n\n현재로서는 Prose에 대한 지원을 제공하지 않습니다만, 만약 여러분이 Prose를 \n사용하는 컨텐트 편집자일 경우, 이에 대해 접근할 수 있도록 해 주는 개발자와 \n연락을 취해야 합니다. Prose와 관련된 기술적인 문제는 [GitHub에 이슈로 등록](https://github.com/prose/prose/issues)해 주기 바랍니다.\n\n## Credits\n\nProse is developed and maintained by\n[Development Seed](http://developmentseed.org), a creative data\nvisualization and mapping team based in Washington, DC.\n"
+        "content": "# 소개\nProse는 [CMS가 없는 웹사이트](http://developmentseed.org/blog/2012/07/27/build-cms-free-websites/)에 \n멋지고 간결한 컨텐츠 제작 환경을 제공해 줍니다.\nProse는 [BowTie](http://bowtie.io) 상의 컨텐츠를 관리하는 웹기반의 \n인터페이스를 제공해 줍니다. \nProse를 이용하면 파일을 생성 수정 삭제하고 변경내용을 BowTie에 \n직접 저정할 수 있습니다. \n웹사이트를 [BowTie Pages](http://pages.bowtie.io)에 무료로 호스팅하거나 \n직접 [BowTie webhook server](http://developmentseed.org/blog/2013/05/01/introducing-jekyll-hook/)를 셋업하기 바랍니다.\n\nProse는 [Jekyll](http://jekyllrb.com/) 사이트와 [markdown content](http://daringfireball.net/projects/markdown/)에 대한 지원을 향상시켜왔습니다. \nProse는 Jekyll 사이트 내의 마크다운 글들을 찾아서 해당 사이트의 \n전체 레이아웃 상에서 문법 하이라이팅, 툴바, 초안 미리보기를 제공해 줍니다. \n\n개발자는 Jekyll 사이트를 설정하여 이러한 장점과 컨텐트 편집을 \n커스터마이징할 수 있는 많은 기능들을 사용할 수 있습니다. \n\n## 구성하기\n\nProse는 Jekyll 사이트의 `_config.yml` 파일이나 별도의 `prose.yml` 파일에 \n메타데이터를 추가해 주어 저장소 별로 설정을 달리 할 수 있습니다. \n우리는 가장 최신 버전의 Prose.io를 호스팅 서비스로 제공합니다만, \n소스코드를 다운로드 받아 직접 서버환경을 구축하여 사용할 수도 있습니다. \n개발자용 문서에 대해서는 [the wiki page on BowTie](https://bowtie.io/prose/prose/wiki)를 참고하기 바랍니다. \n\n## 개발하기\n\nProse는 오픈소스 프로젝트입니다. 따라서 마음껏 기여하여 이 어플리케이션의 기능을 향상시키도록  도와 주거나 여러분들의 요구사항에 맞게 얼마든지 보완하셔도 됩니다.  \nProse 개발에 대한 내용은 [Prose contributing guidelines](https://bowtie.io/prose/prose/blob/gh-pages/CONTRIBUTING.md)를 참고하기 바랍니다.\n\n## 도움받기\n\n현재로서는 Prose에 대한 지원을 제공하지 않습니다만, 만약 여러분이 Prose를 \n사용하는 컨텐트 편집자일 경우, 이에 대해 접근할 수 있도록 해 주는 개발자와 \n연락을 취해야 합니다. Prose와 관련된 기술적인 문제는 [BowTie에 이슈로 등록](https://bowtie.io/prose/prose/issues)해 주기 바랍니다.\n\n## Credits\n\nProse is developed and maintained by\n[Development Seed](http://developmentseed.org), a creative data\nvisualization and mapping team based in Washington, DC.\n"
     }
 }

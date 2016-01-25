@@ -125,10 +125,10 @@
         "create": "创建",
         "home": "回到主页",
         "back": "返回",
-        "githubStatus": "Github上的状态({status})",
+        "bowtieStatus": "Github上的状态({status})",
         "error": {
             "label": "出错了",
-            "github": "从 Github 加载信息时出现了错误。也许仅为暂时问题。请过后再试。",
+            "bowtie": "从 Github 加载信息时出现了错误。也许仅为暂时问题。请过后再试。",
             "exists": "此文件不存在",
             "notFound": "未找到此页面"
         }

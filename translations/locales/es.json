@@ -9,7 +9,7 @@
         "preview": "Vista previa",
         "settings": "Configuración",
         "save": "Guardar",
-        "login": "Autorizar con GitHub",
+        "login": "Autorizar con BowTie",
         "about": "Acerca de"
     },
     "toolbar": {
@@ -60,7 +60,7 @@
     },
     "main": {
         "start": {
-            "content": "Prose es un editor de contenido para GitHub diseñado para mantener sitios web",
+            "content": "Prose es un editor de contenido para BowTie diseñado para mantener sitios web",
             "learn": "Aprender más"
         },
         "repos": {

@@ -1,8 +1,8 @@
-var config = require('./config'); 
-var $ = require('jquery-browserify'); 
+var config = require('./config');
+var $ = require('jquery-browserify');
 
 module.exports = {
-  githubApi: function(cb) {
+  bowtieApi: function(cb) {
     $.ajax({
       type: 'GET',
       url: config.apiStatus + '?callback=?',

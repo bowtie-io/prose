@@ -114,7 +114,7 @@
         }
     },
     "notification": {
-        "loginDescription": "Lütfen bu projeye erişmek için GitHub hesabınız ile giriş yapın.",
+        "loginDescription": "Lütfen bu projeye erişmek için BowTie hesabınız ile giriş yapın.",
         "home": "Ana Sayfaya Dön",
         "back": "Geri",
         "error": {

@@ -1,5 +1,5 @@
 {
-    "login": "Godkend på GitHub",
+    "login": "Godkend på BowTie",
     "docheader": {
         "editing": "Redigerer",
         "error": "Fejl",
@@ -12,7 +12,7 @@
         "settings": "Indstillinger",
         "meta": "Metadata",
         "save": "Gem",
-        "login": "Godkend hos GitHub",
+        "login": "Godkend hos BowTie",
         "about": "Om",
         "develop": "Udviklere",
         "logout": "Log ud",
@@ -97,7 +97,7 @@
     },
     "main": {
         "start": {
-            "content": "Prose er en indholds-editor til GitHub designet til håndtering af websites.",
+            "content": "Prose er en indholds-editor til BowTie designet til håndtering af websites.",
             "learn": "Lær mere"
         },
         "repos": {
@@ -129,14 +129,14 @@
         }
     },
     "notification": {
-        "loginDescription": "Log venligst ind med din GitHub-konto for at tilgå projektet.",
+        "loginDescription": "Log venligst ind med din BowTie-konto for at tilgå projektet.",
         "create": "Opret det",
         "home": "Tilbage til hovedsiden",
         "back": "Gå tilbage",
-        "githubStatus": "Status på GitHub ({status})",
+        "bowtieStatus": "Status på BowTie ({status})",
         "error": {
             "label": "Fejl",
-            "github": "Fejl ved indlæsning af data fra GitHub. Det kan være et midlertidigt problem. Prøv venligst igen senere.",
+            "bowtie": "Fejl ved indlæsning af data fra BowTie. Det kan være et midlertidigt problem. Prøv venligst igen senere.",
             "exists": "Denne fil eksisterer ikke",
             "notFound": "Side ikke fundet"
         }
@@ -225,7 +225,7 @@
                 "content": {
                     "links": {
                         "title": "Links",
-                        "content": "<p>Markdown har to typer links: <strong>på linje</strong> og <strong>som reference</strong>. For hver linktype skal teksten, du vil vise, omsluttes af bjælker (\\\"[ ]\\\"). Hvis du for eksempel vil have, at linket viser teksten &ldquo;GitHub&rdquo;, skriver du <code>[GitHub]</code>.</p><p>For at lave et link på linjen indsætter du et sæt parenteser (\\\"( )\\\") lige efter bjælkerne og skriver din URL inden i parenteserne. (e.g., <code>[GitHub](http://github.com/)</code>). Relative stier tillades i links på linjen.</p><p>For at lave et referencelink bruger du i stedet to sæt bjælker. <code>[mit interne link][internal-ref]</code> vil linke til en intern reference <code>internal-ref</code>.</p>\n"
+                        "content": "<p>Markdown har to typer links: <strong>på linje</strong> og <strong>som reference</strong>. For hver linktype skal teksten, du vil vise, omsluttes af bjælker (\\\"[ ]\\\"). Hvis du for eksempel vil have, at linket viser teksten &ldquo;BowTie&rdquo;, skriver du <code>[BowTie]</code>.</p><p>For at lave et link på linjen indsætter du et sæt parenteser (\\\"( )\\\") lige efter bjælkerne og skriver din URL inden i parenteserne. (e.g., <code>[BowTie](http://bowtie.io/)</code>). Relative stier tillades i links på linjen.</p><p>For at lave et referencelink bruger du i stedet to sæt bjælker. <code>[mit interne link][internal-ref]</code> vil linke til en intern reference <code>internal-ref</code>.</p>\n"
                     },
                     "emphasis": {
                         "title": "Fremhævning",
@@ -237,7 +237,7 @@
                     },
                     "images": {
                         "title": "Billeder",
-                        "content": "<p>Markdowns billedsyntaks ligner til meget linksyntaksen til forveksling; den er stort set den samme med et udråbstegn foran (<code>!</code>). Hvis du for eksempel vil linke til et billede på <code>http://github.com/unicorn.png</code> med den alt-teksten <code>My Unicorn</code>, ville du taste <code>![My Unicorn](http://github.com/unicorn.png)</code>.</p>\n"
+                        "content": "<p>Markdowns billedsyntaks ligner til meget linksyntaksen til forveksling; den er stort set den samme med et udråbstegn foran (<code>!</code>). Hvis du for eksempel vil linke til et billede på <code>http://bowtie.io/unicorn.png</code> med den alt-teksten <code>My Unicorn</code>, ville du taste <code>![My Unicorn](http://bowtie.io/unicorn.png)</code>.</p>\n"
                     }
                 }
             },
@@ -246,7 +246,7 @@
                 "content": {
                     "automaticLinks": {
                         "title": "Automatiske links",
-                        "content": "<p>Hvis du vil lave et link, der viser selve URLen, gør Markdown det muligt, ved at kommer <code>&lt;</code> og <code>&gt;</code> uden om URLen. For eksempel er linket <a href=\\\"javascript:void(0);\\\">http://github.com/</a> nemmere at skrive som <code>&lt;http://github.com/&gt;</code>.</p>\n"
+                        "content": "<p>Hvis du vil lave et link, der viser selve URLen, gør Markdown det muligt, ved at kommer <code>&lt;</code> og <code>&gt;</code> uden om URLen. For eksempel er linket <a href=\\\"javascript:void(0);\\\">http://bowtie.io/</a> nemmere at skrive som <code>&lt;http://bowtie.io/&gt;</code>.</p>\n"
                     },
                     "escaping": {
                         "title": "Escaping",
@@ -261,6 +261,6 @@
         "description": "Prose er et værktøj med flere oversættelser. Hvis du ikke ser dit sprog på listen, eller der er stavefejl, eller oversættelsen mangler, burde du overveje at <a href='https://www.transifex.com/projects/p/prose'>bidrage med oversættelser til projektet</a>.\n"
     },
     "about": {
-        "content": "# Om\n\nProse tilbyder et smukt, simpelt skrivemiljø til\n\n[CMS-løse sider](http://developmentseed.org/blog/2012/07/27/build-cms-free-websites/).\n\nDet er et webbaseret interface til at håndtere indhold på\n\n[GitHub](http://github.com). Brug det til at oprette, redigere og slette filer,\n\nog gem dine ændringer direkte hos GitHub. Opbevar (\\\"host\"\\\") dine hjemmesider på\n\n[GitHub Pages](http://pages.github.com) gratis eller opret din egen\n\n[GitHub-webhook-server](http://developmentseed.org/blog/2013/05/01/introducing-jekyll-hook/).\n\n\n\nProse har udvidet understøttelse af [Jekyll](http://jekyllrb.com/)-sider og\n\n[Markdown-indhold](http://daringfireball.net/projects/markdown/).\n\nProse detekterer Markdown-indlæg på Jekyll-sider and udbyder syntaks-\n\nmarkering, en værktøjslinje til formatering og forhåndsvisning er uudgivede indlæg med sidens\n\nfulde layout.\n\n\n\nUdviklere kan konfigurere Jekyll-sider til at udnytte disse og\n\nmange andre funktionaliteter, der kan skræddersy skriveoplevelsen.\n\n\n\n## Konfigurering\n\n\n\nProse kan konfigureres for hvert \\\"repository\\\" med yderligere i en\n\nJekyll-sides `_config.yml`-fil eller i en separat `prose.yml`-fil. Vi tilbyder\n\nProse.io som en selvhostet tjeneste med nyeste udgave på, men du kan også downloade\n\nkildekoden og hoste det selv. Udviklerdokumentationen,\n\nkan læses på [wiki-siden på GitHub](https://github.com/prose/prose/wiki).\n\n\n\n## Udvikling\n\n\n\nProse er et open source-projekt. Vi opfordrer dig til at bidrage til og\n\nhjælpe os med at forbedre dette værktøj eller tilpasse det til dine egne behov.\n\nInstruktioner om at udvikle videre på Prose kan findes på\n\n[Proses retningslinjer for bidrag](https://github.com/prose/prose/blob/gh-pages/CONTRIBUTING.md).\n\n\n\n## Hjælp\n\n\n\nVi udbyder ikke support til Prose på nuværende tidspunker, men hvis du skriver\n\ni Prose, bør du kontakte udvikleren, der gav\n\ndig adgang til det. For at indberette tekniske problemer med Prose bedes du\n\n[oprette en forespørgsel (\\\"issue\\\") på GitHub](https://github.com/prose/prose/issues).\n\n\n\n## Ansvarlige\n\n\n\nProse er udviklet af\n\n[Development Seed](http://developmentseed.org), som er et hold af\n\nkreativ datavisualisering- og korteksperter baseret i Washington, DC.\n"
+        "content": "# Om\n\nProse tilbyder et smukt, simpelt skrivemiljø til\n\n[CMS-løse sider](http://developmentseed.org/blog/2012/07/27/build-cms-free-websites/).\n\nDet er et webbaseret interface til at håndtere indhold på\n\n[BowTie](http://bowtie.io). Brug det til at oprette, redigere og slette filer,\n\nog gem dine ændringer direkte hos BowTie. Opbevar (\\\"host\"\\\") dine hjemmesider på\n\n[BowTie Pages](http://pages.bowtie.io) gratis eller opret din egen\n\n[BowTie-webhook-server](http://developmentseed.org/blog/2013/05/01/introducing-jekyll-hook/).\n\n\n\nProse har udvidet understøttelse af [Jekyll](http://jekyllrb.com/)-sider og\n\n[Markdown-indhold](http://daringfireball.net/projects/markdown/).\n\nProse detekterer Markdown-indlæg på Jekyll-sider and udbyder syntaks-\n\nmarkering, en værktøjslinje til formatering og forhåndsvisning er uudgivede indlæg med sidens\n\nfulde layout.\n\n\n\nUdviklere kan konfigurere Jekyll-sider til at udnytte disse og\n\nmange andre funktionaliteter, der kan skræddersy skriveoplevelsen.\n\n\n\n## Konfigurering\n\n\n\nProse kan konfigureres for hvert \\\"repository\\\" med yderligere i en\n\nJekyll-sides `_config.yml`-fil eller i en separat `prose.yml`-fil. Vi tilbyder\n\nProse.io som en selvhostet tjeneste med nyeste udgave på, men du kan også downloade\n\nkildekoden og hoste det selv. Udviklerdokumentationen,\n\nkan læses på [wiki-siden på BowTie](https://bowtie.io/prose/prose/wiki).\n\n\n\n## Udvikling\n\n\n\nProse er et open source-projekt. Vi opfordrer dig til at bidrage til og\n\nhjælpe os med at forbedre dette værktøj eller tilpasse det til dine egne behov.\n\nInstruktioner om at udvikle videre på Prose kan findes på\n\n[Proses retningslinjer for bidrag](https://bowtie.io/prose/prose/blob/gh-pages/CONTRIBUTING.md).\n\n\n\n## Hjælp\n\n\n\nVi udbyder ikke support til Prose på nuværende tidspunker, men hvis du skriver\n\ni Prose, bør du kontakte udvikleren, der gav\n\ndig adgang til det. For at indberette tekniske problemer med Prose bedes du\n\n[oprette en forespørgsel (\\\"issue\\\") på BowTie](https://bowtie.io/prose/prose/issues).\n\n\n\n## Ansvarlige\n\n\n\nProse er udviklet af\n\n[Development Seed](http://developmentseed.org), som er et hold af\n\nkreativ datavisualisering- og korteksperter baseret i Washington, DC.\n"
     }
 }

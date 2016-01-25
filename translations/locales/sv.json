@@ -1,5 +1,5 @@
 {
-    "login": "Auktorisera på GitHub",
+    "login": "Auktorisera på BowTie",
     "docheader": {
         "editing": "Redigering",
         "error": "Fel",
@@ -12,7 +12,7 @@
         "settings": "Inställningar",
         "meta": "Meta-data",
         "save": "Spara",
-        "login": "Auktorisera med GitHub",
+        "login": "Auktorisera med BowTie",
         "about": "Om",
         "develop": "Utvecklare",
         "logout": "Logga ut",
@@ -97,7 +97,7 @@
     },
     "main": {
         "start": {
-            "content": "Prose är en innehållsredigerare för GitHub som skapats för att redigera webbsidor.",
+            "content": "Prose är en innehållsredigerare för BowTie som skapats för att redigera webbsidor.",
             "learn": "Lär dig mer"
         },
         "repos": {
@@ -129,14 +129,14 @@
         }
     },
     "notification": {
-        "loginDescription": "Vänligen logga in med ditt GitHub-konto för att få tillgång till detta projekt.",
+        "loginDescription": "Vänligen logga in med ditt BowTie-konto för att få tillgång till detta projekt.",
         "create": "Skapa den",
         "home": "Tillbaka till huvudsida",
         "back": "Gå tillbaka",
-        "githubStatus": "Status på GitHub ({status})",
+        "bowtieStatus": "Status på BowTie ({status})",
         "error": {
             "label": "Fel",
-            "github": "Fel vid inladdning av data från GitHub. Detta kan vara ett tillfälligt problem. Vänligen försök igen senare.",
+            "bowtie": "Fel vid inladdning av data från BowTie. Detta kan vara ett tillfälligt problem. Vänligen försök igen senare.",
             "exists": "Denna fil existerar inte",
             "notFound": "Sidan kunde inte hittas"
         }
@@ -225,7 +225,7 @@
                 "content": {
                     "links": {
                         "title": "Länkar",
-                        "content": "<p>Markdown har två typer av länkar: <strong>ordinära länkar</strong> och <strong>interna referenser</strong>. För båda länktyperna placeras den text du vill att länken ska visa inom hakparenteser. Till exempel, om du vill att din länk ska visa texten &ldquo;GitHub&rdquo;, skriver du <code>[GitHub]</code>.</p><p>För att infoga en vanlig ordinär länk, skapa ett parentespar direkt efter hakparenteserna och skriv din URL inom parenteserna (t.ex. <code>[GitHub](http://github.com/)</code>). Relativa sökvägar tillåts i ordinära länkar.</p><p>För att skapa en intern referenslänk, använd två hakparentespar. <code>[min interna länk][intern-ref]</code> kommer länka till den interna referensen <code>intern-ref</code>.</p>\n"
+                        "content": "<p>Markdown har två typer av länkar: <strong>ordinära länkar</strong> och <strong>interna referenser</strong>. För båda länktyperna placeras den text du vill att länken ska visa inom hakparenteser. Till exempel, om du vill att din länk ska visa texten &ldquo;BowTie&rdquo;, skriver du <code>[BowTie]</code>.</p><p>För att infoga en vanlig ordinär länk, skapa ett parentespar direkt efter hakparenteserna och skriv din URL inom parenteserna (t.ex. <code>[BowTie](http://bowtie.io/)</code>). Relativa sökvägar tillåts i ordinära länkar.</p><p>För att skapa en intern referenslänk, använd två hakparentespar. <code>[min interna länk][intern-ref]</code> kommer länka till den interna referensen <code>intern-ref</code>.</p>\n"
                     },
                     "emphasis": {
                         "title": "Emfas",
@@ -237,7 +237,7 @@
                     },
                     "images": {
                         "title": "Bilder",
-                        "content": "<p>Markdown's syntax för bilder är i princip identisk med länk-syntax, frånsett tillägget av ett inledande utropstecken (<code>!</code>). Till exempel, om du vill länka till en bild på adressen <code>http://github.com/unicorn.png</code> med den alternativa texten <code>Min enhörning</code>, skriver du <code>![Min enhörning](http://github.com/unicorn.png)</code>.</p>\n"
+                        "content": "<p>Markdown's syntax för bilder är i princip identisk med länk-syntax, frånsett tillägget av ett inledande utropstecken (<code>!</code>). Till exempel, om du vill länka till en bild på adressen <code>http://bowtie.io/unicorn.png</code> med den alternativa texten <code>Min enhörning</code>, skriver du <code>![Min enhörning](http://bowtie.io/unicorn.png)</code>.</p>\n"
                     }
                 }
             },
@@ -246,7 +246,7 @@
                 "content": {
                     "automaticLinks": {
                         "title": "Automatiska länkar",
-                        "content": "<p>Om du vill skapa en länk som visar länkens URL som länktext, kan du enkelt göra detta genom att omsluta URL-adressen med <code>&lt;</code> och <code>&gt;</code>. Till exempel, länken <a href=\"javascript:void(0);\">http://github.com/</a> kan enkelt göras till länktext om du skriver <code>&lt;http://github.com/&gt;</code>.</p>\n"
+                        "content": "<p>Om du vill skapa en länk som visar länkens URL som länktext, kan du enkelt göra detta genom att omsluta URL-adressen med <code>&lt;</code> och <code>&gt;</code>. Till exempel, länken <a href=\"javascript:void(0);\">http://bowtie.io/</a> kan enkelt göras till länktext om du skriver <code>&lt;http://bowtie.io/&gt;</code>.</p>\n"
                     },
                     "escaping": {
                         "title": "Kodade tecken (Escaping)",

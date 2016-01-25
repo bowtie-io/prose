@@ -1,5 +1,5 @@
 {
-    "login": "Autoritzar a GitHub",
+    "login": "Autoritzar a BowTie",
     "docheader": {
         "editing": "Editant",
         "error": "Error",
@@ -12,7 +12,7 @@
         "settings": "Configuració",
         "meta": "Metadata",
         "save": "Guardar",
-        "login": "Autoritzar amb GitHub",
+        "login": "Autoritzar amb BowTie",
         "about": "Sobre",
         "develop": "Desenvolupadors",
         "logout": "Sortir",
@@ -97,7 +97,7 @@
     },
     "main": {
         "start": {
-            "content": "Prose és un editor de contingut per a GitHub, dissenyat per gestionar llocs web.",
+            "content": "Prose és un editor de contingut per a BowTie, dissenyat per gestionar llocs web.",
             "learn": "Aprendre més"
         },
         "repos": {
@@ -127,14 +127,14 @@
         }
     },
     "notification": {
-        "loginDescription": "Fes login amb el teu compte de GitHub per accedir al projecte.",
+        "loginDescription": "Fes login amb el teu compte de BowTie per accedir al projecte.",
         "create": "Crear",
         "home": "Tornar a la pàgina principal",
         "back": "Enrera",
-        "githubStatus": "Status a GitHub ({status})",
+        "bowtieStatus": "Status a BowTie ({status})",
         "error": {
             "label": "Error",
-            "github": "Error en carregar dades des de GitHub. Això pot ser degut a un problema temporal. Torna-ho a provar més tard.",
+            "bowtie": "Error en carregar dades des de BowTie. Això pot ser degut a un problema temporal. Torna-ho a provar més tard.",
             "exists": "Aquest fitxer no existeix",
             "notFound": "Pàgina no trobada"
         }

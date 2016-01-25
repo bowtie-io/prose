@@ -1,5 +1,5 @@
 {
-    "login": "Autoryzuj na GitHub",
+    "login": "Autoryzuj na BowTie",
     "docheader": {
         "editing": "Edycja",
         "error": "Błąd",
@@ -12,7 +12,7 @@
         "settings": "Ustawienia",
         "meta": "Dane meta",
         "save": "Zapisz",
-        "login": "Autoryzuj z GitHub",
+        "login": "Autoryzuj z BowTie",
         "about": "O Prose",
         "develop": "Programiści",
         "logout": "Wyloguj się",
@@ -97,7 +97,7 @@
     },
     "main": {
         "start": {
-            "content": "Prose to edytor treści dla GitHub'a, zaprojektowany do zarządzania stronami internetowymi.",
+            "content": "Prose to edytor treści dla BowTie'a, zaprojektowany do zarządzania stronami internetowymi.",
             "learn": "Dowiedz się więcej"
         },
         "repos": {
@@ -129,14 +129,14 @@
         }
     },
     "notification": {
-        "loginDescription": "Zaloguj się przy użyciu konta GitHub, aby uzyskać dostęp do tego projektu.",
+        "loginDescription": "Zaloguj się przy użyciu konta BowTie, aby uzyskać dostęp do tego projektu.",
         "create": "Utwórz to",
         "home": "Powrót do strony głównej",
         "back": "Powrót",
-        "githubStatus": "Status na GitHub ({status})",
+        "bowtieStatus": "Status na BowTie ({status})",
         "error": {
             "label": "Błąd",
-            "github": "Błąd podczas ładowania danych z GitHub. To może być tymczasowy problem. Spróbuj ponownie później.",
+            "bowtie": "Błąd podczas ładowania danych z BowTie. To może być tymczasowy problem. Spróbuj ponownie później.",
             "exists": "Ten plik nie istnieje",
             "notFound": "Nie znaleziono strony"
         }

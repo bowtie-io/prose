@@ -294,7 +294,7 @@ module.exports = {
     try {
         return JSON.parse(xhr.responseText).message;
     } catch (err) {
-        return t('notification.error.github');
+        return t('notification.error.bowtie');
     }
   }
 };

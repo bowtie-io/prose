@@ -1,5 +1,5 @@
 {
-    "login": "Đồng bộ hóa với GitHub",
+    "login": "Đồng bộ hóa với BowTie",
     "docheader": {
         "editing": "Đang chỉnh sửa",
         "error": "Lỗi",
@@ -12,7 +12,7 @@
         "settings": "Thiết lập",
         "meta": "Thông tin bổ sung",
         "save": "Lưu",
-        "login": "Đồng bộ hóa với GitHub",
+        "login": "Đồng bộ hóa với BowTie",
         "about": "Dịch bởi Vietnamesel10n",
         "develop": "Nhà Phát triển",
         "logout": "Đăng xuất",
@@ -97,7 +97,7 @@
     },
     "main": {
         "start": {
-            "content": "Prose là một chương trình chỉnh sửa nội dung dành cho việc quản lý các website từ GitHub, dịch bởi Phan Anh.",
+            "content": "Prose là một chương trình chỉnh sửa nội dung dành cho việc quản lý các website từ BowTie, dịch bởi Phan Anh.",
             "learn": "Tìm hiểu thêm"
         },
         "repos": {
@@ -129,14 +129,14 @@
         }
     },
     "notification": {
-        "loginDescription": "Hãy đăng nhập với tài khoản trên GitHub để truy cập dự án đó.",
+        "loginDescription": "Hãy đăng nhập với tài khoản trên BowTie để truy cập dự án đó.",
         "create": "Tạo ",
         "home": "Quay về trang chủ",
         "back": "Quay về",
-        "githubStatus": "Trạng thái trên GitHub ({status})",
+        "bowtieStatus": "Trạng thái trên BowTie ({status})",
         "error": {
             "label": "Lỗi",
-            "github": "Lỗi khi tải dữ liệu từ GitHub. Điều này dường như chỉ mang tính tạm thời. Hãy thử lại sau.",
+            "bowtie": "Lỗi khi tải dữ liệu từ BowTie. Điều này dường như chỉ mang tính tạm thời. Hãy thử lại sau.",
             "exists": "Tập tin này không tồn tại",
             "notFound": "Không tìm thấy trang"
         }
@@ -225,7 +225,7 @@
                 "content": {
                     "links": {
                         "title": "Liên kết",
-                        "content": "<p>Markdown has two types of links: <strong>inline</strong> and <strong>reference</strong>. For both types of links, the text you want to display to the user is placed in square brackets. For example, if you want your link to display the text &ldquo;GitHub&rdquo;, you write <code>[GitHub]</code>.</p><p>To create an inline link, create a set of parentheses immediately after the brackets and write your URL within the parentheses. (e.g., <code>[GitHub](http://github.com/)</code>). Relative paths are allowed in inline links.</p><p>To create a reference link, use two sets of square brackets. <code>[my internal link][internal-ref]</code> will link to the internal reference <code>internal-ref</code>.</p>\n"
+                        "content": "<p>Markdown has two types of links: <strong>inline</strong> and <strong>reference</strong>. For both types of links, the text you want to display to the user is placed in square brackets. For example, if you want your link to display the text &ldquo;BowTie&rdquo;, you write <code>[BowTie]</code>.</p><p>To create an inline link, create a set of parentheses immediately after the brackets and write your URL within the parentheses. (e.g., <code>[BowTie](http://bowtie.io/)</code>). Relative paths are allowed in inline links.</p><p>To create a reference link, use two sets of square brackets. <code>[my internal link][internal-ref]</code> will link to the internal reference <code>internal-ref</code>.</p>\n"
                     },
                     "emphasis": {
                         "title": "Nhấn mạnh",
@@ -237,7 +237,7 @@
                     },
                     "images": {
                         "title": "Hình ảnh",
-                        "content": "<p>Markdown image syntax looks a lot like the syntax for links; it is essentially the same syntax preceded by an exclamation point (<code>!</code>). For example, if you want to link to an image at <code>http://github.com/unicorn.png</code> with the alternate text <code>My Unicorn</code>, you would write <code>![My Unicorn](http://github.com/unicorn.png)</code>.</p>\n"
+                        "content": "<p>Markdown image syntax looks a lot like the syntax for links; it is essentially the same syntax preceded by an exclamation point (<code>!</code>). For example, if you want to link to an image at <code>http://bowtie.io/unicorn.png</code> with the alternate text <code>My Unicorn</code>, you would write <code>![My Unicorn](http://bowtie.io/unicorn.png)</code>.</p>\n"
                     }
                 }
             },
@@ -246,7 +246,7 @@
                 "content": {
                     "automaticLinks": {
                         "title": "Liên kết tự động",
-                        "content": "<p>Nếu bạn muốn tạo một đường liên kết để hiển thị chính xác đường dẫn liên kết trực tiếp, Markdown cho phép bạn nhanh chóng bọc lại đường dẫn liên kết trực tiếp đó trong cặp <code>&lt;</code> và <code>&gt;</code> . Lấy thí dụ đối với liên kết <a href=\"javascript:void(0);\">http://github.com/</a> có thể được thực hiện dễ dàng bằng cách viết <code>&lt;http://github.com/&gt;</code>.</p>\n"
+                        "content": "<p>Nếu bạn muốn tạo một đường liên kết để hiển thị chính xác đường dẫn liên kết trực tiếp, Markdown cho phép bạn nhanh chóng bọc lại đường dẫn liên kết trực tiếp đó trong cặp <code>&lt;</code> và <code>&gt;</code> . Lấy thí dụ đối với liên kết <a href=\"javascript:void(0);\">http://bowtie.io/</a> có thể được thực hiện dễ dàng bằng cách viết <code>&lt;http://bowtie.io/&gt;</code>.</p>\n"
                     },
                     "escaping": {
                         "title": "Đang thoát",
@@ -261,6 +261,6 @@
         "description": "Prose được phiên dịch ra nhiều phiên bản ngôn ngữ khác nhau. Nếu bạn thấy phần ngôn ngữ mà bạn mong muốn chưa có trên danh sách, hoặc phần phiên dịch này bị lỗi về mặt cú pháp và ý nghĩa hay chính tả, hãy tham gia  <a href='https://www.transifex.com/projects/p/prose'>cộng tác phần dịch thuật của bạn vào dự án, prose được dịch và chuyển ngữ bởi Phan Anh</a>.\n"
     },
     "about": {
-        "content": "# Thông tin thêm - Dịch bởi Phan Anh\nProse provides a beatifully simple content authoring environment for\n[CMS-free websites](http://developmentseed.org/blog/2012/07/27/build-cms-free-websites/).\nIt's a web-based interface for managing content on\n[GitHub](http://github.com). Use it to create, edit, and delete files,\nand save your changes directly to GitHub. Host your website on\n[GitHub Pages](http://pages.github.com) for free, or set up your own\n[GitHub webhook server](http://developmentseed.org/blog/2013/05/01/introducing-jekyll-hook/).\n\nProse has advanced support for [Jekyll](http://jekyllrb.com/) sites and\n[markdown content](http://daringfireball.net/projects/markdown/).\nProse detects markdown posts in Jekyll sites and provides syntax\nhighlighting, a formatting toolbar, and draft previews in the site's\nfull layout.\n\nDevelopers can configure Jekyll sites to take advantage of these and\nmany more features that customize the content editing experience.\n\n## Configuring\n\nProse can be configured per repository with additional metadata in a\nJekyll site's `_config.yml` file or a separate `prose.yml` file. We offer\nProse.io as a hosted service for the latest version, or you can download\nthe source code and host it on your own. For for developer documentation,\nsee [the wiki page on GitHub](https://github.com/prose/prose/wiki).\n\n## Developing\n\nProse is an open source project. We encourage you to contribute and\nhelp us improve this application or adapt it to your needs. For\ninstructions on developing Prose, see the\n[Prose contributing guidelines](https://github.com/prose/prose/blob/gh-pages/CONTRIBUTING.md).\n\n## Getting Help\n\nWe do not offer support for Prose at this time, however if you are a\ncontent editor using Prose, you should contact the developer who gave\nyou access to it. To report technical problems with Prose, please\n[file an issue on GitHub](https://github.com/prose/prose/issues).\n\n## Credits\n\nProse is developed and maintained by\n[Development Seed](http://developmentseed.org), a creative data\nvisualization and mapping team based in Washington, DC.\n"
+        "content": "# Thông tin thêm - Dịch bởi Phan Anh\nProse provides a beatifully simple content authoring environment for\n[CMS-free websites](http://developmentseed.org/blog/2012/07/27/build-cms-free-websites/).\nIt's a web-based interface for managing content on\n[BowTie](http://bowtie.io). Use it to create, edit, and delete files,\nand save your changes directly to BowTie. Host your website on\n[BowTie Pages](http://pages.bowtie.io) for free, or set up your own\n[BowTie webhook server](http://developmentseed.org/blog/2013/05/01/introducing-jekyll-hook/).\n\nProse has advanced support for [Jekyll](http://jekyllrb.com/) sites and\n[markdown content](http://daringfireball.net/projects/markdown/).\nProse detects markdown posts in Jekyll sites and provides syntax\nhighlighting, a formatting toolbar, and draft previews in the site's\nfull layout.\n\nDevelopers can configure Jekyll sites to take advantage of these and\nmany more features that customize the content editing experience.\n\n## Configuring\n\nProse can be configured per repository with additional metadata in a\nJekyll site's `_config.yml` file or a separate `prose.yml` file. We offer\nProse.io as a hosted service for the latest version, or you can download\nthe source code and host it on your own. For for developer documentation,\nsee [the wiki page on BowTie](https://bowtie.io/prose/prose/wiki).\n\n## Developing\n\nProse is an open source project. We encourage you to contribute and\nhelp us improve this application or adapt it to your needs. For\ninstructions on developing Prose, see the\n[Prose contributing guidelines](https://bowtie.io/prose/prose/blob/gh-pages/CONTRIBUTING.md).\n\n## Getting Help\n\nWe do not offer support for Prose at this time, however if you are a\ncontent editor using Prose, you should contact the developer who gave\nyou access to it. To report technical problems with Prose, please\n[file an issue on BowTie](https://bowtie.io/prose/prose/issues).\n\n## Credits\n\nProse is developed and maintained by\n[Development Seed](http://developmentseed.org), a creative data\nvisualization and mapping team based in Washington, DC.\n"
     }
 }

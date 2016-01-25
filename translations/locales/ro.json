@@ -1,5 +1,5 @@
 {
-    "login": "Autorizare pe GitHub",
+    "login": "Autorizare pe BowTie",
     "docheader": {
         "editing": "Editare",
         "error": "Eroare",
@@ -12,7 +12,7 @@
         "settings": "Setări",
         "meta": "Date meta",
         "save": "Salvează",
-        "login": "Autorizare cu GitHub",
+        "login": "Autorizare cu BowTie",
         "about": "Despre",
         "develop": "Dezvoltatori",
         "logout": "Deconectare",
@@ -95,7 +95,7 @@
     },
     "main": {
         "start": {
-            "content": "Prose este un editor de conținut pentru GitHub, proiectat pentru gestionare de situri.",
+            "content": "Prose este un editor de conținut pentru BowTie, proiectat pentru gestionare de situri.",
             "learn": "Află mai multe"
         },
         "repos": {
@@ -127,14 +127,14 @@
         }
     },
     "notification": {
-        "loginDescription": "Autentificați-vă cu contul de GitHub pentru a accesa proiectul.",
+        "loginDescription": "Autentificați-vă cu contul de BowTie pentru a accesa proiectul.",
         "create": "Creează",
         "home": "Înapoi la pagina principală",
         "back": "Înapoi",
-        "githubStatus": "Starea pe GitHub ({status})",
+        "bowtieStatus": "Starea pe BowTie ({status})",
         "error": {
             "label": "Eroare",
-            "github": "S-a produs o eroare în timpul încărcării de date de la GitHub. Posibil e o problemă temporară. Încercați din nou mai târziu.",
+            "bowtie": "S-a produs o eroare în timpul încărcării de date de la BowTie. Posibil e o problemă temporară. Încercați din nou mai târziu.",
             "exists": "Acest fișier nu există",
             "notFound": "Pagina nu a fost găsită"
         }
@@ -222,7 +222,7 @@
                 "content": {
                     "links": {
                         "title": "Legături",
-                        "content": "<p>Markdown suportă două tipuri de legături: <strong>în linie</strong> și <strong>prin referință</strong>. Textul afișat utlizatorului se află între paranteze patrate. Spre exemplu, dacă doriți să afișați &ldquo;GitHub&rdquo;, adaugați <code>[GitHub]</code>.</p><p>Pentru legături în linie, introduceți adresa într-un un set de paranteze rotunde imediat după parantezele patrate. (e.g., <code>[GitHub](http://github.com/)</code>). Se permit căi relative în legăturile inline.</p><p>Pentru legături prin referință, folosiți două seturi de paranteze patrate. <code>[legătură internă][referință-internă]</code> corespunde cu referința internă <code>referință-internă</code>.</p>\n\n"
+                        "content": "<p>Markdown suportă două tipuri de legături: <strong>în linie</strong> și <strong>prin referință</strong>. Textul afișat utlizatorului se află între paranteze patrate. Spre exemplu, dacă doriți să afișați &ldquo;BowTie&rdquo;, adaugați <code>[BowTie]</code>.</p><p>Pentru legături în linie, introduceți adresa într-un un set de paranteze rotunde imediat după parantezele patrate. (e.g., <code>[BowTie](http://bowtie.io/)</code>). Se permit căi relative în legăturile inline.</p><p>Pentru legături prin referință, folosiți două seturi de paranteze patrate. <code>[legătură internă][referință-internă]</code> corespunde cu referința internă <code>referință-internă</code>.</p>\n\n"
                     },
                     "emphasis": {
                         "title": "Accentuare"
@@ -232,7 +232,7 @@
                     },
                     "images": {
                         "title": "Imagini",
-                        "content": "<p>Sintaxa Markdown pentru imagini e similară cu cea pentru link-uri. Este în esență aceeași sintaxă, precedată de un semn de exclamare (<code>!</code>). De exemplu, dacă doriți să vă legați la <code>http://github.com/unicorn.png</code> cu textul alternativ <code>Unicornul meu</code>, scrieți <code>![Unicornul meu](http://github.com/unicorn.png)</code>.</p>\n"
+                        "content": "<p>Sintaxa Markdown pentru imagini e similară cu cea pentru link-uri. Este în esență aceeași sintaxă, precedată de un semn de exclamare (<code>!</code>). De exemplu, dacă doriți să vă legați la <code>http://bowtie.io/unicorn.png</code> cu textul alternativ <code>Unicornul meu</code>, scrieți <code>![Unicornul meu](http://bowtie.io/unicorn.png)</code>.</p>\n"
                     }
                 }
             },

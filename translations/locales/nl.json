@@ -1,5 +1,5 @@
 {
-    "login": "Aanmelden op GitHub",
+    "login": "Aanmelden op BowTie",
     "docheader": {
         "editing": "Wijzigen",
         "error": "Fout",
@@ -12,7 +12,7 @@
         "settings": "Instellingen",
         "meta": "Metadata",
         "save": "Opslaan",
-        "login": "Aanmelden met GitHub",
+        "login": "Aanmelden met BowTie",
         "about": "Over",
         "develop": "Ontwikkelaars",
         "logout": "Afmelden",
@@ -97,7 +97,7 @@
     },
     "main": {
         "start": {
-            "content": "Prose is een content editor voor GitHub, ontworpen om websites te beheren.",
+            "content": "Prose is een content editor voor BowTie, ontworpen om websites te beheren.",
             "learn": "Lees meer"
         },
         "repos": {
@@ -129,14 +129,14 @@
         }
     },
     "notification": {
-        "loginDescription": "Log in met je GitHub account om dit project te bekijken.",
+        "loginDescription": "Log in met je BowTie account om dit project te bekijken.",
         "create": "Aanmaken",
         "home": "Terug naar de voorpagina",
         "back": "Ga terug",
-        "githubStatus": "Status op GitHub ({status})",
+        "bowtieStatus": "Status op BowTie ({status})",
         "error": {
             "label": "Fout",
-            "github": "Fout bij het laden van data van GitHub. Dit kan een tijdelijk probleem zijn. Probeer later opnieuw.",
+            "bowtie": "Fout bij het laden van data van BowTie. Dit kan een tijdelijk probleem zijn. Probeer later opnieuw.",
             "exists": "Dit bestand bestaat niet",
             "notFound": "Pagina niet gevonden"
         }
@@ -225,7 +225,7 @@
                 "content": {
                     "links": {
                         "title": "Links",
-                        "content": "<p>Markdown heeft twee soorten links: <strong>inline</strong> en <strong>reference</strong>. Voor beide soorten wordt de tekst die je wil weergeven tussen vierkante haken geplaatst. Als je bijvoorbeeld een link wil met de tekst &ldquo;GitHub&rdquo; schrijf je <code>[GitHub]</code>.</p><p>Om een inline link te maken moet je ronde haakjes plaatsen na de vierkante, waarin je je URL plaatst (bvb. <code>[GitHub](http://github.com/)</code>). Relatieve paden zijn toegelaten in inline links.</p><p>Om een reference link to maken moet je twee vierkante haken gebruiken. <code>[my internal link][internal-ref]</code> zal naar de <code>internal-ref</code> interne referentie linken.</p>\n"
+                        "content": "<p>Markdown heeft twee soorten links: <strong>inline</strong> en <strong>reference</strong>. Voor beide soorten wordt de tekst die je wil weergeven tussen vierkante haken geplaatst. Als je bijvoorbeeld een link wil met de tekst &ldquo;BowTie&rdquo; schrijf je <code>[BowTie]</code>.</p><p>Om een inline link te maken moet je ronde haakjes plaatsen na de vierkante, waarin je je URL plaatst (bvb. <code>[BowTie](http://bowtie.io/)</code>). Relatieve paden zijn toegelaten in inline links.</p><p>Om een reference link to maken moet je twee vierkante haken gebruiken. <code>[my internal link][internal-ref]</code> zal naar de <code>internal-ref</code> interne referentie linken.</p>\n"
                     },
                     "emphasis": {
                         "title": "Benadrukking",
@@ -237,7 +237,7 @@
                     },
                     "images": {
                         "title": "Afbeeldingen",
-                        "content": "<p>Markdown afbeelding syntax is gebaseerd op de syntax van links; het is exact dezelfde syntax met een uitroepingsteken (<code>!</code>) aan het begin. Als je bijvoorbeeld een afbeelding op <code>http://github.com/unicorn.png</code> wil linken met de alternatieve tekst <code>My Unicorn</code>, moet je volgende code gebruiken: <code>![My Unicorn](http://github.com/unicorn.png)</code>.</p>\n"
+                        "content": "<p>Markdown afbeelding syntax is gebaseerd op de syntax van links; het is exact dezelfde syntax met een uitroepingsteken (<code>!</code>) aan het begin. Als je bijvoorbeeld een afbeelding op <code>http://bowtie.io/unicorn.png</code> wil linken met de alternatieve tekst <code>My Unicorn</code>, moet je volgende code gebruiken: <code>![My Unicorn](http://bowtie.io/unicorn.png)</code>.</p>\n"
                     }
                 }
             },
@@ -246,7 +246,7 @@
                 "content": {
                     "automaticLinks": {
                         "title": "Automatische links",
-                        "content": "<p>Als je een link wil invoegen die de URL toont laat Markdown toe je tekst tussen <code>&lt;</code> en <code>&gt;</code> te zetten. Voorbeeld: <a href=\"javascript:void(0);\">http://github.com/</a> kan gemaakt worden met de code <code>&lt;http://github.com/&gt;</code>.</p>\n\n"
+                        "content": "<p>Als je een link wil invoegen die de URL toont laat Markdown toe je tekst tussen <code>&lt;</code> en <code>&gt;</code> te zetten. Voorbeeld: <a href=\"javascript:void(0);\">http://bowtie.io/</a> kan gemaakt worden met de code <code>&lt;http://bowtie.io/&gt;</code>.</p>\n\n"
                     },
                     "escaping": {
                         "title": "Escapen",

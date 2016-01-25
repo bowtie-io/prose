@@ -57,7 +57,7 @@
     },
     "main": {
         "start": {
-            "content": "Prose GitHub-এওয়েবসাইট পরিচালনার জন্য নির্মিত একটি কন্টেন্ট এডিটর।",
+            "content": "Prose BowTie-এওয়েবসাইট পরিচালনার জন্য নির্মিত একটি কন্টেন্ট এডিটর।",
             "learn": "আরও জানুন"
         },
         "repos": {
@@ -75,7 +75,7 @@
         }
     },
     "notification": {
-        "githubStatus": "GitHub-এ স্ট্যাটাস ({status})"
+        "bowtieStatus": "BowTie-এ স্ট্যাটাস ({status})"
     },
     "sidebar": {
         "settings": {

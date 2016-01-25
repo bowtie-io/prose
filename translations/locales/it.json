@@ -1,5 +1,5 @@
 {
-    "login": "Autorizza con GitHub",
+    "login": "Autorizza con BowTie",
     "docheader": {
         "editing": "Redazione",
         "error": "Errore",
@@ -12,7 +12,7 @@
         "settings": "Impostazioni",
         "meta": "Metadati",
         "save": "Salva",
-        "login": "Autorizza con GitHub",
+        "login": "Autorizza con BowTie",
         "about": "A Proposito",
         "develop": "Sviluppatori",
         "logout": "Esci",
@@ -97,7 +97,7 @@
     },
     "main": {
         "start": {
-            "content": "Prose è un editor di contenuti per GitHub progettato per la gestione di siti web.",
+            "content": "Prose è un editor di contenuti per BowTie progettato per la gestione di siti web.",
             "learn": "Saperne di più"
         },
         "repos": {
@@ -129,14 +129,14 @@
         }
     },
     "notification": {
-        "loginDescription": "Per favore accedi con il tuo account GitHub per accedere al progetto.",
+        "loginDescription": "Per favore accedi con il tuo account BowTie per accedere al progetto.",
         "create": "Crealo",
         "home": "Ritorna alla Pagina Principale",
         "back": "Torna Dietro",
-        "githubStatus": "Stato su GitHub ({status})",
+        "bowtieStatus": "Stato su BowTie ({status})",
         "error": {
             "label": "Errore",
-            "github": "Errore durante il caricamento dei dati da GitHub. Potrebbe essere un problema temporaneo. Per favore riprova più tardi.",
+            "bowtie": "Errore durante il caricamento dei dati da BowTie. Potrebbe essere un problema temporaneo. Per favore riprova più tardi.",
             "exists": "Questo file non esiste",
             "notFound": "Pagina non Trovata"
         }
@@ -225,7 +225,7 @@
                 "content": {
                     "links": {
                         "title": "Collegamenti",
-                        "content": "<p>Markdown ha due tipi di collegamenti: <strong>in linea</strong> e di <strong>riferimento</strong>. Per entrambi i tipi di collegamento, il testo che vuoi mostrare all'utente è posto in parentesi quadre. Per esempio, se vuoi che il tuo collegamento mostri il testo &ldquo;GitHub&rdquo;, scrivi <code>[GitHub]</code>.</p><p>Per creare un collegamento in linea, crea una coppia di parentesi tonde subito dopo le quadre e scrivi l'URL in quelle tonde. (es., <code>[GitHub](http://github.com/)</code>). Percorsi relativi sono permessi nei collegamenti in linea.</p><p>Per creare un collegamento di riferimento, usa una coppia di parentesi quadre. <code>[il mio collegamento interno][riferimento-interno]</code> collegherà il riferimento interno <code>riferimento-interno</code>.</p>\n"
+                        "content": "<p>Markdown ha due tipi di collegamenti: <strong>in linea</strong> e di <strong>riferimento</strong>. Per entrambi i tipi di collegamento, il testo che vuoi mostrare all'utente è posto in parentesi quadre. Per esempio, se vuoi che il tuo collegamento mostri il testo &ldquo;BowTie&rdquo;, scrivi <code>[BowTie]</code>.</p><p>Per creare un collegamento in linea, crea una coppia di parentesi tonde subito dopo le quadre e scrivi l'URL in quelle tonde. (es., <code>[BowTie](http://bowtie.io/)</code>). Percorsi relativi sono permessi nei collegamenti in linea.</p><p>Per creare un collegamento di riferimento, usa una coppia di parentesi quadre. <code>[il mio collegamento interno][riferimento-interno]</code> collegherà il riferimento interno <code>riferimento-interno</code>.</p>\n"
                     },
                     "emphasis": {
                         "title": "Enfasi",
@@ -237,7 +237,7 @@
                     },
                     "images": {
                         "title": "Immagini",
-                        "content": "<p>La sintassi delle immagini di Markdown assomiglia molto alla sintassi dei collegamenti; essa è essenzialmente la stessa sintassi preceduta da un punto esclamativo (<code>!</code>). Per esempio, se vuoi collegare un immagine <code>http://github.com/unicorn.png</code> con con il testo alternativo <code>Il Mio Unicorno</code>, dovresti scrivere <code>![Il Mio Unicorno](http://github.com/unicorn.png)</code>.</p>\n"
+                        "content": "<p>La sintassi delle immagini di Markdown assomiglia molto alla sintassi dei collegamenti; essa è essenzialmente la stessa sintassi preceduta da un punto esclamativo (<code>!</code>). Per esempio, se vuoi collegare un immagine <code>http://bowtie.io/unicorn.png</code> con con il testo alternativo <code>Il Mio Unicorno</code>, dovresti scrivere <code>![Il Mio Unicorno](http://bowtie.io/unicorn.png)</code>.</p>\n"
                     }
                 }
             },
@@ -246,7 +246,7 @@
                 "content": {
                     "automaticLinks": {
                         "title": "Collegamenti Automatici",
-                        "content": "<p>Se vuoi creare un collegamento che mostra l'URL attuale, Markdown ti permette di avvolgere rapidamente l'URL in <code>&lt;</code> e <code>&gt;</code>. Per esempio, il collegamento <a href=\"javascript:void(0);\">http://github.com/</a> è facilmente prodotto scrivendo <code>&lt;http://github.com/&gt;</code>.</p>\n"
+                        "content": "<p>Se vuoi creare un collegamento che mostra l'URL attuale, Markdown ti permette di avvolgere rapidamente l'URL in <code>&lt;</code> e <code>&gt;</code>. Per esempio, il collegamento <a href=\"javascript:void(0);\">http://bowtie.io/</a> è facilmente prodotto scrivendo <code>&lt;http://bowtie.io/&gt;</code>.</p>\n"
                     },
                     "escaping": {
                         "title": "Proteggere",
@@ -261,6 +261,6 @@
         "description": "Prose è un'applicazione tradotta. Se non vedi la tua lingua nella lista, se ci sono errori di ortografia, o le traduzioni sono mancanti, considera <a href='https://www.transifex.com/projects/p/prose'>una contribuzione alle traduzioni del progetto</a>.\n"
     },
     "about": {
-        "content": "# A proposito di\nProse fornisce un ambiente di creazione di contenuti meravigliosamente semplice per\n[siti web liberi da CMS](http://developmentseed.org/blog/2012/07/27/build-cms-free-websites/).\nSi tratta di una interfaccia web per la gestione di contenuti su\n[GitHub](http://github.com). Usalo per creare, modificare, ed eliminare file,\ne salvare i tuoi cambiamenti direttamente su GitHub. Opsita i tuoi siti web su\n[GitHub Pages](http://pages.github.com) gratuitamente, o imposta il tuo\n[server webhook per GitHub](http://developmentseed.org/blog/2013/05/01/introducing-jekyll-hook/).\n\nProse fornisce supporto avanzato per siti [Jekyll](http://jekyllrb.com/) e\n[contenuti in markdown](http://daringfireball.net/projects/markdown/).\nProse rileva post scritti in markdown per siti Jekyll fornendo l'evidenziazione \ndella sintassi, una barra degli strumenti per la formattazione, e l'anteprima \ndi bozze.\n\nGli sviluppatori possono configurare siti Jekyll per approfittare di queste e\nmolte altre caratteristiche che consentono di personalizzare l'esperienza di editing dei contenuti.\n\n## Configurazione\n\nProse può essere configurato per repository con metadata aggiuntivi in un\nfile `_config.yml` di un sito Jekyll o un file `prose.yml` separato. Noi offriamo\nProse.io come servizio per l'ultima versione, o alternativamente puoi scaricare\nil codice sorgente e ospitarlo sul tuo server. Per la documentazione degli sviluppatori,\nguarda [la pagina wiki su GitHub](https://github.com/prose/prose/wiki).\n\n## Sviluppo\n\nProse è un progetto open source. Vi incoraggiamo a contribuire e\naiutarci a migliorare l'applicazione o ad adattarla alle proprie esigenze. Per\nle istruzioni sullo sviluppo di Prose, guarda le\n[le linee guida per contribuire allo sviluppo di Prose ](https://github.com/prose/prose/blob/gh-pages/CONTRIBUTING.md).\n\n## Come ottenere assistenza\n\nIn questo momento non offriamo supporto per Prose, tuttavia se sei un\neditor di contenuti che sta usando Prose, dovresti contattare lo sviluppatore che ti ha dato\nl'accesso. Per segnalare problemi tecnici relativi a Prose, si prega di\n[aggiungere un'issue su GitHub](https://github.com/prose/prose/issues).\n\n## Crediti\n\nProse è sviluppato e mantenuto da\n[Development Seed](http://developmentseed.org), un team che lavora sulla visualizzazione\ncreativa di dati e il mapping con sede a Washington, DC.\n"
+        "content": "# A proposito di\nProse fornisce un ambiente di creazione di contenuti meravigliosamente semplice per\n[siti web liberi da CMS](http://developmentseed.org/blog/2012/07/27/build-cms-free-websites/).\nSi tratta di una interfaccia web per la gestione di contenuti su\n[BowTie](http://bowtie.io). Usalo per creare, modificare, ed eliminare file,\ne salvare i tuoi cambiamenti direttamente su BowTie. Opsita i tuoi siti web su\n[BowTie Pages](http://pages.bowtie.io) gratuitamente, o imposta il tuo\n[server webhook per BowTie](http://developmentseed.org/blog/2013/05/01/introducing-jekyll-hook/).\n\nProse fornisce supporto avanzato per siti [Jekyll](http://jekyllrb.com/) e\n[contenuti in markdown](http://daringfireball.net/projects/markdown/).\nProse rileva post scritti in markdown per siti Jekyll fornendo l'evidenziazione \ndella sintassi, una barra degli strumenti per la formattazione, e l'anteprima \ndi bozze.\n\nGli sviluppatori possono configurare siti Jekyll per approfittare di queste e\nmolte altre caratteristiche che consentono di personalizzare l'esperienza di editing dei contenuti.\n\n## Configurazione\n\nProse può essere configurato per repository con metadata aggiuntivi in un\nfile `_config.yml` di un sito Jekyll o un file `prose.yml` separato. Noi offriamo\nProse.io come servizio per l'ultima versione, o alternativamente puoi scaricare\nil codice sorgente e ospitarlo sul tuo server. Per la documentazione degli sviluppatori,\nguarda [la pagina wiki su BowTie](https://bowtie.io/prose/prose/wiki).\n\n## Sviluppo\n\nProse è un progetto open source. Vi incoraggiamo a contribuire e\naiutarci a migliorare l'applicazione o ad adattarla alle proprie esigenze. Per\nle istruzioni sullo sviluppo di Prose, guarda le\n[le linee guida per contribuire allo sviluppo di Prose ](https://bowtie.io/prose/prose/blob/gh-pages/CONTRIBUTING.md).\n\n## Come ottenere assistenza\n\nIn questo momento non offriamo supporto per Prose, tuttavia se sei un\neditor di contenuti che sta usando Prose, dovresti contattare lo sviluppatore che ti ha dato\nl'accesso. Per segnalare problemi tecnici relativi a Prose, si prega di\n[aggiungere un'issue su BowTie](https://bowtie.io/prose/prose/issues).\n\n## Crediti\n\nProse è sviluppato e mantenuto da\n[Development Seed](http://developmentseed.org), un team che lavora sulla visualizzazione\ncreativa di dati e il mapping con sede a Washington, DC.\n"
     }
 }

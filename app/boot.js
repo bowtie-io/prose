@@ -60,19 +60,19 @@ user.authenticate({
         // Start responding to routes
         Backbone.history.start();
       }).fail(function(){
-        var apiStatus = status.githubApi(function(res) {
+        var apiStatus = status.bowtieApi(function(res) {
           var error = new NotificationView({
-            'message': t('notification.error.github'),
+            'message': t('notification.error.bowtie'),
             'options': [
               {
                 'title': t('notification.back'),
                 'link': '/'
               },
               {
-                'title': t('notification.githubStatus', {
+                'title': t('notification.bowtieStatus', {
                   status: res.status
                 }),
-                'link': '//status.github.com',
+                'link': '//status.bowtie.io',
                 'className': res.status
               }
             ]
