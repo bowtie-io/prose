@@ -117,7 +117,8 @@ en:
     bowtieStatus: "Status on BowTie ({status})"
     error:
       label: "Error"
-      bowtie: "Error while loading data from Github. This might be a temporary issue. Please try again later."
+      github: "Error while loading data from BowTie. This might be a temporary issue. Please try again later."
+      bowtie: "Error while loading data from BowTie. This might be a temporary issue. Please try again later."
       exists: "This file does not exist"
       notFound: "Page not Found"
   sidebar:
@@ -196,7 +197,7 @@ en:
           links:
             title: "Links"
             content: |
-              <p>Markdown has two types of links: <strong>inline</strong> and <strong>reference</strong>. For both types of links, the text you want to display to the user is placed in square brackets. For example, if you want your link to display the text &ldquo;BowTie&rdquo;, you write <code>[BowTie]</code>.</p><p>To create an inline link, create a set of parentheses immediately after the brackets and write your URL within the parentheses. (e.g., <code>[BowTie](http://bowtie.io/)</code>). Relative paths are allowed in inline links.</p><p>To create a reference link, use two sets of square brackets. <code>[my internal link][internal-ref]</code> will link to the internal reference <code>internal-ref</code>.</p>
+              <p>Markdown has two types of links: <strong>inline</strong> and <strong>reference</strong>. For both types of links, the text you want to display to the user is placed in square brackets. For example, if you want your link to display the text &ldquo;BowTie&rdquo;, you write <code>[BowTie]</code>.</p><p>To create an inline link, create a set of parentheses immediately after the brackets and write your URL within the parentheses. (e.g., <code>[BowTie](https://bowtie.io/)</code>). Relative paths are allowed in inline links.</p><p>To create a reference link, use two sets of square brackets. <code>[my internal link][internal-ref]</code> will link to the internal reference <code>internal-ref</code>.</p>
           emphasis:
             title: "Emphasis"
             content: |
@@ -208,14 +209,14 @@ en:
           images:
             title: "Images"
             content: |
-              <p>Markdown image syntax looks a lot like the syntax for links; it is essentially the same syntax preceded by an exclamation point (<code>!</code>). For example, if you want to link to an image at <code>http://bowtie.io/unicorn.png</code> with the alternate text <code>My Unicorn</code>, you would write <code>![My Unicorn](http://bowtie.io/unicorn.png)</code>.</p>
+              <p>Markdown image syntax looks a lot like the syntax for links; it is essentially the same syntax preceded by an exclamation point (<code>!</code>). For example, if you want to link to an image at <code>https://bowtie.io/unicorn.png</code> with the alternate text <code>My Unicorn</code>, you would write <code>![My Unicorn](https://bowtie.io/unicorn.png)</code>.</p>
       miscellaneous:
         title: "Miscellaneous"
         content:
           automaticLinks:
             title: "Automatic Links"
             content: |
-              <p>If you want to create a link that displays the actual URL, Markdown allows you to quickly wrap the URL in <code>&lt;</code> and <code>&gt;</code> to do so. For example, the link <a href="javascript:void(0);">http://bowtie.io/</a> is easily produced by writing <code>&lt;http://bowtie.io/&gt;</code>.</p>
+              <p>If you want to create a link that displays the actual URL, Markdown allows you to quickly wrap the URL in <code>&lt;</code> and <code>&gt;</code> to do so. For example, the link <a href="javascript:void(0);">https://bowtie.io/</a> is easily produced by writing <code>&lt;http://bowtie.io/&gt;</code>.</p>
           escaping:
             title: "Escaping"
             content: |
@@ -230,10 +231,8 @@ en:
       Prose provides a beatifully simple content authoring environment for
       [CMS-free websites](http://developmentseed.org/blog/2012/07/27/build-cms-free-websites/).
       It's a web-based interface for managing content on
-      [BowTie](http://bowtie.io). Use it to create, edit, and delete files,
-      and save your changes directly to BowTie. Host your website on
-      [BowTie Pages](http://pages.bowtie.io) for free, or set up your own
-      [BowTie webhook server](http://developmentseed.org/blog/2013/05/01/introducing-jekyll-hook/).
+      [BowTie](https://bowtie.io). Use it to create, edit, and delete files,
+      and save your changes directly to BowTie.
 
       Prose has advanced support for [Jekyll](http://jekyllrb.com/) sites and
       [markdown content](http://daringfireball.net/projects/markdown/).
@@ -250,21 +249,21 @@ en:
       Jekyll site's `_config.yml` file or a separate `prose.yml` file. We offer
       Prose.io as a hosted service for the latest version, or you can download
       the source code and host it on your own. For for developer documentation,
-      see [the wiki page on BowTie](https://bowtie.io/prose/prose/wiki).
+      see [the wiki page on GitHub](https://github.com/prose/prose/wiki).
 
       ## Developing
 
       Prose is an open source project. We encourage you to contribute and
       help us improve this application or adapt it to your needs. For
       instructions on developing Prose, see the
-      [Prose contributing guidelines](https://bowtie.io/prose/prose/blob/gh-pages/CONTRIBUTING.md).
+      [Prose contributing guidelines](https://github.com/prose/prose/blob/gh-pages/CONTRIBUTING.md).
 
       ## Getting Help
 
       We do not offer support for Prose at this time, however if you are a
       content editor using Prose, you should contact the developer who gave
       you access to it. To report technical problems with Prose, please
-      [file an issue on BowTie](https://bowtie.io/prose/prose/issues).
+      [file an issue on GitHub](https://github.com/prose/prose/issues).
 
       ## Credits
 

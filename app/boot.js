@@ -72,7 +72,7 @@ user.authenticate({
                 'title': t('notification.bowtieStatus', {
                   status: res.status
                 }),
-                'link': '//status.bowtie.io',
+                'link': 'https://status.bowtie.io',
                 'className': res.status
               }
             ]

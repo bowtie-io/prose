@@ -73,7 +73,7 @@ user.authenticate({
                 'title': t('notification.bowtieStatus', {
                   status: res.status
                 }),
-                'link': '//status.bowtie.io',
+                'link': 'https://status.bowtie.io',
                 'className': res.status
               }
             ]
@@ -2052,7 +2052,7 @@ module.exports = Backbone.View.extend({
   template: templates.chooselanguage,
 
   events: {
-    'click .language': 'setLanguage' 
+    'click .language': 'setLanguage'
   },
 
   render: function() {
@@ -4945,7 +4945,7 @@ module.exports = Backbone.View.extend({
         sidebar: this.sidebar,
         user: this.user
       });
-      
+
       this.subviews['orgs'] = orgs;
     }
 
@@ -6419,9 +6419,9 @@ module.exports = Backbone.View.extend({
 });
 
 },{"../../dist/templates":58,"../toolbar/markdown.js":19,"../upload":20,"../util":21,"backbone":59,"chosen-jquery-browserify":70,"jquery-browserify":76,"underscore":113}],57:[function(require,module,exports){
-module.exports = {"login":"Authorize on BowTie","docheader":{"editing":"Editing","error":"Error","preview":"Previewing"},"navigation":{"newFile":"New File","edit":"Edit","preview":"Preview","settings":"Settings","meta":"Meta Data","save":"Save","login":"Authorize with BowTie","about":"About","develop":"Developers","logout":"Logout","language":"Language"},"toolbar":{"heading":"Heading","subHeading":"Sub Heading","link":"Insert Link","image":"Insert Image","bold":"Bold","italic":"Italic","blockquote":"Blockquote","list":"List","numberedlist":"Numbered List","help":"Help"},"heading":{"explore":"Explore Projects"},"actions":{"unsaved":"You have unsaved Changes. Are you sure you want to leave?","draft":{"toPost":"Draft to Post","toPostInfo":"Convert this draft into a published post"},"publishing":{"publish":"Publish","publishInfo":"This post will be published the next time you save","published":"Published","unpublish":"Unpublish","unpublished":"Unpublished","unpublishInfo":"This post will be unpublished the next time you save"},"change":{"noChange":"No Changes","submit":"Changes to Submit","save":"Changes to Save"},"delete":{"title":"Delete","warn":"Are you sure you want to delete this file?","error":"Error during deletion. Please wait 30 seconds and try again."},"upload":{"uploading":"Uploading {file}","uploaded":"Uploaded {file}"},"save":{"title":"Save","saved":"Saved","saving":"Saving","patch":"Submitting Request","fileNameError":"Needs a Filename","submission":"Request Submitted","metaError":"Error! Metadata not Found","fileNameExists":"A filename with this path already exists"},"error":"Error. Try again in 30 Seconds","restore":{"restoring":"Restoring","restored":"Restored"},"commits":{"created":"Created {filename}","updated":"Updated {filename}","deleted":"Deleted {filename}","toDraft":"Created draft of {filename}","fromDraft":"Created post from a draft of {filename}"}},"loading":{"repos":"Loading Profile","repo":"Loading Project","file":"Loading File","preview":"Previewing File","creating":"Creating new post"},"modal":{"errorHeading":"Error","confirm":"Got it"},"main":{"start":{"content":"Prose is a content editor for BowTie designed for managing websites.","learn":"Learn more"},"repos":{"filter":"Filter Projects","repo":"View Project","site":"View Site","sharedFrom":"Shared from an account","forkedFrom":"Forked from another project"},"repo":{"filter":"Filter Files","edit":"Edit","delete":"Delete this File"},"new":{"body":"## A New Post\n\nEnter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.\n"},"file":{"noTitle":"Untitled","metaTitle":"Review your changes:","rawMeta":"Raw Metadata","metaDescription":"Additions are highlighted in green. Deletions are crossed out.","back":"Done","createMeta":"Create New"},"upgrade":{"content":"Prose requires features not available to your browser","download":"Download a Modern Browser"}},"notification":{"404":"This file does not exist, or you don't have access to it. Try authorizing with BowTie.","loginDescription":"Please login with your BowTie account to access that project.","create":"Create it","home":"Back to Main Page","back":"Go Back","bowtieStatus":"Status on BowTie ({status})","error":{"label":"Error","bowtie":"Error while loading data from Github. This might be a temporary issue. Please try again later.","exists":"This file does not exist","notFound":"Page not Found"}},"sidebar":{"repos":{"groups":"Groups"},"repo":{"branch":"Switch Branch","drafts":"View Drafts","history":{"label":"Most Recent History","actions":{"restore":"Restore?"}},"create":"Create New File"},"save":{"label":"Describe your Changes","cancel":"Cancel","save":"Commit","submit":"Submit Change Request"},"settings":{"title":"Options","fileInputLabel":"File Path","delete":"Delete This File","translate":"Translate to","draft":"Create Draft"}},"dialogs":{"link":{"title":"Insert Link","insertLocal":"Insert a Local Link","insert":"Insert","hrefPlaceholder":"Link URL","textPlaceholder":"Link Name","titlePlaceholder":"Title (optional)","insertPlaceholder":"Insert a local link"},"media":{"title":"Insert Image","back":"Back","hrefPlaceholder":"Image URL","altPlaceholder":"Alt text (optional)","description":"Upload images by Dragging &amp; Dropping or </br>\n{input} <a>selecting one</a>\n","help":"Images uploaded are added to the current directory or one specified in the Image URL path above.","helpMedia":"Images uploaded are added to the 'Choose Existing' directory or one specified in the Image URL field.","choose":"Choose Existing"},"help":{"blockElements":{"title":"Block Elements","content":{"paragraphs":{"title":"Paragraphs &amp; Breaks","content":"<p>To create a paragraph, simply create a block of text that is separated by one or more blank lines. Blocks of text separated by one or more blank lines will be parsed as paragraphs.</p><p>If you want to create a line break, end a line with two or more spaces, then hit Return/Enter.</p>\n"},"headers":{"title":"Headers","content":"<p>Markdown supports two header formats. The wiki editor uses the &ldquo;atx&rsquo;-style headers. Simply prefix your header text with the number of <code>#</code> characters to specify heading depth. For example: <code># Header 1</code>, <code>## Header 2</code> and <code>### Header 3</code> will be progressively smaller headers. You may end your headers with any number of hashes.</p>\n"},"blockquotes":{"title":"Blockquotes","content":"<p>Markdown creates blockquotes email-style by prefixing each line with the <code>&gt;</code>. This looks best if you decide to hard-wrap text and prefix each line with a <code>&gt;</code> character, but Markdown supports just putting <code>&gt;</code> before your paragraph.</p>\n"},"lists":{"title":"Lists","content":"<p>Markdown supports both ordered and unordered lists. To create an ordered list, simply prefix each line with a number (any number will do &mdash; this is why the editor only uses one number.) To create an unordered list, you can prefix each line with <code>*</code>, <code>+</code> or <code>-</code>.</p> List items can contain multiple paragraphs, however each paragraph must be indented by at least 4 spaces or a tab.\n"},"codeBlocks":{"title":"Code Blocks","content":"<p>Markdown wraps code blocks in pre-formatted tags to preserve indentation in your code blocks. To create a code block, indent the entire block by at least 4 spaces or one tab. Markdown will strip the extra indentation you&rsquo;ve added to the code block.</p>\n"},"horizontalRules":{"title":"Horizontal Rules","content":"<p>Horizontal rules are created by placing three or more hyphens, asterisks or underscores on a line by themselves. Spaces are allowed between the hyphens, asterisks or underscores.</p>\n"}}},"spanElements":{"title":"Span Elements","content":{"links":{"title":"Links","content":"<p>Markdown has two types of links: <strong>inline</strong> and <strong>reference</strong>. For both types of links, the text you want to display to the user is placed in square brackets. For example, if you want your link to display the text &ldquo;BowTie&rdquo;, you write <code>[BowTie]</code>.</p><p>To create an inline link, create a set of parentheses immediately after the brackets and write your URL within the parentheses. (e.g., <code>[BowTie](http://bowtie.io/)</code>). Relative paths are allowed in inline links.</p><p>To create a reference link, use two sets of square brackets. <code>[my internal link][internal-ref]</code> will link to the internal reference <code>internal-ref</code>.</p>\n"},"emphasis":{"title":"Emphasis","content":"<p>Asterisks (<code>*</code>) and underscores (<code>_</code>) are treated as emphasis and are wrapped with an <code>&lt;em&gt;</code> tag, which usually displays as italics in most browsers. Double asterisks (<code>**</code>) or double underscores (<code>__</code>) are treated as bold using the <code>&lt;strong&gt;</code> tag. To create italic or bold text, simply wrap your words in single/double asterisks/underscores. For example, <code>**My double emphasis text**</code> becomes <strong>My double emphasis text</strong>, and <code>*My single emphasis text*</code> becomes <em>My single emphasis text</em>.</p>\n"},"code":{"title":"Code","content":"<p>To create inline spans of code, simply wrap the code in backticks (<code>`</code>). Markdown will turn <code>`myFunction`</code> into <code>myFunction</code>.</p>\n"},"images":{"title":"Images","content":"<p>Markdown image syntax looks a lot like the syntax for links; it is essentially the same syntax preceded by an exclamation point (<code>!</code>). For example, if you want to link to an image at <code>http://bowtie.io/unicorn.png</code> with the alternate text <code>My Unicorn</code>, you would write <code>![My Unicorn](http://bowtie.io/unicorn.png)</code>.</p>\n"}}},"miscellaneous":{"title":"Miscellaneous","content":{"automaticLinks":{"title":"Automatic Links","content":"<p>If you want to create a link that displays the actual URL, Markdown allows you to quickly wrap the URL in <code>&lt;</code> and <code>&gt;</code> to do so. For example, the link <a href=\"javascript:void(0);\">http://bowtie.io/</a> is easily produced by writing <code>&lt;http://bowtie.io/&gt;</code>.</p>\n"},"escaping":{"title":"Escaping","content":"<p>If you want to use a special Markdown character in your document (such as displaying literal asterisks), you can escape the character with the backslash (<code>\\\\</code>). Markdown will ignore the character directly after a backslash.</p>\n"}}}}},"chooselanguage":{"title":"Choose a Language","description":"Prose is a translated application. If you don't see your language in the list, there are spelling errors, or translations are missing, consider <a href='https://www.transifex.com/projects/p/prose'>contributing translations to the project</a>.\n"},"about":{"content":"# About\nProse provides a beatifully simple content authoring environment for\n[CMS-free websites](http://developmentseed.org/blog/2012/07/27/build-cms-free-websites/).\nIt's a web-based interface for managing content on\n[BowTie](http://bowtie.io). Use it to create, edit, and delete files,\nand save your changes directly to BowTie. Host your website on\n[BowTie Pages](http://pages.bowtie.io) for free, or set up your own\n[BowTie webhook server](http://developmentseed.org/blog/2013/05/01/introducing-jekyll-hook/).\n\nProse has advanced support for [Jekyll](http://jekyllrb.com/) sites and\n[markdown content](http://daringfireball.net/projects/markdown/).\nProse detects markdown posts in Jekyll sites and provides syntax\nhighlighting, a formatting toolbar, and draft previews in the site's\nfull layout.\n\nDevelopers can configure Jekyll sites to take advantage of these and\nmany more features that customize the content editing experience.\n\n## Configuring\n\nProse can be configured per repository with additional metadata in a\nJekyll site's `_config.yml` file or a separate `prose.yml` file. We offer\nProse.io as a hosted service for the latest version, or you can download\nthe source code and host it on your own. For for developer documentation,\nsee [the wiki page on BowTie](https://bowtie.io/prose/prose/wiki).\n\n## Developing\n\nProse is an open source project. We encourage you to contribute and\nhelp us improve this application or adapt it to your needs. For\ninstructions on developing Prose, see the\n[Prose contributing guidelines](https://bowtie.io/prose/prose/blob/gh-pages/CONTRIBUTING.md).\n\n## Getting Help\n\nWe do not offer support for Prose at this time, however if you are a\ncontent editor using Prose, you should contact the developer who gave\nyou access to it. To report technical problems with Prose, please\n[file an issue on BowTie](https://bowtie.io/prose/prose/issues).\n\n## Credits\n\nProse is developed and maintained by\n[Development Seed](http://developmentseed.org), a creative data\nvisualization and mapping team based in Washington, DC.\n"}};
+module.exports = {"login":"Authorize on BowTie","docheader":{"editing":"Editing","error":"Error","preview":"Previewing"},"navigation":{"newFile":"New File","edit":"Edit","preview":"Preview","settings":"Settings","meta":"Meta Data","save":"Save","login":"Authorize with BowTie","about":"About","develop":"Developers","logout":"Logout","language":"Language"},"toolbar":{"heading":"Heading","subHeading":"Sub Heading","link":"Insert Link","image":"Insert Image","bold":"Bold","italic":"Italic","blockquote":"Blockquote","list":"List","numberedlist":"Numbered List","help":"Help"},"heading":{"explore":"Explore Projects"},"actions":{"unsaved":"You have unsaved Changes. Are you sure you want to leave?","draft":{"toPost":"Draft to Post","toPostInfo":"Convert this draft into a published post"},"publishing":{"publish":"Publish","publishInfo":"This post will be published the next time you save","published":"Published","unpublish":"Unpublish","unpublished":"Unpublished","unpublishInfo":"This post will be unpublished the next time you save"},"change":{"noChange":"No Changes","submit":"Changes to Submit","save":"Changes to Save"},"delete":{"title":"Delete","warn":"Are you sure you want to delete this file?","error":"Error during deletion. Please wait 30 seconds and try again."},"upload":{"uploading":"Uploading {file}","uploaded":"Uploaded {file}"},"save":{"title":"Save","saved":"Saved","saving":"Saving","patch":"Submitting Request","fileNameError":"Needs a Filename","submission":"Request Submitted","metaError":"Error! Metadata not Found","fileNameExists":"A filename with this path already exists"},"error":"Error. Try again in 30 Seconds","restore":{"restoring":"Restoring","restored":"Restored"},"commits":{"created":"Created {filename}","updated":"Updated {filename}","deleted":"Deleted {filename}","toDraft":"Created draft of {filename}","fromDraft":"Created post from a draft of {filename}"}},"loading":{"repos":"Loading Profile","repo":"Loading Project","file":"Loading File","preview":"Previewing File","creating":"Creating new post"},"modal":{"errorHeading":"Error","confirm":"Got it"},"main":{"start":{"content":"Prose is a content editor for BowTie designed for managing websites.","learn":"Learn more"},"repos":{"filter":"Filter Projects","repo":"View Project","site":"View Site","sharedFrom":"Shared from an account","forkedFrom":"Forked from another project"},"repo":{"filter":"Filter Files","edit":"Edit","delete":"Delete this File"},"new":{"body":"## A New Post\n\nEnter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.\n"},"file":{"noTitle":"Untitled","metaTitle":"Review your changes:","rawMeta":"Raw Metadata","metaDescription":"Additions are highlighted in green. Deletions are crossed out.","back":"Done","createMeta":"Create New"},"upgrade":{"content":"Prose requires features not available to your browser","download":"Download a Modern Browser"}},"notification":{"404":"This file does not exist, or you don't have access to it. Try authorizing with BowTie.","loginDescription":"Please login with your BowTie account to access that project.","create":"Create it","home":"Back to Main Page","back":"Go Back","bowtieStatus":"Status on BowTie ({status})","error":{"label":"Error","bowtie":"Error while loading data from BowTie. This might be a temporary issue. Please try again later.","github":"Error while loading data from BowTie. This might be a temporary issue. Please try again later.","exists":"This file does not exist","notFound":"Page not Found"}},"sidebar":{"repos":{"groups":"Groups"},"repo":{"branch":"Switch Branch","drafts":"View Drafts","history":{"label":"Most Recent History","actions":{"restore":"Restore?"}},"create":"Create New File"},"save":{"label":"Describe your Changes","cancel":"Cancel","save":"Commit","submit":"Submit Change Request"},"settings":{"title":"Options","fileInputLabel":"File Path","delete":"Delete This File","translate":"Translate to","draft":"Create Draft"}},"dialogs":{"link":{"title":"Insert Link","insertLocal":"Insert a Local Link","insert":"Insert","hrefPlaceholder":"Link URL","textPlaceholder":"Link Name","titlePlaceholder":"Title (optional)","insertPlaceholder":"Insert a local link"},"media":{"title":"Insert Image","back":"Back","hrefPlaceholder":"Image URL","altPlaceholder":"Alt text (optional)","description":"Upload images by Dragging &amp; Dropping or </br>\n{input} <a>selecting one</a>\n","help":"Images uploaded are added to the current directory or one specified in the Image URL path above.","helpMedia":"Images uploaded are added to the 'Choose Existing' directory or one specified in the Image URL field.","choose":"Choose Existing"},"help":{"blockElements":{"title":"Block Elements","content":{"paragraphs":{"title":"Paragraphs &amp; Breaks","content":"<p>To create a paragraph, simply create a block of text that is separated by one or more blank lines. Blocks of text separated by one or more blank lines will be parsed as paragraphs.</p><p>If you want to create a line break, end a line with two or more spaces, then hit Return/Enter.</p>\n"},"headers":{"title":"Headers","content":"<p>Markdown supports two header formats. The wiki editor uses the &ldquo;atx&rsquo;-style headers. Simply prefix your header text with the number of <code>#</code> characters to specify heading depth. For example: <code># Header 1</code>, <code>## Header 2</code> and <code>### Header 3</code> will be progressively smaller headers. You may end your headers with any number of hashes.</p>\n"},"blockquotes":{"title":"Blockquotes","content":"<p>Markdown creates blockquotes email-style by prefixing each line with the <code>&gt;</code>. This looks best if you decide to hard-wrap text and prefix each line with a <code>&gt;</code> character, but Markdown supports just putting <code>&gt;</code> before your paragraph.</p>\n"},"lists":{"title":"Lists","content":"<p>Markdown supports both ordered and unordered lists. To create an ordered list, simply prefix each line with a number (any number will do &mdash; this is why the editor only uses one number.) To create an unordered list, you can prefix each line with <code>*</code>, <code>+</code> or <code>-</code>.</p> List items can contain multiple paragraphs, however each paragraph must be indented by at least 4 spaces or a tab.\n"},"codeBlocks":{"title":"Code Blocks","content":"<p>Markdown wraps code blocks in pre-formatted tags to preserve indentation in your code blocks. To create a code block, indent the entire block by at least 4 spaces or one tab. Markdown will strip the extra indentation you&rsquo;ve added to the code block.</p>\n"},"horizontalRules":{"title":"Horizontal Rules","content":"<p>Horizontal rules are created by placing three or more hyphens, asterisks or underscores on a line by themselves. Spaces are allowed between the hyphens, asterisks or underscores.</p>\n"}}},"spanElements":{"title":"Span Elements","content":{"links":{"title":"Links","content":"<p>Markdown has two types of links: <strong>inline</strong> and <strong>reference</strong>. For both types of links, the text you want to display to the user is placed in square brackets. For example, if you want your link to display the text &ldquo;BowTie&rdquo;, you write <code>[BowTie]</code>.</p><p>To create an inline link, create a set of parentheses immediately after the brackets and write your URL within the parentheses. (e.g., <code>[BowTie](https://bowtie.io/)</code>). Relative paths are allowed in inline links.</p><p>To create a reference link, use two sets of square brackets. <code>[my internal link][internal-ref]</code> will link to the internal reference <code>internal-ref</code>.</p>\n"},"emphasis":{"title":"Emphasis","content":"<p>Asterisks (<code>*</code>) and underscores (<code>_</code>) are treated as emphasis and are wrapped with an <code>&lt;em&gt;</code> tag, which usually displays as italics in most browsers. Double asterisks (<code>**</code>) or double underscores (<code>__</code>) are treated as bold using the <code>&lt;strong&gt;</code> tag. To create italic or bold text, simply wrap your words in single/double asterisks/underscores. For example, <code>**My double emphasis text**</code> becomes <strong>My double emphasis text</strong>, and <code>*My single emphasis text*</code> becomes <em>My single emphasis text</em>.</p>\n"},"code":{"title":"Code","content":"<p>To create inline spans of code, simply wrap the code in backticks (<code>`</code>). Markdown will turn <code>`myFunction`</code> into <code>myFunction</code>.</p>\n"},"images":{"title":"Images","content":"<p>Markdown image syntax looks a lot like the syntax for links; it is essentially the same syntax preceded by an exclamation point (<code>!</code>). For example, if you want to link to an image at <code>https://bowtie.io/unicorn.png</code> with the alternate text <code>My Unicorn</code>, you would write <code>![My Unicorn](https://bowtie.io/unicorn.png)</code>.</p>\n"}}},"miscellaneous":{"title":"Miscellaneous","content":{"automaticLinks":{"title":"Automatic Links","content":"<p>If you want to create a link that displays the actual URL, Markdown allows you to quickly wrap the URL in <code>&lt;</code> and <code>&gt;</code> to do so. For example, the link <a href=\"javascript:void(0);\">https://bowtie.io/</a> is easily produced by writing <code>&lt;https://bowtie.io/&gt;</code>.</p>\n"},"escaping":{"title":"Escaping","content":"<p>If you want to use a special Markdown character in your document (such as displaying literal asterisks), you can escape the character with the backslash (<code>\\\\</code>). Markdown will ignore the character directly after a backslash.</p>\n"}}}}},"chooselanguage":{"title":"Choose a Language","description":"Prose is a translated application. If you don't see your language in the list, there are spelling errors, or translations are missing, consider <a href='https://www.transifex.com/projects/p/prose'>contributing translations to the project</a>.\n"},"about":{"content":"# About\nProse provides a beatifully simple content authoring environment for\n[CMS-free websites](http://developmentseed.org/blog/2012/07/27/build-cms-free-websites/).\nIt's a web-based interface for managing content on\n[BowTie](https://bowtie.io). Use it to create, edit, and delete files,\nand save your changes directly to BowTie. \nProse has advanced support for [Jekyll](http://jekyllrb.com/) sites and\n[markdown content](http://daringfireball.net/projects/markdown/).\nProse detects markdown posts in Jekyll sites and provides syntax\nhighlighting, a formatting toolbar, and draft previews in the site's\nfull layout.\n\nDevelopers can configure Jekyll sites to take advantage of these and\nmany more features that customize the content editing experience.\n\n## Configuring\n\nProse can be configured per repository with additional metadata in a\nJekyll site's `_config.yml` file or a separate `prose.yml` file. We offer\nProse.io as a hosted service for the latest version, or you can download\nthe source code and host it on your own. For for developer documentation,\nsee [the wiki page on Github](https://github.com/prose/prose/wiki).\n\n## Developing\n\nProse is an open source project. We encourage you to contribute and\nhelp us improve this application or adapt it to your needs. For\ninstructions on developing Prose, see the\n[Prose contributing guidelines](https://github.com/prose/prose/blob/gh-pages/CONTRIBUTING.md).\n\n## Getting Help\n\nWe do not offer support for Prose at this time, however if you are a\ncontent editor using Prose, you should contact the developer who gave\nyou access to it. To report technical problems with Prose, please\n[file an issue on Github](https://github.com/prose/prose/issues).\n\n## Credits\n\nProse is developed and maintained by\n[Development Seed](http://developmentseed.org), a creative data\nvisualization and mapping team based in Washington, DC.\n"}};
 },{}],58:[function(require,module,exports){
-module.exports = {"app":"<% if (locale.current() === 'he-IL') { %>\n  <link rel='stylesheet' href='./style-rtl.css'>\n<% } %>\n\n<div id='loader' class='loader'></div>\n<div id='drawer' class='sidebar' <% if (locale.current() === 'he-IL') { %>dir='rtl'<% } %>></div>\n<nav id='navigation'></nav>\n<div id='main' <% if (locale.current() === 'he-IL') { %>dir='rtl'<% } %>></div>\n\n<div class='prose-menu dropdown-menu' <% if (locale.current() === 'he-IL') { %>dir='rtl'<% } %>>\n  <div class='inner clearfix'>\n    <a href='#' class='icon branding dropdown-hover' data-link=true>Prose</a>\n    <ul class='dropdown clearfix'>\n      <li><a href='#'>Prose</a></li>\n      <li><a class='about' href='#about'><%= t('navigation.about') %></a></li>\n      <li><a class='help' href='https://github.com/prose/prose'><%= t('navigation.develop') %></a></li>\n      <li><a href='#chooselanguage'><%= t('navigation.language') %></a></li>\n    </ul>\n  </div>\n</div>\n","breadcrumb":"<span class='slash'>/</span>\n<a class='path' href='#<%= trail %>/<%= url %>'><%= name %></a>\n","chooselanguage":"<h1><%= t('chooselanguage.title') %></h1>\n<ul class='fat-list round'>\n  <% _(chooseLanguage.languages).each(function(l) { %>\n    <li>\n    <a href='#' data-code='<%= l.code %>' class='language<% if (l.code === chooseLanguage.active) { %> active<% } %>'>\n        <% if (l.code === chooseLanguage.active) { %><span class='ico checkmark fr'></span><% } %>\n        <%= l.name %>\n        <small>(<%= l.code %>)</small>\n      </a>\n    </li>\n  <% }); %>\n</ul>\n<p><%= t('chooselanguage.description') %></p>\n","dialogs":{"help":"<%\n  function formattedClass(str) {\n    return str.toLowerCase().replace(/\\s/g, '-').replace('&amp;', '');\n  };\n%>\n\n<div class='col col25'>\n  <ul class='main-menu'>\n    <% _(help).each(function(mainMenu, i) { %>\n      <li><a href='#' class='<% if (i === 0) { %>active <% } %>' data-id='<%= formattedClass(mainMenu.menuName) %>'><%= mainMenu.menuName %></a></li>\n    <% }); %>\n  </ul>\n</div>\n\n<div class='col col25'>\n  <% _(help).each(function(mainMenu, index) { %>\n  <ul class='sub-menu <%= formattedClass(mainMenu.menuName) %> <% if (index === 0) { %>active<% } %>' data-id='<%= formattedClass(mainMenu.menuName) %>'>\n      <% _(mainMenu.content).each(function(subMenu, i) { %>\n        <li><a href='#' data-id='<%= formattedClass(subMenu.menuName) %>' class='<% if (index === 0 && i === 0) { %> active<% } %>'><%= subMenu.menuName %></a></li>\n      <% }); %>\n    </ul>\n  <% }); %>\n</div>\n\n<div class='col col-last prose small'>\n  <% _(help).each(function(mainMenu, index) { %>\n    <% _(mainMenu.content).each(function(d, i) { %>\n    <div class='help-content inner help-<%= formattedClass(d.menuName) %><% if (index === 0 && i === 0) { %> active<% } %>'>\n      <%= d.data %>\n    </div>\n    <% }); %>\n  <% }); %>\n</div>\n","link":"<div class='inner'>\n  <label><%= t('dialogs.link.title') %></label>\n  <input type='text' name='href' placeholder=\"<%= t('dialogs.link.hrefPlaceholder') %>\" />\n  <input type='text' name='text' placeholder=\"<%= t('dialogs.link.textPlaceholder') %>\" />\n  <input type='text' name='title' placeholder=\"<%= t('dialogs.link.titlePlaceholder') %>\" />\n\n  <% if (relativeLinks) { %>\n    <div class='collapsible'>\n      <select data-placeholder=\"<%= t('dialogs.link.insertPlaceholder') %>\" class='chzn-select'>\n        <option value></option>\n        <% _(relativeLinks).each(function(link) { %>\n        <option value='<%= link.href %>,<%= link.text %>'><%= link.text %></option>\n        <% }); %>\n      </select>\n    </div>\n  <% } %>\n\n  <a href='#' class='button round insert' data-type='link'><%= t('dialogs.link.insert') %></a>\n</div>\n","media":"<div class='inner clearfix'>\n\n  <div <% if (assetsDirectory) { %>class='col fl'<% } %>>\n    <label><%= t('dialogs.media.title') %></label>\n\n    <% if (writable) { %>\n      <div class='contain clearfix'>\n        <span class='ico picture-add fl'></span>\n        <%= description %>\n      </div>\n    <% } %>\n\n    <input type='text' name='url' placeholder=\"<%= t('dialogs.media.hrefPlaceholder')%>\" />\n    <input type='text' name='alt' placeholder=\"<%= t('dialogs.media.altPlaceholder')%>\" />\n    <a href='#' class='button round insert' data-type='media'><%= t('dialogs.link.insert') %></a>\n      <% if (!assetsDirectory) { %>\n        <small class='caption deemphasize'><%= t('dialogs.media.help') %></small>\n      <% } %>\n  </div>\n\n  <% if (assetsDirectory) { %>\n    <div class='col col-last fl media-listing'>\n      <label><%= t('dialogs.media.choose') %></label>\n      <ul id='media'></ul>\n      <small class='caption deemphasize'><%= t('dialogs.media.helpMedia') %></small>\n    </div>\n  <% } %>\n</div>\n","mediadirectory":"<% if (type === 'tree') { %>\n  <li class='directory'>\n    <span class='mask'></span>\n    <a class='clearfix item' href='<%= path %>'>\n      <span class='ico fl small inline folder'></span>\n      <%= name %>\n    </a>\n  </li>\n<% } else { %>\n  <li class='asset'>\n    <span class='mask'></span>\n    <a class='clearfix item' href='<%= path %>' title='<%= path %>'>\n      <% if (isMedia) { %>\n        <span class='ico fl small inline media'></span>\n      <% } else { %>\n        <span class='ico fl small inline document'></span>\n      <% } %>\n      <%= name %>\n    </a>\n  </li>\n<% } %>\n"},"drawer":"<div id='orgs'></div>\n<div id='branches'></div>\n<div id='history'></div>\n<div id='drafts'></div>\n<div id='save'></div>\n<div id='settings'></div>\n","file":"<header id='heading' class='heading limiter clearfix'></header>\n<div id='modal'></div>\n\n<div id='post' class='post limiter'>\n  <div class='editor views<% if (file.markdown) { %> markdown<% } %>'>\n    <div id='diff' class='view prose diff'>\n      <h2><%= t('main.file.metaTitle') %><br />\n        <span class='deemphasize small'><%= t('main.file.metaDescription') %></span>\n      </h2>\n      <div class='diff-content inner'></div>\n    </div>\n    <div id='meta' class='view round meta'></div>\n    <div id='edit' class='view active edit'>\n      <div class='topbar-wrapper'>\n        <div class='topbar'>\n          <div id='toolbar' class='containment toolbar round'></div>\n        </div>\n      </div>\n      <div id='drop' class='drop-mask'></div>\n      <textarea id='code' class='code round inner'></textarea>\n    </div>\n    <div id='preview' class='view preview prose'></div>\n  </div>\n</div>\n","files":"<% if (data.path && data.path !== data.rooturl) { %>\n  <div class='breadcrumb'>\n    <a class='branch' href='#<%= data.url %>'>..</a>\n    <% _.each(data.parts, function(part) { %>\n      <% if (part.name !== data.rooturl) { %>\n        <span class='slash'>/</span>\n        <a class='path' href='#<%= [data.url, part.url].join(\"/\") %>'><%= part.name %></a>\n      <% } %>\n    <% }); %>\n  </div>\n<% } %>\n\n<ul class='listing'></ul>\n","header":"<% if (data.alterable) { %>\n  <div class='avatar round'><%= data.avatar %></div>\n    <a href=\"#\"><%= data.path %></a>\n  </div>\n  <div class='fl details'>\n    <h4 class='parent-trail'><a>&nbsp;</a></h4>\n    <!-- if (isNew() && !translate) placeholder, not value -->\n    <input type='text' class='headerinput' data-mode='<%= data.mode %>' <% print((data.placeholder ? 'placeholder=' : 'value=') + '\"' + data.input + '\"') %>>\n    <div class='mask'></div>\n  </div>\n<% } else { %>\n  <div style=\"display:none;\">\n    <div class='avatar round'><%= data.avatar %></div>\n    <div class='fl details'>\n      <h4><a>&nbsp;</a></h4>\n      <h2><a class='repo' href='#<%= data.path %>'><%= data.title %></a></h2>\n    </div>\n  </div>\n<% } %>\n","li":{"file":"<% if (file.binary) { %>\n  <div class='listing-icon icon round <%- file.extension %> <% if (file.media) { %>media<% } %>'></div>\n<% } else { %>\n  <a href='#edit/<%- file.branch %>/<%- file.path %>' class='listing-icon'>\n    <span class='icon round <%- file.extension %> <% if (file.markdown) { %> md<% } %> <% if (file.media) { %> media<% } %>'></span>\n  </a>\n<% } %>\n\n<div class='details'>\n  <div class='actions fr clearfix'>\n    <% if (!file.binary) { %>\n      <a class='clearfix'\n        title=\"<%= t('main.repo.edit') %>\"\n        href='#edit/<%- file.branch %>/<%- file.path %>'>\n        <%= t('main.repo.edit') %>\n      </a>\n    <% } %>\n    <% if (file.writable) { %>\n      <a\n        class='delete'\n        title=\"<%= t('main.repo.delete') %>\"\n        href='#'>\n        <span class='ico rubbish small'></span>\n      </a>\n    <% } %>\n  </div>\n  <% if (file.binary) { %>\n    <h3 class='title' title='<%- file.name %>'><%- file.name %></h3>\n  <% } else { %>\n    <h3 class='title' title='<%- file.name %>'><a class='clearfix'href='#edit/<%- file.branch %>/<%- file.path %>'><%- file.name %></a></h3>\n  <% } %>\n  <span class='deemphasize'><%- file.jailpath %></span>\n</div>\n","folder":"<a href='#tree/<%= folder.branch %>/<%= folder.path %>' class='listing-icon'>\n  <span class='icon round folder'></span>\n</a>\n\n<span class='details'>\n  <h3 class='title' title='<%= folder.name %>'>\n    <a href='#tree/<%= folder.branch %>/<%= folder.path %>'>\n      <%- folder.name %>\n    </a>\n  </h3>\n  <span class='deemphasize'><%- folder.jailpath %></span>\n</span>\n","repo":"<a class='listing-icon' href='#'>\n  <span class='icon round repo private'></span>\n</a>\n\n<div class='details'>\n  <div class='actions fr clearfix'>\n    <a href='#'>\n      <%= t('main.repos.repo') %>\n    </a>\n    <% if (repo.homepage) { %>\n      <a href='<%- repo.homepage %>'><%= t('main.repos.site') %></a>\n    <% } %>\n  </div>\n  <a href='#'>\n    <h3<% if (!repo.description) { %> class='title'<% } %>><%- repo.name %></h3>\n    <span class='deemphasize'><%- repo.description %></span>\n  </a>\n</div>\n"},"loading":"<div class='loading round clearfix'>\n  <div class='loading-icon'></div>\n  <span class=\"message\"></span>\n</div>\n","meta":{"button":"<div class='form-item'>\n  <label for='<%= meta.name %>'><%= meta.label %></label>\n  <% if (meta.help) { %><small class='deemphasize'><%= meta.help %></small><% } %>\n  <fieldset>\n    <button class='metafield round <%= meta.name %>' type='button' name='<%= meta.name %>' value='<%= meta.value %>' data-on='<%= meta.on %>' data-off='<%= meta.off %>'><%= meta.on %></button>\n  </fieldset>\n</div>\n","checkbox":"<div class='form-item'>\n  <fieldset>\n    <input class='metafield' type='checkbox' name='<%= meta.name %>' value='<%= meta.value %>'<% print(meta.checked ? 'checked' : '') %> />\n    <label class='aside' for='<%= meta.name %>'><%= meta.label %></label>\n  </fieldset>\n  <% if (meta.help) { %><small class='deemphasize'><%= meta.help %></small><% } %>\n</div>\n","multiselect":"<div class='form-item'>\n  <label for='<%= meta.name %>'><%= meta.label %></label>\n  <% if (meta.help) { %><small class='deemphasize'><%= meta.help %></small><% } %>\n\n  <fieldset>\n    <select id='<%= meta.name %>' name='<%= meta.name %>' data-placeholder='<%= meta.placeholder %>' multiple class='metafield chzn-select'>\n      <% _(meta.options).each(function(o) { %>\n        <% if (!o.lang || o.lang === meta.lang) { %>\n          <% if (o.name) { %>\n           <option value='<%= o.value %>'><%= o.name %></option>\n          <% } else if (o.value) { %>\n           <option value='<%= o.value %>'><%= o.value %></option>\n          <% } else { %>\n           <option value='<%= o %>'><%= o %></option>\n          <% } %>\n        <% } %>\n      <% }); %>\n    </select>\n  </fieldset>\n\n  <% if (meta.alterable) { %>\n    <div class='create'>\n      <input type='text' class='inline' data-select='<%= meta.name %>' />\n      <a href='#' class='round create-select inline button' data-select='<%= meta.name %>' title=\"<%= t('main.file.createMeta') %>\"><%= t('main.file.createMeta') %></a>\n    </div>\n  <% } %>\n</div>\n","raw":"<div class='form-item'>\n  <label for='raw'><%= t('main.file.rawMeta') %></label>\n  <% if (meta.help) { %><small><%= meta.help %></small><% } %>\n  <fieldset>\n    <div name='raw' id='raw' class='metafield inner'></div>\n  </fieldset>\n</div>\n","select":"<div class='form-item'>\n  <label for='<%= meta.name %>'><%= meta.label %></label>\n  <% if (meta.help) { %><small class='deemphasize'><%= meta.help %></small><% } %>\n\n  <fieldset>\n    <select name='<%= meta.name %>' data-placeholder='<%= meta.placeholder %>' class='metafield chzn-select'>\n      <% _(meta.options).each(function(o) { %>\n        <% if (!o.lang || o.lang === meta.lang) { %>\n          <% if (o.name) { %>\n           <option value='<%= o.value %>'><%= o.name %></option>\n          <% } else if (o.value) { %>\n           <option value='<%= o.value %>'><%= o.value %></option>\n          <% } else { %>\n           <option value='<%= o %>'><%= o %></option>\n          <% } %>\n        <% } %>\n      <% }); %>\n    </select>\n  </fieldset>\n</div>\n","text":"<div class='form-item'>\n  <label for='<%= meta.name %>'><%= meta.label %></label>\n  <% if (meta.help) { %><small class='deemphasize'><%= meta.help %></small><% } %>\n  <fieldset>\n    <input class='metafield' type='text' name='<%= meta.name %>' value='<%= meta.value %>' data-type='<%= meta.type %>' placeholder='<%= meta.placeholder %>' />\n  </fieldset>\n</div>\n","textarea":"<div class='form-item yaml-block'>\n  <label for='<%= meta.name %>'><%= meta.label %></label>\n  <% if (meta.help) { %><small class='deemphasize'><%= meta.help %></small><% } %>\n  <fieldset>\n    <textarea class='metafield' id='<%= meta.id %>' type='text' name='<%= meta.name %>' data-type='<%= meta.type %>' placeholder='<%= meta.placeholder %>'><%= meta.value %></textarea>\n  </fieldset>\n</div>\n"},"metadata":"<div class='form'></div>\n<a href='#' class='button round finish'><%= t('main.file.back') %></a>\n","modal":"<div class='modal-content round'>\n  <div class='modal-heading inner'>\n    <%= t('modal.errorHeading') %>\n  </div>\n  <div class='prose inner'>\n    <p><%= modal.message %></p>\n  </div>\n  <div class='modal-footer inner'>\n    <a href='#' class='button round got-it'><%= t('modal.confirm') %></a>\n  </div>\n</div>\n","nav":"<ul class='mobile nav clearfix'>\n  <li>\n    <a href='#' class='toggle ico menu round'></a>\n  </li>\n</ul>\n\n<ul class='file nav clearfix'>\n  <li>\n    <a href='#' title=\"<%= t('navigation.edit') %>\" class='ico round pencil edit' data-state='edit'>\n      <span class='popup round arrow-right'><%= t('navigation.edit') %></span>\n    </a>\n  </li>\n\n  <li>\n    <a href='#' title=\"<%= t('navigation.preview') %>\" class='ico round eye blob preview' data-state='blob'>\n      <span class='popup round arrow-right'><%= t('navigation.preview') %></span>\n    </a>\n  </li>\n\n  <li>\n    <a href='#' title=\"<%= t('navigation.meta') %>\" class='ico round metadata meta' data-state='meta'>\n      <span class='popup round arrow-right'><%= t('navigation.meta') %></span>\n    </a>\n  </li>\n\n  <li>\n    <a href='#' title=\"<%= t('navigation.settings') %>\" class='ico round sprocket settings' data-state='settings' data-drawer=true>\n      <span class='popup round arrow-right'><%= t('navigation.settings') %></span>\n    </a>\n  </li>\n\n  <li>\n    <a href='#' title=\"<%= t('navigation.save') %>\" class='ico round save' data-state='save'>\n      <div class='status'></div>\n      <span class='popup round arrow-right'>\n        <%= t('navigation.save') %>\n      </span>\n    </a>\n  </li>\n</ul>\n","notification":"<div class='notify'>\n  <h2 class='icon landing error'>Prose</h2>\n  <div class='inner'>\n    <p><%= data.message %></p>\n    <p class='error'><%= data.error %></p>\n\n    <% _(data.options).each(function(options) { %>\n    <div>\n      <a class='button round <% if(options.className) { %><%= options.className %><% } %>' href='<%= options.link %>'><%= options.title %></a>\n    </div>\n    <% }); %>\n  </div>\n</div>\n","profile":"<header id='heading' class='heading limiter clearfix'></header>\n\n<div id='content' class='application content limiter'>\n  <div class='topbar'>\n    <div id='search' class='content-search round'></div>\n  </div>\n  <ul id='repos' class='projects listing'></ul>\n</div>\n","repo":"<header id='heading' class='heading limiter clearfix'></header>\n\n<div id='content' class='application content limiter'>\n  <div class='topbar clearfix'>\n    <!-- if repo and authenticated -->\n    <!-- #user/repo/new/branch/path -->\n    <div id='search' class='fl content-search round'></div>\n    <a href='#' class='fl button round new new-file' data-state='new'>\n      <%= t('navigation.newFile') %>\n    </a>\n  </div>\n\n  <div id='files'></div>\n</div>\n","search":"<span class='ico search'></span>\n<input type='text' id='filter' placeholder=\"<%= search.placeholder %>\" />\n","sidebar":{"branches":"<div class='inner'>\n  <h2 class='label'><%= t('sidebar.repo.branch') %></h2>\n  <select class='chzn-select'></select>\n</div>\n","drafts":"<a class='button round' href='#<%= link %>'><%= t('sidebar.repo.drafts') %></a>\n","label":"<div class='inner'>\n  <h2 class='label inner'><%= label %></h2>\n</div>\n","li":{"commit":"<a class='<%= data.status %>' href='#<%- [data.mode, data.branch, data.path].join(\"/\") %>'>\n  <span class='ico small inline <%= data.status %>'></span>\n  <span class='message'><%- data.file.filename %></span>\n</a>\n"},"orgs":"<div class='inner'>\n  <h2 class='label'><%= t('sidebar.repos.groups') %></h2>\n</div>\n<ul class='listing'>\n  <li>\n    <a href='#<%= orgs.login.user %>' title='<%= orgs.login.user %>' data-id='<%= orgs.login.id %>'>\n      <%= orgs.login.user %>\n    </a>\n  </li>\n  <% orgs.orgs.each(function(org) {  %>\n  <li>\n    <a href='#<%= org.login %>' title='<%= org.login %>' data-id='<%= org.id %>'>\n      <%= org.login %>\n    </a>\n  </li>\n  <% }); %>\n</ul>\n","save":"<div class='inner'>\n  <h2 class='label'><%= t('sidebar.save.label') %></h2>\n</div>\n<div class='inner authoring'>\n  <div class='commit'>\n    <textarea class='commit-message' placeholder></textarea>\n    <a class='ico small cancel round' title=\"<%= t('sidebar.save.cancel') %>\" href='#' data-action='cancel'>\n      <span class='popup round arrow-bottom'><%= t('sidebar.save.cancel') %></span>\n    </a>\n  </div>\n  <a class='confirm button round' href='#' data-action='confirm'><%= writable %></a>\n</div>\n","settings":"<div class='inner'>\n  <h2 class='label'><%= t('sidebar.settings.title') %></h2>\n</div>\n<div class='inner authoring'>\n  <% if (/^_posts/.test(settings.path)) { %>\n    <a class='draft button round' href='#' data-action='draft'><%= t('sidebar.settings.draft') %></a>\n  <% } %>\n  \n  <% if (settings.languages && settings.lang !== 'yaml') { %>\n    <% _.each(settings.languages, function(l) { %>\n      <% if (l.value && (settings.metadata && (settings.metadata.lang !== l.value))) { %>\n        <a class='translate round button' href='#<%= l.value %>' data-action='translate'><%= t('sidebar.settings.translate') + ' ' + l.name %></a>\n      <% } %>\n    <% }); %>\n  <% } %>\n\n  <!-- if !isNew() and is writable -->\n  <a class='delete button round' href='#' data-action='destroy'><%= t('sidebar.settings.delete') %></a>\n</div>\n\n<% if (settings.fileInput) { %>\n  <div class='inner'>\n    <h2 class='label'><%= t('sidebar.settings.fileInputLabel') %></h2>\n    <input type='text' class='filepath' placeholder='<%= settings.path %>' value='<%= settings.path %>'>\n  </div>\n<% } %>\n"},"start":"<div class='round splash'>\n  <h2 class='icon landing'>Prose</h2>\n  <div class='inner'>\n    <p><%= t('main.start.content') %></p>\n    <p><a href='#about'><%= t('main.start.learn') %></a></p>\n    <a class='round button' href='<%= auth.site %>/login/oauth/authorize?client_id=<%= auth.id %>&scope=<%- auth.scope %>'><%= t('login') %></a>\n    <div class=\"toggle-hide\">\n      <a href=\"#scopes\" class=\"deemphasize\">Set repository access</a>\n      <select>\n        <option value=\"repo\" <% if (auth.scope === 'repo') {%>selected<% } %>>Public and private repositories</option>\n        <option value=\"public_repo\" <% if (auth.scope === 'public_repo') {%>selected<% } %>>Only public repositories</option>\n      </select>\n    </div>\n  </div>\n</div>\n","toolbar":"<% if (toolbar.draft) { %>\n  <a href='#' class='draft-to-post round contain'>\n    <%= t('actions.draft.toPost') %><span class='ico small checkmark'></span>\n    <span class='popup round arrow-top'><%= t('actions.draft.toPostInfo') %></span>\n  </a>\n<% } else { %>\n  <% if (toolbar.metadata && toolbar.metadata.published) { %>\n    <a href='#' class='publish-flag published round contain' data-state='true'>\n      <%= t('actions.publishing.published') %><span class='ico small checkmark'></span>\n    </a>\n  <% } else if (toolbar.metadata && !toolbar.metadata.published) { %>\n    <a href='#' class='publish-flag round contain' data-state='false'>\n      <%= t('actions.publishing.unpublished') %><span class='ico small checkmark'></span>\n    </a>\n  <% } %>\n<% } %>\n\n<% if (toolbar.markdown) { %>\n<div class='options clearfix'>\n  <ul class='group round clearfix'>\n    <li><a href='#' title=\"<%= t('toolbar.heading') %>\" data-key='heading' data-snippet='<% print(\"##\\n\\n\") %>'>h2</a></li>\n    <li><a href='#' title=\"<%= t('toolbar.subHeading') %>\" data-key='sub-heading' data-snippet='<% print(\"###\\n\\n\") %>'>h3</a></li>\n  </ul>\n  <ul class='group round clearfix'>\n    <li>\n      <a title=\"<%= t('toolbar.link') %>\" href='#' data-key='link' data-snippet=false data-dialog=true>\n        <span class='ico small link'></span>\n      </a>\n    </li>\n    <li>\n      <a title=\"<%= t('toolbar.image') %>\" href='#' data-key='media' data-snippet=false data-dialog=true>\n        <span class='ico small picture'></span>\n      </a>\n    </li>\n  </ul>\n  <ul class='group round clearfix'>\n    <li><a href='#' title=\"<%= t('toolbar.bold') %>\" data-key='bold' data-snippet='****'>B</a></li>\n    <li>\n      <a data-key='italic' href='#' title=\"<%= t('toolbar.italic') %>\" data-snippet='__'>\n        <span class='ico small italic'></span>\n      </a>\n    </li>\n  </ul>\n  <ul class='group round clearfix'>\n    <li>\n      <a title=\"<%= t('toolbar.blockquote') %>\"  href='#' data-key='quote' data-snippet='<% print(\"> We loved with a love that was more than love\\n\\n\"); %>'>\n        <span class='ico small quote'></span>\n      </a>\n    </li>\n    <li>\n      <a href='#' title=\"<%= t('toolbar.list') %>\" data-key='list' data-snippet='<% print(\"- item\\n- item\\n- item\\n\\n\"); %>'>\n        <span class='ico small list'></span>\n      </a>\n    </li>\n    <li>\n      <a href='#' title=\"<%= t('toolbar.numberedlist') %>\" data-key='numbered-list' data-snippet='<% print(\"1. item\\n2. item\\n3. item\\n\\n\"); %>'>\n        <span class='ico small numbered-list'></span>\n      </a>\n    </li>\n  </ul>\n  <ul class='group round clearfix'>\n    <li>\n    <a class='round' title=\"<%= t('toolbar.help') %>\" href='#' data-key='help' data-snippet=false data-dialog=true>\n        <span class='ico small question'></span>\n      </a>\n    </li>\n  </ul>\n</div>\n<% } %>\n<div id='dialog'></div>\n"};
+module.exports = {"app":"<% if (locale.current() === 'he-IL') { %>\n  <link rel='stylesheet' href='./style-rtl.css'>\n<% } %>\n\n<div id='loader' class='loader'></div>\n<div id='drawer' class='sidebar' <% if (locale.current() === 'he-IL') { %>dir='rtl'<% } %>></div>\n<nav id='navigation'></nav>\n<div id='main' <% if (locale.current() === 'he-IL') { %>dir='rtl'<% } %>></div>\n\n<div class='prose-menu dropdown-menu' <% if (locale.current() === 'he-IL') { %>dir='rtl'<% } %>>\n  <div class='inner clearfix'>\n    <a href='#' class='icon branding dropdown-hover' data-link=true>Prose</a>\n    <ul class='dropdown clearfix'>\n      <li><a href='/'>Home</a></li>\n      <li><a href='#'>Prose</a></li>\n      <li><a class='about' href='#about'><%= t('navigation.about') %></a></li>\n      <li><a class='help' href='https://github.com/prose/prose'><%= t('navigation.develop') %></a></li>\n      <li><a href='#chooselanguage'><%= t('navigation.language') %></a></li>\n    </ul>\n  </div>\n</div>\n","breadcrumb":"<span class='slash'>/</span>\n<a class='path' href='#<%= trail %>/<%= url %>'><%= name %></a>\n","chooselanguage":"<h1><%= t('chooselanguage.title') %></h1>\n<ul class='fat-list round'>\n  <% _(chooseLanguage.languages).each(function(l) { %>\n    <li>\n    <a href='#' data-code='<%= l.code %>' class='language<% if (l.code === chooseLanguage.active) { %> active<% } %>'>\n        <% if (l.code === chooseLanguage.active) { %><span class='ico checkmark fr'></span><% } %>\n        <%= l.name %>\n        <small>(<%= l.code %>)</small>\n      </a>\n    </li>\n  <% }); %>\n</ul>\n<p><%= t('chooselanguage.description') %></p>\n","dialogs":{"help":"<%\n  function formattedClass(str) {\n    return str.toLowerCase().replace(/\\s/g, '-').replace('&amp;', '');\n  };\n%>\n\n<div class='col col25'>\n  <ul class='main-menu'>\n    <% _(help).each(function(mainMenu, i) { %>\n      <li><a href='#' class='<% if (i === 0) { %>active <% } %>' data-id='<%= formattedClass(mainMenu.menuName) %>'><%= mainMenu.menuName %></a></li>\n    <% }); %>\n  </ul>\n</div>\n\n<div class='col col25'>\n  <% _(help).each(function(mainMenu, index) { %>\n  <ul class='sub-menu <%= formattedClass(mainMenu.menuName) %> <% if (index === 0) { %>active<% } %>' data-id='<%= formattedClass(mainMenu.menuName) %>'>\n      <% _(mainMenu.content).each(function(subMenu, i) { %>\n        <li><a href='#' data-id='<%= formattedClass(subMenu.menuName) %>' class='<% if (index === 0 && i === 0) { %> active<% } %>'><%= subMenu.menuName %></a></li>\n      <% }); %>\n    </ul>\n  <% }); %>\n</div>\n\n<div class='col col-last prose small'>\n  <% _(help).each(function(mainMenu, index) { %>\n    <% _(mainMenu.content).each(function(d, i) { %>\n    <div class='help-content inner help-<%= formattedClass(d.menuName) %><% if (index === 0 && i === 0) { %> active<% } %>'>\n      <%= d.data %>\n    </div>\n    <% }); %>\n  <% }); %>\n</div>\n","link":"<div class='inner'>\n  <label><%= t('dialogs.link.title') %></label>\n  <input type='text' name='href' placeholder=\"<%= t('dialogs.link.hrefPlaceholder') %>\" />\n  <input type='text' name='text' placeholder=\"<%= t('dialogs.link.textPlaceholder') %>\" />\n  <input type='text' name='title' placeholder=\"<%= t('dialogs.link.titlePlaceholder') %>\" />\n\n  <% if (relativeLinks) { %>\n    <div class='collapsible'>\n      <select data-placeholder=\"<%= t('dialogs.link.insertPlaceholder') %>\" class='chzn-select'>\n        <option value></option>\n        <% _(relativeLinks).each(function(link) { %>\n        <option value='<%= link.href %>,<%= link.text %>'><%= link.text %></option>\n        <% }); %>\n      </select>\n    </div>\n  <% } %>\n\n  <a href='#' class='button round insert' data-type='link'><%= t('dialogs.link.insert') %></a>\n</div>\n","media":"<div class='inner clearfix'>\n\n  <div <% if (assetsDirectory) { %>class='col fl'<% } %>>\n    <label><%= t('dialogs.media.title') %></label>\n\n    <% if (writable) { %>\n      <div class='contain clearfix'>\n        <span class='ico picture-add fl'></span>\n        <%= description %>\n      </div>\n    <% } %>\n\n    <input type='text' name='url' placeholder=\"<%= t('dialogs.media.hrefPlaceholder')%>\" />\n    <input type='text' name='alt' placeholder=\"<%= t('dialogs.media.altPlaceholder')%>\" />\n    <a href='#' class='button round insert' data-type='media'><%= t('dialogs.link.insert') %></a>\n      <% if (!assetsDirectory) { %>\n        <small class='caption deemphasize'><%= t('dialogs.media.help') %></small>\n      <% } %>\n  </div>\n\n  <% if (assetsDirectory) { %>\n    <div class='col col-last fl media-listing'>\n      <label><%= t('dialogs.media.choose') %></label>\n      <ul id='media'></ul>\n      <small class='caption deemphasize'><%= t('dialogs.media.helpMedia') %></small>\n    </div>\n  <% } %>\n</div>\n","mediadirectory":"<% if (type === 'tree') { %>\n  <li class='directory'>\n    <span class='mask'></span>\n    <a class='clearfix item' href='<%= path %>'>\n      <span class='ico fl small inline folder'></span>\n      <%= name %>\n    </a>\n  </li>\n<% } else { %>\n  <li class='asset'>\n    <span class='mask'></span>\n    <a class='clearfix item' href='<%= path %>' title='<%= path %>'>\n      <% if (isMedia) { %>\n        <span class='ico fl small inline media'></span>\n      <% } else { %>\n        <span class='ico fl small inline document'></span>\n      <% } %>\n      <%= name %>\n    </a>\n  </li>\n<% } %>\n"},"drawer":"<div id='orgs'></div>\n<div id='branches'></div>\n<div id='history'></div>\n<div id='drafts'></div>\n<div id='save'></div>\n<div id='settings'></div>\n","file":"<header id='heading' class='heading limiter clearfix'></header>\n<div id='modal'></div>\n\n<div id='post' class='post limiter'>\n  <div class='editor views<% if (file.markdown) { %> markdown<% } %>'>\n    <div id='diff' class='view prose diff'>\n      <h2><%= t('main.file.metaTitle') %><br />\n        <span class='deemphasize small'><%= t('main.file.metaDescription') %></span>\n      </h2>\n      <div class='diff-content inner'></div>\n    </div>\n    <div id='meta' class='view round meta'></div>\n    <div id='edit' class='view active edit'>\n      <div class='topbar-wrapper'>\n        <div class='topbar'>\n          <div id='toolbar' class='containment toolbar round'></div>\n        </div>\n      </div>\n      <div id='drop' class='drop-mask'></div>\n      <textarea id='code' class='code round inner'></textarea>\n    </div>\n    <div id='preview' class='view preview prose'></div>\n  </div>\n</div>\n","files":"<% if (data.path && data.path !== data.rooturl) { %>\n  <div class='breadcrumb'>\n    <a class='branch' href='#<%= data.url %>'>..</a>\n    <% _.each(data.parts, function(part) { %>\n      <% if (part.name !== data.rooturl) { %>\n        <span class='slash'>/</span>\n        <a class='path' href='#<%= [data.url, part.url].join(\"/\") %>'><%= part.name %></a>\n      <% } %>\n    <% }); %>\n  </div>\n<% } %>\n\n<ul class='listing'></ul>\n","header":"<% if (data.alterable) { %>\n  <div class='avatar round'><%= data.avatar %></div>\n    <a href=\"#\"><%= data.path %></a>\n  </div>\n  <div class='fl details'>\n    <h4 class='parent-trail'><a>&nbsp;</a></h4>\n    <!-- if (isNew() && !translate) placeholder, not value -->\n    <input type='text' class='headerinput' data-mode='<%= data.mode %>' <% print((data.placeholder ? 'placeholder=' : 'value=') + '\"' + data.input + '\"') %>>\n    <div class='mask'></div>\n  </div>\n<% } else { %>\n  <div style=\"display:none;\">\n    <div class='avatar round'><%= data.avatar %></div>\n    <div class='fl details'>\n      <h4><a>&nbsp;</a></h4>\n      <h2><a class='repo' href='#<%= data.path %>'><%= data.title %></a></h2>\n    </div>\n  </div>\n<% } %>\n","li":{"file":"<% if (file.binary) { %>\n  <div class='listing-icon icon round <%- file.extension %> <% if (file.media) { %>media<% } %>'></div>\n<% } else { %>\n  <a href='#edit/<%- file.branch %>/<%- file.path %>' class='listing-icon'>\n    <span class='icon round <%- file.extension %> <% if (file.markdown) { %> md<% } %> <% if (file.media) { %> media<% } %>'></span>\n  </a>\n<% } %>\n\n<div class='details'>\n  <div class='actions fr clearfix'>\n    <% if (!file.binary) { %>\n      <a class='clearfix'\n        title=\"<%= t('main.repo.edit') %>\"\n        href='#edit/<%- file.branch %>/<%- file.path %>'>\n        <%= t('main.repo.edit') %>\n      </a>\n    <% } %>\n    <% if (file.writable) { %>\n      <a\n        class='delete'\n        title=\"<%= t('main.repo.delete') %>\"\n        href='#'>\n        <span class='ico rubbish small'></span>\n      </a>\n    <% } %>\n  </div>\n  <% if (file.binary) { %>\n    <h3 class='title' title='<%- file.name %>'><%- file.name %></h3>\n  <% } else { %>\n    <h3 class='title' title='<%- file.name %>'><a class='clearfix'href='#edit/<%- file.branch %>/<%- file.path %>'><%- file.name %></a></h3>\n  <% } %>\n  <span class='deemphasize'><%- file.jailpath %></span>\n</div>\n","folder":"<a href='#tree/<%= folder.branch %>/<%= folder.path %>' class='listing-icon'>\n  <span class='icon round folder'></span>\n</a>\n\n<span class='details'>\n  <h3 class='title' title='<%= folder.name %>'>\n    <a href='#tree/<%= folder.branch %>/<%= folder.path %>'>\n      <%- folder.name %>\n    </a>\n  </h3>\n  <span class='deemphasize'><%- folder.jailpath %></span>\n</span>\n","repo":"<a class='listing-icon' href='#'>\n  <span class='icon round repo private'></span>\n</a>\n\n<div class='details'>\n  <div class='actions fr clearfix'>\n    <a href='#'>\n      <%= t('main.repos.repo') %>\n    </a>\n    <% if (repo.homepage) { %>\n      <a href='<%- repo.homepage %>'><%= t('main.repos.site') %></a>\n    <% } %>\n  </div>\n  <a href='#'>\n    <h3<% if (!repo.description) { %> class='title'<% } %>><%- repo.name %></h3>\n    <span class='deemphasize'><%- repo.description %></span>\n  </a>\n</div>\n"},"loading":"<div class='loading round clearfix'>\n  <div class='loading-icon'></div>\n  <span class=\"message\"></span>\n</div>\n","meta":{"button":"<div class='form-item'>\n  <label for='<%= meta.name %>'><%= meta.label %></label>\n  <% if (meta.help) { %><small class='deemphasize'><%= meta.help %></small><% } %>\n  <fieldset>\n    <button class='metafield round <%= meta.name %>' type='button' name='<%= meta.name %>' value='<%= meta.value %>' data-on='<%= meta.on %>' data-off='<%= meta.off %>'><%= meta.on %></button>\n  </fieldset>\n</div>\n","checkbox":"<div class='form-item'>\n  <fieldset>\n    <input class='metafield' type='checkbox' name='<%= meta.name %>' value='<%= meta.value %>'<% print(meta.checked ? 'checked' : '') %> />\n    <label class='aside' for='<%= meta.name %>'><%= meta.label %></label>\n  </fieldset>\n  <% if (meta.help) { %><small class='deemphasize'><%= meta.help %></small><% } %>\n</div>\n","multiselect":"<div class='form-item'>\n  <label for='<%= meta.name %>'><%= meta.label %></label>\n  <% if (meta.help) { %><small class='deemphasize'><%= meta.help %></small><% } %>\n\n  <fieldset>\n    <select id='<%= meta.name %>' name='<%= meta.name %>' data-placeholder='<%= meta.placeholder %>' multiple class='metafield chzn-select'>\n      <% _(meta.options).each(function(o) { %>\n        <% if (!o.lang || o.lang === meta.lang) { %>\n          <% if (o.name) { %>\n           <option value='<%= o.value %>'><%= o.name %></option>\n          <% } else if (o.value) { %>\n           <option value='<%= o.value %>'><%= o.value %></option>\n          <% } else { %>\n           <option value='<%= o %>'><%= o %></option>\n          <% } %>\n        <% } %>\n      <% }); %>\n    </select>\n  </fieldset>\n\n  <% if (meta.alterable) { %>\n    <div class='create'>\n      <input type='text' class='inline' data-select='<%= meta.name %>' />\n      <a href='#' class='round create-select inline button' data-select='<%= meta.name %>' title=\"<%= t('main.file.createMeta') %>\"><%= t('main.file.createMeta') %></a>\n    </div>\n  <% } %>\n</div>\n","raw":"<div class='form-item'>\n  <label for='raw'><%= t('main.file.rawMeta') %></label>\n  <% if (meta.help) { %><small><%= meta.help %></small><% } %>\n  <fieldset>\n    <div name='raw' id='raw' class='metafield inner'></div>\n  </fieldset>\n</div>\n","select":"<div class='form-item'>\n  <label for='<%= meta.name %>'><%= meta.label %></label>\n  <% if (meta.help) { %><small class='deemphasize'><%= meta.help %></small><% } %>\n\n  <fieldset>\n    <select name='<%= meta.name %>' data-placeholder='<%= meta.placeholder %>' class='metafield chzn-select'>\n      <% _(meta.options).each(function(o) { %>\n        <% if (!o.lang || o.lang === meta.lang) { %>\n          <% if (o.name) { %>\n           <option value='<%= o.value %>'><%= o.name %></option>\n          <% } else if (o.value) { %>\n           <option value='<%= o.value %>'><%= o.value %></option>\n          <% } else { %>\n           <option value='<%= o %>'><%= o %></option>\n          <% } %>\n        <% } %>\n      <% }); %>\n    </select>\n  </fieldset>\n</div>\n","text":"<div class='form-item'>\n  <label for='<%= meta.name %>'><%= meta.label %></label>\n  <% if (meta.help) { %><small class='deemphasize'><%= meta.help %></small><% } %>\n  <fieldset>\n    <input class='metafield' type='text' name='<%= meta.name %>' value='<%= meta.value %>' data-type='<%= meta.type %>' placeholder='<%= meta.placeholder %>' />\n  </fieldset>\n</div>\n","textarea":"<div class='form-item yaml-block'>\n  <label for='<%= meta.name %>'><%= meta.label %></label>\n  <% if (meta.help) { %><small class='deemphasize'><%= meta.help %></small><% } %>\n  <fieldset>\n    <textarea class='metafield' id='<%= meta.id %>' type='text' name='<%= meta.name %>' data-type='<%= meta.type %>' placeholder='<%= meta.placeholder %>'><%= meta.value %></textarea>\n  </fieldset>\n</div>\n"},"metadata":"<div class='form'></div>\n<a href='#' class='button round finish'><%= t('main.file.back') %></a>\n","modal":"<div class='modal-content round'>\n  <div class='modal-heading inner'>\n    <%= t('modal.errorHeading') %>\n  </div>\n  <div class='prose inner'>\n    <p><%= modal.message %></p>\n  </div>\n  <div class='modal-footer inner'>\n    <a href='#' class='button round got-it'><%= t('modal.confirm') %></a>\n  </div>\n</div>\n","nav":"<ul class='mobile nav clearfix'>\n  <li>\n    <a href='#' class='toggle ico menu round'></a>\n  </li>\n</ul>\n\n<ul class='file nav clearfix'>\n  <li>\n    <a href='#' title=\"<%= t('navigation.edit') %>\" class='ico round pencil edit' data-state='edit'>\n      <span class='popup round arrow-right'><%= t('navigation.edit') %></span>\n    </a>\n  </li>\n\n  <li>\n    <a href='#' title=\"<%= t('navigation.preview') %>\" class='ico round eye blob preview' data-state='blob'>\n      <span class='popup round arrow-right'><%= t('navigation.preview') %></span>\n    </a>\n  </li>\n\n  <li>\n    <a href='#' title=\"<%= t('navigation.meta') %>\" class='ico round metadata meta' data-state='meta'>\n      <span class='popup round arrow-right'><%= t('navigation.meta') %></span>\n    </a>\n  </li>\n\n  <li>\n    <a href='#' title=\"<%= t('navigation.settings') %>\" class='ico round sprocket settings' data-state='settings' data-drawer=true>\n      <span class='popup round arrow-right'><%= t('navigation.settings') %></span>\n    </a>\n  </li>\n\n  <li>\n    <a href='#' title=\"<%= t('navigation.save') %>\" class='ico round save' data-state='save'>\n      <div class='status'></div>\n      <span class='popup round arrow-right'>\n        <%= t('navigation.save') %>\n      </span>\n    </a>\n  </li>\n</ul>\n","notification":"<div class='notify'>\n  <h2 class='icon landing error'>Prose</h2>\n  <div class='inner'>\n    <p><%= data.message %></p>\n    <p class='error'><%= data.error %></p>\n\n    <% _(data.options).each(function(options) { %>\n    <div>\n      <a class='button round <% if(options.className) { %><%= options.className %><% } %>' href='<%= options.link %>'><%= options.title %></a>\n    </div>\n    <% }); %>\n  </div>\n</div>\n","profile":"<header id='heading' class='heading limiter clearfix'></header>\n\n<div id='content' class='application content limiter'>\n  <div class='topbar'>\n    <div id='search' class='content-search round'></div>\n  </div>\n  <ul id='repos' class='projects listing'></ul>\n</div>\n","repo":"<header id='heading' class='heading limiter clearfix'></header>\n\n<div id='content' class='application content limiter'>\n  <div class='topbar clearfix'>\n    <!-- if repo and authenticated -->\n    <!-- #user/repo/new/branch/path -->\n    <div id='search' class='fl content-search round'></div>\n    <a href='#' class='fl button round new new-file' data-state='new'>\n      <%= t('navigation.newFile') %>\n    </a>\n  </div>\n\n  <div id='files'></div>\n</div>\n","search":"<span class='ico search'></span>\n<input type='text' id='filter' placeholder=\"<%= search.placeholder %>\" />\n","sidebar":{"branches":"<div class='inner'>\n  <h2 class='label'><%= t('sidebar.repo.branch') %></h2>\n  <select class='chzn-select'></select>\n</div>\n","drafts":"<a class='button round' href='#<%= link %>'><%= t('sidebar.repo.drafts') %></a>\n","label":"<div class='inner'>\n  <h2 class='label inner'><%= label %></h2>\n</div>\n","li":{"commit":"<a class='<%= data.status %>' href='#<%- [data.mode, data.branch, data.path].join(\"/\") %>'>\n  <span class='ico small inline <%= data.status %>'></span>\n  <span class='message'><%- data.file.filename %></span>\n</a>\n"},"orgs":"<div class='inner'>\n  <h2 class='label'><%= t('sidebar.repos.groups') %></h2>\n</div>\n<ul class='listing'>\n  <li>\n    <a href='#<%= orgs.login.user %>' title='<%= orgs.login.user %>' data-id='<%= orgs.login.id %>'>\n      <%= orgs.login.user %>\n    </a>\n  </li>\n  <% orgs.orgs.each(function(org) {  %>\n  <li>\n    <a href='#<%= org.login %>' title='<%= org.login %>' data-id='<%= org.id %>'>\n      <%= org.login %>\n    </a>\n  </li>\n  <% }); %>\n</ul>\n","save":"<div class='inner'>\n  <h2 class='label'><%= t('sidebar.save.label') %></h2>\n</div>\n<div class='inner authoring'>\n  <div class='commit'>\n    <textarea class='commit-message' placeholder></textarea>\n    <a class='ico small cancel round' title=\"<%= t('sidebar.save.cancel') %>\" href='#' data-action='cancel'>\n      <span class='popup round arrow-bottom'><%= t('sidebar.save.cancel') %></span>\n    </a>\n  </div>\n  <a class='confirm button round' href='#' data-action='confirm'><%= writable %></a>\n</div>\n","settings":"<div class='inner'>\n  <h2 class='label'><%= t('sidebar.settings.title') %></h2>\n</div>\n<div class='inner authoring'>\n  <% if (/^_posts/.test(settings.path)) { %>\n    <a class='draft button round' href='#' data-action='draft'><%= t('sidebar.settings.draft') %></a>\n  <% } %>\n  \n  <% if (settings.languages && settings.lang !== 'yaml') { %>\n    <% _.each(settings.languages, function(l) { %>\n      <% if (l.value && (settings.metadata && (settings.metadata.lang !== l.value))) { %>\n        <a class='translate round button' href='#<%= l.value %>' data-action='translate'><%= t('sidebar.settings.translate') + ' ' + l.name %></a>\n      <% } %>\n    <% }); %>\n  <% } %>\n\n  <!-- if !isNew() and is writable -->\n  <a class='delete button round' href='#' data-action='destroy'><%= t('sidebar.settings.delete') %></a>\n</div>\n\n<% if (settings.fileInput) { %>\n  <div class='inner'>\n    <h2 class='label'><%= t('sidebar.settings.fileInputLabel') %></h2>\n    <input type='text' class='filepath' placeholder='<%= settings.path %>' value='<%= settings.path %>'>\n  </div>\n<% } %>\n"},"start":"<div class='round splash'>\n  <h2 class='icon landing'>Prose</h2>\n  <div class='inner'>\n    <p><%= t('main.start.content') %></p>\n    <p><a href='#about'><%= t('main.start.learn') %></a></p>\n    <a class='round button' href='<%= auth.site %>/login/oauth/authorize?client_id=<%= auth.id %>&scope=<%- auth.scope %>'><%= t('login') %></a>\n    <div class=\"toggle-hide\">\n      <a href=\"#scopes\" class=\"deemphasize\">Set repository access</a>\n      <select>\n        <option value=\"repo\" <% if (auth.scope === 'repo') {%>selected<% } %>>Public and private repositories</option>\n        <option value=\"public_repo\" <% if (auth.scope === 'public_repo') {%>selected<% } %>>Only public repositories</option>\n      </select>\n    </div>\n  </div>\n</div>\n","toolbar":"<% if (toolbar.draft) { %>\n  <a href='#' class='draft-to-post round contain'>\n    <%= t('actions.draft.toPost') %><span class='ico small checkmark'></span>\n    <span class='popup round arrow-top'><%= t('actions.draft.toPostInfo') %></span>\n  </a>\n<% } else { %>\n  <% if (toolbar.metadata && toolbar.metadata.published) { %>\n    <a href='#' class='publish-flag published round contain' data-state='true'>\n      <%= t('actions.publishing.published') %><span class='ico small checkmark'></span>\n    </a>\n  <% } else if (toolbar.metadata && !toolbar.metadata.published) { %>\n    <a href='#' class='publish-flag round contain' data-state='false'>\n      <%= t('actions.publishing.unpublished') %><span class='ico small checkmark'></span>\n    </a>\n  <% } %>\n<% } %>\n\n<% if (toolbar.markdown) { %>\n<div class='options clearfix'>\n  <ul class='group round clearfix'>\n    <li><a href='#' title=\"<%= t('toolbar.heading') %>\" data-key='heading' data-snippet='<% print(\"##\\n\\n\") %>'>h2</a></li>\n    <li><a href='#' title=\"<%= t('toolbar.subHeading') %>\" data-key='sub-heading' data-snippet='<% print(\"###\\n\\n\") %>'>h3</a></li>\n  </ul>\n  <ul class='group round clearfix'>\n    <li>\n      <a title=\"<%= t('toolbar.link') %>\" href='#' data-key='link' data-snippet=false data-dialog=true>\n        <span class='ico small link'></span>\n      </a>\n    </li>\n    <li>\n      <a title=\"<%= t('toolbar.image') %>\" href='#' data-key='media' data-snippet=false data-dialog=true>\n        <span class='ico small picture'></span>\n      </a>\n    </li>\n  </ul>\n  <ul class='group round clearfix'>\n    <li><a href='#' title=\"<%= t('toolbar.bold') %>\" data-key='bold' data-snippet='****'>B</a></li>\n    <li>\n      <a data-key='italic' href='#' title=\"<%= t('toolbar.italic') %>\" data-snippet='__'>\n        <span class='ico small italic'></span>\n      </a>\n    </li>\n  </ul>\n  <ul class='group round clearfix'>\n    <li>\n      <a title=\"<%= t('toolbar.blockquote') %>\"  href='#' data-key='quote' data-snippet='<% print(\"> We loved with a love that was more than love\\n\\n\"); %>'>\n        <span class='ico small quote'></span>\n      </a>\n    </li>\n    <li>\n      <a href='#' title=\"<%= t('toolbar.list') %>\" data-key='list' data-snippet='<% print(\"- item\\n- item\\n- item\\n\\n\"); %>'>\n        <span class='ico small list'></span>\n      </a>\n    </li>\n    <li>\n      <a href='#' title=\"<%= t('toolbar.numberedlist') %>\" data-key='numbered-list' data-snippet='<% print(\"1. item\\n2. item\\n3. item\\n\\n\"); %>'>\n        <span class='ico small numbered-list'></span>\n      </a>\n    </li>\n  </ul>\n  <ul class='group round clearfix'>\n    <li>\n    <a class='round' title=\"<%= t('toolbar.help') %>\" href='#' data-key='help' data-snippet=false data-dialog=true>\n        <span class='ico small question'></span>\n      </a>\n    </li>\n  </ul>\n</div>\n<% } %>\n<div id='dialog'></div>\n"};
 },{}],59:[function(require,module,exports){
 //     Backbone.js 1.0.0
 
@@ -7998,27 +7998,23 @@ module.exports = {"app":"<% if (locale.current() === 'he-IL') { %>\n  <link rel=
 },{"underscore":113}],60:[function(require,module,exports){
 
 },{}],61:[function(require,module,exports){
-(function (global){
 /*!
  * The buffer module from node.js, for the browser.
  *
  * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
  * @license  MIT
  */
-/* eslint-disable no-proto */
-
-'use strict'
 
 var base64 = require('base64-js')
 var ieee754 = require('ieee754')
-var isArray = require('isarray')
+var isArray = require('is-array')
 
 exports.Buffer = Buffer
-exports.SlowBuffer = SlowBuffer
+exports.SlowBuffer = Buffer
 exports.INSPECT_MAX_BYTES = 50
 Buffer.poolSize = 8192 // not used by this implementation
 
-var rootParent = {}
+var kMaxLength = 0x3fffffff
 
 /**
  * If `Buffer.TYPED_ARRAY_SUPPORT`:
@@ -8028,43 +8024,32 @@ var rootParent = {}
  * Browsers that support typed arrays are IE 10+, Firefox 4+, Chrome 7+, Safari 5.1+,
  * Opera 11.6+, iOS 4.2+.
  *
- * Due to various browser bugs, sometimes the Object implementation will be used even
- * when the browser supports typed arrays.
- *
  * Note:
  *
- *   - Firefox 4-29 lacks support for adding new properties to `Uint8Array` instances,
- *     See: https://bugzilla.mozilla.org/show_bug.cgi?id=695438.
+ * - Implementation must support adding new properties to `Uint8Array` instances.
+ *   Firefox 4-29 lacked support, fixed in Firefox 30+.
+ *   See: https://bugzilla.mozilla.org/show_bug.cgi?id=695438.
  *
- *   - Chrome 9-10 is missing the `TypedArray.prototype.subarray` function.
+ *  - Chrome 9-10 is missing the `TypedArray.prototype.subarray` function.
  *
- *   - IE10 has a broken `TypedArray.prototype.subarray` function which returns arrays of
- *     incorrect length in some situations.
-
- * We detect these buggy browsers and set `Buffer.TYPED_ARRAY_SUPPORT` to `false` so they
- * get the Object implementation, which is slower but behaves correctly.
+ *  - IE10 has a broken `TypedArray.prototype.subarray` function which returns arrays of
+ *    incorrect length in some situations.
+ *
+ * We detect these buggy browsers and set `Buffer.TYPED_ARRAY_SUPPORT` to `false` so they will
+ * get the Object implementation, which is slower but will work correctly.
  */
-Buffer.TYPED_ARRAY_SUPPORT = global.TYPED_ARRAY_SUPPORT !== undefined
-  ? global.TYPED_ARRAY_SUPPORT
-  : typedArraySupport()
-
-function typedArraySupport () {
+Buffer.TYPED_ARRAY_SUPPORT = (function () {
   try {
-    var arr = new Uint8Array(1)
+    var buf = new ArrayBuffer(0)
+    var arr = new Uint8Array(buf)
     arr.foo = function () { return 42 }
-    return arr.foo() === 42 && // typed array instances can be augmented
+    return 42 === arr.foo() && // typed array instances can be augmented
         typeof arr.subarray === 'function' && // chrome 9-10 lack `subarray`
-        arr.subarray(1, 1).byteLength === 0 // ie10 has broken `subarray`
+        new Uint8Array(1).subarray(1, 1).byteLength === 0 // ie10 has broken `subarray`
   } catch (e) {
     return false
   }
-}
-
-function kMaxLength () {
-  return Buffer.TYPED_ARRAY_SUPPORT
-    ? 0x7fffffff
-    : 0x3fffffff
-}
+})()
 
 /**
  * Class: Buffer
@@ -8078,222 +8063,87 @@ function kMaxLength () {
  * By augmenting the instances, we can avoid modifying the `Uint8Array`
  * prototype.
  */
-function Buffer (arg) {
-  if (!(this instanceof Buffer)) {
-    // Avoid going through an ArgumentsAdaptorTrampoline in the common case.
-    if (arguments.length > 1) return new Buffer(arg, arguments[1])
-    return new Buffer(arg)
-  }
+function Buffer (subject, encoding, noZero) {
+  if (!(this instanceof Buffer))
+    return new Buffer(subject, encoding, noZero)
 
-  if (!Buffer.TYPED_ARRAY_SUPPORT) {
-    this.length = 0
-    this.parent = undefined
-  }
+  var type = typeof subject
 
-  // Common case.
-  if (typeof arg === 'number') {
-    return fromNumber(this, arg)
-  }
-
-  // Slightly less common case.
-  if (typeof arg === 'string') {
-    return fromString(this, arg, arguments.length > 1 ? arguments[1] : 'utf8')
-  }
-
-  // Unusual.
-  return fromObject(this, arg)
-}
-
-function fromNumber (that, length) {
-  that = allocate(that, length < 0 ? 0 : checked(length) | 0)
-  if (!Buffer.TYPED_ARRAY_SUPPORT) {
-    for (var i = 0; i < length; i++) {
-      that[i] = 0
-    }
-  }
-  return that
-}
-
-function fromString (that, string, encoding) {
-  if (typeof encoding !== 'string' || encoding === '') encoding = 'utf8'
-
-  // Assumption: byteLength() return value is always < kMaxLength.
-  var length = byteLength(string, encoding) | 0
-  that = allocate(that, length)
-
-  that.write(string, encoding)
-  return that
-}
-
-function fromObject (that, object) {
-  if (Buffer.isBuffer(object)) return fromBuffer(that, object)
-
-  if (isArray(object)) return fromArray(that, object)
-
-  if (object == null) {
+  // Find the length
+  var length
+  if (type === 'number')
+    length = subject > 0 ? subject >>> 0 : 0
+  else if (type === 'string') {
+    if (encoding === 'base64')
+      subject = base64clean(subject)
+    length = Buffer.byteLength(subject, encoding)
+  } else if (type === 'object' && subject !== null) { // assume object is array-like
+    if (subject.type === 'Buffer' && isArray(subject.data))
+      subject = subject.data
+    length = +subject.length > 0 ? Math.floor(+subject.length) : 0
+  } else
     throw new TypeError('must start with number, buffer, array or string')
-  }
 
-  if (typeof ArrayBuffer !== 'undefined') {
-    if (object.buffer instanceof ArrayBuffer) {
-      return fromTypedArray(that, object)
-    }
-    if (object instanceof ArrayBuffer) {
-      return fromArrayBuffer(that, object)
-    }
-  }
-
-  if (object.length) return fromArrayLike(that, object)
-
-  return fromJsonObject(that, object)
-}
-
-function fromBuffer (that, buffer) {
-  var length = checked(buffer.length) | 0
-  that = allocate(that, length)
-  buffer.copy(that, 0, 0, length)
-  return that
-}
-
-function fromArray (that, array) {
-  var length = checked(array.length) | 0
-  that = allocate(that, length)
-  for (var i = 0; i < length; i += 1) {
-    that[i] = array[i] & 255
-  }
-  return that
-}
-
-// Duplicate of fromArray() to keep fromArray() monomorphic.
-function fromTypedArray (that, array) {
-  var length = checked(array.length) | 0
-  that = allocate(that, length)
-  // Truncating the elements is probably not what people expect from typed
-  // arrays with BYTES_PER_ELEMENT > 1 but it's compatible with the behavior
-  // of the old Buffer constructor.
-  for (var i = 0; i < length; i += 1) {
-    that[i] = array[i] & 255
-  }
-  return that
-}
-
-function fromArrayBuffer (that, array) {
-  array.byteLength // this throws if `array` is not a valid ArrayBuffer
-
-  if (Buffer.TYPED_ARRAY_SUPPORT) {
-    // Return an augmented `Uint8Array` instance, for best performance
-    that = new Uint8Array(array)
-    that.__proto__ = Buffer.prototype
-  } else {
-    // Fallback: Return an object instance of the Buffer class
-    that = fromTypedArray(that, new Uint8Array(array))
-  }
-  return that
-}
-
-function fromArrayLike (that, array) {
-  var length = checked(array.length) | 0
-  that = allocate(that, length)
-  for (var i = 0; i < length; i += 1) {
-    that[i] = array[i] & 255
-  }
-  return that
-}
-
-// Deserialize { type: 'Buffer', data: [1,2,3,...] } into a Buffer object.
-// Returns a zero-length buffer for inputs that don't conform to the spec.
-function fromJsonObject (that, object) {
-  var array
-  var length = 0
-
-  if (object.type === 'Buffer' && isArray(object.data)) {
-    array = object.data
-    length = checked(array.length) | 0
-  }
-  that = allocate(that, length)
-
-  for (var i = 0; i < length; i += 1) {
-    that[i] = array[i] & 255
-  }
-  return that
-}
-
-if (Buffer.TYPED_ARRAY_SUPPORT) {
-  Buffer.prototype.__proto__ = Uint8Array.prototype
-  Buffer.__proto__ = Uint8Array
-} else {
-  // pre-set for values that may exist in the future
-  Buffer.prototype.length = undefined
-  Buffer.prototype.parent = undefined
-}
-
-function allocate (that, length) {
-  if (Buffer.TYPED_ARRAY_SUPPORT) {
-    // Return an augmented `Uint8Array` instance, for best performance
-    that = new Uint8Array(length)
-    that.__proto__ = Buffer.prototype
-  } else {
-    // Fallback: Return an object instance of the Buffer class
-    that.length = length
-  }
-
-  var fromPool = length !== 0 && length <= Buffer.poolSize >>> 1
-  if (fromPool) that.parent = rootParent
-
-  return that
-}
-
-function checked (length) {
-  // Note: cannot use `length < kMaxLength` here because that fails when
-  // length is NaN (which is otherwise coerced to zero.)
-  if (length >= kMaxLength()) {
+  if (this.length > kMaxLength)
     throw new RangeError('Attempt to allocate Buffer larger than maximum ' +
-                         'size: 0x' + kMaxLength().toString(16) + ' bytes')
+      'size: 0x' + kMaxLength.toString(16) + ' bytes')
+
+  var buf
+  if (Buffer.TYPED_ARRAY_SUPPORT) {
+    // Preferred: Return an augmented `Uint8Array` instance for best performance
+    buf = Buffer._augment(new Uint8Array(length))
+  } else {
+    // Fallback: Return THIS instance of Buffer (created by `new`)
+    buf = this
+    buf.length = length
+    buf._isBuffer = true
   }
-  return length | 0
-}
 
-function SlowBuffer (subject, encoding) {
-  if (!(this instanceof SlowBuffer)) return new SlowBuffer(subject, encoding)
+  var i
+  if (Buffer.TYPED_ARRAY_SUPPORT && typeof subject.byteLength === 'number') {
+    // Speed optimization -- use set if we're copying from a typed array
+    buf._set(subject)
+  } else if (isArrayish(subject)) {
+    // Treat array-ish objects as a byte array
+    if (Buffer.isBuffer(subject)) {
+      for (i = 0; i < length; i++)
+        buf[i] = subject.readUInt8(i)
+    } else {
+      for (i = 0; i < length; i++)
+        buf[i] = ((subject[i] % 256) + 256) % 256
+    }
+  } else if (type === 'string') {
+    buf.write(subject, 0, encoding)
+  } else if (type === 'number' && !Buffer.TYPED_ARRAY_SUPPORT && !noZero) {
+    for (i = 0; i < length; i++) {
+      buf[i] = 0
+    }
+  }
 
-  var buf = new Buffer(subject, encoding)
-  delete buf.parent
   return buf
 }
 
-Buffer.isBuffer = function isBuffer (b) {
+Buffer.isBuffer = function (b) {
   return !!(b != null && b._isBuffer)
 }
 
-Buffer.compare = function compare (a, b) {
-  if (!Buffer.isBuffer(a) || !Buffer.isBuffer(b)) {
+Buffer.compare = function (a, b) {
+  if (!Buffer.isBuffer(a) || !Buffer.isBuffer(b))
     throw new TypeError('Arguments must be Buffers')
-  }
-
-  if (a === b) return 0
 
   var x = a.length
   var y = b.length
-
-  var i = 0
-  var len = Math.min(x, y)
-  while (i < len) {
-    if (a[i] !== b[i]) break
-
-    ++i
-  }
-
+  for (var i = 0, len = Math.min(x, y); i < len && a[i] === b[i]; i++) {}
   if (i !== len) {
     x = a[i]
     y = b[i]
   }
-
   if (x < y) return -1
   if (y < x) return 1
   return 0
 }
 
-Buffer.isEncoding = function isEncoding (encoding) {
+Buffer.isEncoding = function (encoding) {
   switch (String(encoding).toLowerCase()) {
     case 'hex':
     case 'utf8':
@@ -8312,22 +8162,24 @@ Buffer.isEncoding = function isEncoding (encoding) {
   }
 }
 
-Buffer.concat = function concat (list, length) {
-  if (!isArray(list)) throw new TypeError('list argument must be an Array of Buffers.')
+Buffer.concat = function (list, totalLength) {
+  if (!isArray(list)) throw new TypeError('Usage: Buffer.concat(list[, length])')
 
   if (list.length === 0) {
     return new Buffer(0)
+  } else if (list.length === 1) {
+    return list[0]
   }
 
   var i
-  if (length === undefined) {
-    length = 0
+  if (totalLength === undefined) {
+    totalLength = 0
     for (i = 0; i < list.length; i++) {
-      length += list[i].length
+      totalLength += list[i].length
     }
   }
 
-  var buf = new Buffer(length)
+  var buf = new Buffer(totalLength)
   var pos = 0
   for (i = 0; i < list.length; i++) {
     var item = list[i]
@@ -8337,48 +8189,47 @@ Buffer.concat = function concat (list, length) {
   return buf
 }
 
-function byteLength (string, encoding) {
-  if (typeof string !== 'string') string = '' + string
-
-  var len = string.length
-  if (len === 0) return 0
-
-  // Use a for loop to avoid recursion
-  var loweredCase = false
-  for (;;) {
-    switch (encoding) {
-      case 'ascii':
-      case 'binary':
-      // Deprecated
-      case 'raw':
-      case 'raws':
-        return len
-      case 'utf8':
-      case 'utf-8':
-        return utf8ToBytes(string).length
-      case 'ucs2':
-      case 'ucs-2':
-      case 'utf16le':
-      case 'utf-16le':
-        return len * 2
-      case 'hex':
-        return len >>> 1
-      case 'base64':
-        return base64ToBytes(string).length
-      default:
-        if (loweredCase) return utf8ToBytes(string).length // assume utf8
-        encoding = ('' + encoding).toLowerCase()
-        loweredCase = true
-    }
+Buffer.byteLength = function (str, encoding) {
+  var ret
+  str = str + ''
+  switch (encoding || 'utf8') {
+    case 'ascii':
+    case 'binary':
+    case 'raw':
+      ret = str.length
+      break
+    case 'ucs2':
+    case 'ucs-2':
+    case 'utf16le':
+    case 'utf-16le':
+      ret = str.length * 2
+      break
+    case 'hex':
+      ret = str.length >>> 1
+      break
+    case 'utf8':
+    case 'utf-8':
+      ret = utf8ToBytes(str).length
+      break
+    case 'base64':
+      ret = base64ToBytes(str).length
+      break
+    default:
+      ret = str.length
   }
+  return ret
 }
-Buffer.byteLength = byteLength
 
-function slowToString (encoding, start, end) {
+// pre-set for values that may exist in the future
+Buffer.prototype.length = undefined
+Buffer.prototype.parent = undefined
+
+// toString(encoding, start=0, end=buffer.length)
+Buffer.prototype.toString = function (encoding, start, end) {
   var loweredCase = false
 
-  start = start | 0
-  end = end === undefined || end === Infinity ? this.length : end | 0
+  start = start >>> 0
+  end = end === undefined || end === Infinity ? this.length : end >>> 0
 
   if (!encoding) encoding = 'utf8'
   if (start < 0) start = 0
@@ -8410,85 +8261,45 @@ function slowToString (encoding, start, end) {
         return utf16leSlice(this, start, end)
 
       default:
-        if (loweredCase) throw new TypeError('Unknown encoding: ' + encoding)
+        if (loweredCase)
+          throw new TypeError('Unknown encoding: ' + encoding)
         encoding = (encoding + '').toLowerCase()
         loweredCase = true
     }
   }
 }
 
-// Even though this property is private, it shouldn't be removed because it is
-// used by `is-buffer` to detect buffer instances in Safari 5-7.
-Buffer.prototype._isBuffer = true
-
-Buffer.prototype.toString = function toString () {
-  var length = this.length | 0
-  if (length === 0) return ''
-  if (arguments.length === 0) return utf8Slice(this, 0, length)
-  return slowToString.apply(this, arguments)
-}
-
-Buffer.prototype.equals = function equals (b) {
-  if (!Buffer.isBuffer(b)) throw new TypeError('Argument must be a Buffer')
-  if (this === b) return true
+Buffer.prototype.equals = function (b) {
+  if(!Buffer.isBuffer(b)) throw new TypeError('Argument must be a Buffer')
   return Buffer.compare(this, b) === 0
 }
 
-Buffer.prototype.inspect = function inspect () {
+Buffer.prototype.inspect = function () {
   var str = ''
   var max = exports.INSPECT_MAX_BYTES
   if (this.length > 0) {
     str = this.toString('hex', 0, max).match(/.{2}/g).join(' ')
-    if (this.length > max) str += ' ... '
+    if (this.length > max)
+      str += ' ... '
   }
   return '<Buffer ' + str + '>'
 }
 
-Buffer.prototype.compare = function compare (b) {
+Buffer.prototype.compare = function (b) {
   if (!Buffer.isBuffer(b)) throw new TypeError('Argument must be a Buffer')
-  if (this === b) return 0
   return Buffer.compare(this, b)
 }
 
-Buffer.prototype.indexOf = function indexOf (val, byteOffset) {
-  if (byteOffset > 0x7fffffff) byteOffset = 0x7fffffff
-  else if (byteOffset < -0x80000000) byteOffset = -0x80000000
-  byteOffset >>= 0
+// `get` will be removed in Node 0.13+
+Buffer.prototype.get = function (offset) {
+  console.log('.get() is deprecated. Access using array indexes instead.')
+  return this.readUInt8(offset)
+}
 
-  if (this.length === 0) return -1
-  if (byteOffset >= this.length) return -1
-
-  // Negative offsets start from the end of the buffer
-  if (byteOffset < 0) byteOffset = Math.max(this.length + byteOffset, 0)
-
-  if (typeof val === 'string') {
-    if (val.length === 0) return -1 // special case: looking for empty string always fails
-    return String.prototype.indexOf.call(this, val, byteOffset)
-  }
-  if (Buffer.isBuffer(val)) {
-    return arrayIndexOf(this, val, byteOffset)
-  }
-  if (typeof val === 'number') {
-    if (Buffer.TYPED_ARRAY_SUPPORT && Uint8Array.prototype.indexOf === 'function') {
-      return Uint8Array.prototype.indexOf.call(this, val, byteOffset)
-    }
-    return arrayIndexOf(this, [ val ], byteOffset)
-  }
-
-  function arrayIndexOf (arr, val, byteOffset) {
-    var foundIndex = -1
-    for (var i = 0; byteOffset + i < arr.length; i++) {
-      if (arr[byteOffset + i] === val[foundIndex === -1 ? 0 : i - foundIndex]) {
-        if (foundIndex === -1) foundIndex = i
-        if (i - foundIndex + 1 === val.length) return byteOffset + foundIndex
-      } else {
-        foundIndex = -1
-      }
-    }
-    return -1
-  }
-
-  throw new TypeError('val must be string, number or Buffer')
+// `set` will be removed in Node 0.13+
+Buffer.prototype.set = function (v, offset) {
+  console.log('.set() is deprecated. Access using array indexes instead.')
+  return this.writeUInt8(v, offset)
 }
 
 function hexWrite (buf, string, offset, length) {
@@ -8511,19 +8322,21 @@ function hexWrite (buf, string, offset, length) {
     length = strLen / 2
   }
   for (var i = 0; i < length; i++) {
-    var parsed = parseInt(string.substr(i * 2, 2), 16)
-    if (isNaN(parsed)) throw new Error('Invalid hex string')
-    buf[offset + i] = parsed
+    var byte = parseInt(string.substr(i * 2, 2), 16)
+    if (isNaN(byte)) throw new Error('Invalid hex string')
+    buf[offset + i] = byte
   }
   return i
 }
 
 function utf8Write (buf, string, offset, length) {
-  return blitBuffer(utf8ToBytes(string, buf.length - offset), buf, offset, length)
+  var charsWritten = blitBuffer(utf8ToBytes(string), buf, offset, length)
+  return charsWritten
 }
 
 function asciiWrite (buf, string, offset, length) {
-  return blitBuffer(asciiToBytes(string), buf, offset, length)
+  var charsWritten = blitBuffer(asciiToBytes(string), buf, offset, length)
+  return charsWritten
 }
 
 function binaryWrite (buf, string, offset, length) {
@@ -8531,86 +8344,73 @@ function binaryWrite (buf, string, offset, length) {
 }
 
 function base64Write (buf, string, offset, length) {
-  return blitBuffer(base64ToBytes(string), buf, offset, length)
+  var charsWritten = blitBuffer(base64ToBytes(string), buf, offset, length)
+  return charsWritten
 }
 
-function ucs2Write (buf, string, offset, length) {
-  return blitBuffer(utf16leToBytes(string, buf.length - offset), buf, offset, length)
+function utf16leWrite (buf, string, offset, length) {
+  var charsWritten = blitBuffer(utf16leToBytes(string), buf, offset, length, 2)
+  return charsWritten
 }
 
-Buffer.prototype.write = function write (string, offset, length, encoding) {
-  // Buffer#write(string)
-  if (offset === undefined) {
-    encoding = 'utf8'
-    length = this.length
-    offset = 0
-  // Buffer#write(string, encoding)
-  } else if (length === undefined && typeof offset === 'string') {
-    encoding = offset
-    length = this.length
-    offset = 0
-  // Buffer#write(string, offset[, length][, encoding])
-  } else if (isFinite(offset)) {
-    offset = offset | 0
-    if (isFinite(length)) {
-      length = length | 0
-      if (encoding === undefined) encoding = 'utf8'
-    } else {
+Buffer.prototype.write = function (string, offset, length, encoding) {
+  // Support both (string, offset, length, encoding)
+  // and the legacy (string, encoding, offset, length)
+  if (isFinite(offset)) {
+    if (!isFinite(length)) {
       encoding = length
       length = undefined
     }
-  // legacy write(string, encoding, offset, length) - remove in v0.13
-  } else {
+  } else {  // legacy
     var swap = encoding
     encoding = offset
-    offset = length | 0
+    offset = length
     length = swap
   }
 
+  offset = Number(offset) || 0
   var remaining = this.length - offset
-  if (length === undefined || length > remaining) length = remaining
-
-  if ((string.length > 0 && (length < 0 || offset < 0)) || offset > this.length) {
-    throw new RangeError('attempt to write outside buffer bounds')
-  }
-
-  if (!encoding) encoding = 'utf8'
-
-  var loweredCase = false
-  for (;;) {
-    switch (encoding) {
-      case 'hex':
-        return hexWrite(this, string, offset, length)
-
-      case 'utf8':
-      case 'utf-8':
-        return utf8Write(this, string, offset, length)
-
-      case 'ascii':
-        return asciiWrite(this, string, offset, length)
-
-      case 'binary':
-        return binaryWrite(this, string, offset, length)
-
-      case 'base64':
-        // Warning: maxLength not taken into account in base64Write
-        return base64Write(this, string, offset, length)
-
-      case 'ucs2':
-      case 'ucs-2':
-      case 'utf16le':
-      case 'utf-16le':
-        return ucs2Write(this, string, offset, length)
-
-      default:
-        if (loweredCase) throw new TypeError('Unknown encoding: ' + encoding)
-        encoding = ('' + encoding).toLowerCase()
-        loweredCase = true
+  if (!length) {
+    length = remaining
+  } else {
+    length = Number(length)
+    if (length > remaining) {
+      length = remaining
     }
   }
+  encoding = String(encoding || 'utf8').toLowerCase()
+
+  var ret
+  switch (encoding) {
+    case 'hex':
+      ret = hexWrite(this, string, offset, length)
+      break
+    case 'utf8':
+    case 'utf-8':
+      ret = utf8Write(this, string, offset, length)
+      break
+    case 'ascii':
+      ret = asciiWrite(this, string, offset, length)
+      break
+    case 'binary':
+      ret = binaryWrite(this, string, offset, length)
+      break
+    case 'base64':
+      ret = base64Write(this, string, offset, length)
+      break
+    case 'ucs2':
+    case 'ucs-2':
+    case 'utf16le':
+    case 'utf-16le':
+      ret = utf16leWrite(this, string, offset, length)
+      break
+    default:
+      throw new TypeError('Unknown encoding: ' + encoding)
+  }
+  return ret
 }
 
-Buffer.prototype.toJSON = function toJSON () {
+Buffer.prototype.toJSON = function () {
   return {
     type: 'Buffer',
     data: Array.prototype.slice.call(this._arr || this, 0)
@@ -8626,99 +8426,20 @@ function base64Slice (buf, start, end) {
 }
 
 function utf8Slice (buf, start, end) {
-  end = Math.min(buf.length, end)
-  var res = []
-
-  var i = start
-  while (i < end) {
-    var firstByte = buf[i]
-    var codePoint = null
-    var bytesPerSequence = (firstByte > 0xEF) ? 4
-      : (firstByte > 0xDF) ? 3
-      : (firstByte > 0xBF) ? 2
-      : 1
-
-    if (i + bytesPerSequence <= end) {
-      var secondByte, thirdByte, fourthByte, tempCodePoint
-
-      switch (bytesPerSequence) {
-        case 1:
-          if (firstByte < 0x80) {
-            codePoint = firstByte
-          }
-          break
-        case 2:
-          secondByte = buf[i + 1]
-          if ((secondByte & 0xC0) === 0x80) {
-            tempCodePoint = (firstByte & 0x1F) << 0x6 | (secondByte & 0x3F)
-            if (tempCodePoint > 0x7F) {
-              codePoint = tempCodePoint
-            }
-          }
-          break
-        case 3:
-          secondByte = buf[i + 1]
-          thirdByte = buf[i + 2]
-          if ((secondByte & 0xC0) === 0x80 && (thirdByte & 0xC0) === 0x80) {
-            tempCodePoint = (firstByte & 0xF) << 0xC | (secondByte & 0x3F) << 0x6 | (thirdByte & 0x3F)
-            if (tempCodePoint > 0x7FF && (tempCodePoint < 0xD800 || tempCodePoint > 0xDFFF)) {
-              codePoint = tempCodePoint
-            }
-          }
-          break
-        case 4:
-          secondByte = buf[i + 1]
-          thirdByte = buf[i + 2]
-          fourthByte = buf[i + 3]
-          if ((secondByte & 0xC0) === 0x80 && (thirdByte & 0xC0) === 0x80 && (fourthByte & 0xC0) === 0x80) {
-            tempCodePoint = (firstByte & 0xF) << 0x12 | (secondByte & 0x3F) << 0xC | (thirdByte & 0x3F) << 0x6 | (fourthByte & 0x3F)
-            if (tempCodePoint > 0xFFFF && tempCodePoint < 0x110000) {
-              codePoint = tempCodePoint
-            }
-          }
-      }
-    }
-
-    if (codePoint === null) {
-      // we did not generate a valid codePoint so insert a
-      // replacement char (U+FFFD) and advance only 1 byte
-      codePoint = 0xFFFD
-      bytesPerSequence = 1
-    } else if (codePoint > 0xFFFF) {
-      // encode to utf16 (surrogate pair dance)
-      codePoint -= 0x10000
-      res.push(codePoint >>> 10 & 0x3FF | 0xD800)
-      codePoint = 0xDC00 | codePoint & 0x3FF
-    }
-
-    res.push(codePoint)
-    i += bytesPerSequence
-  }
-
-  return decodeCodePointsArray(res)
-}
-
-// Based on http://stackoverflow.com/a/22747272/680742, the browser with
-// the lowest limit is Chrome, with 0x10000 args.
-// We go 1 magnitude less, for safety
-var MAX_ARGUMENTS_LENGTH = 0x1000
-
-function decodeCodePointsArray (codePoints) {
-  var len = codePoints.length
-  if (len <= MAX_ARGUMENTS_LENGTH) {
-    return String.fromCharCode.apply(String, codePoints) // avoid extra slice()
-  }
-
-  // Decode in chunks to avoid "call stack size exceeded".
   var res = ''
-  var i = 0
-  while (i < len) {
-    res += String.fromCharCode.apply(
-      String,
-      codePoints.slice(i, i += MAX_ARGUMENTS_LENGTH)
-    )
+  var tmp = ''
+  end = Math.min(buf.length, end)
+
+  for (var i = start; i < end; i++) {
+    if (buf[i] <= 0x7F) {
+      res += decodeUtf8Char(tmp) + String.fromCharCode(buf[i])
+      tmp = ''
+    } else {
+      tmp += '%' + buf[i].toString(16)
+    }
   }
-  return res
+
+  return res + decodeUtf8Char(tmp)
 }
 
 function asciiSlice (buf, start, end) {
@@ -8726,19 +8447,13 @@ function asciiSlice (buf, start, end) {
   end = Math.min(buf.length, end)
 
   for (var i = start; i < end; i++) {
-    ret += String.fromCharCode(buf[i] & 0x7F)
+    ret += String.fromCharCode(buf[i])
   }
   return ret
 }
 
 function binarySlice (buf, start, end) {
-  var ret = ''
-  end = Math.min(buf.length, end)
-
-  for (var i = start; i < end; i++) {
-    ret += String.fromCharCode(buf[i])
-  }
-  return ret
+  return asciiSlice(buf, start, end)
 }
 
 function hexSlice (buf, start, end) {
@@ -8763,100 +8478,73 @@ function utf16leSlice (buf, start, end) {
   return res
 }
 
-Buffer.prototype.slice = function slice (start, end) {
+Buffer.prototype.slice = function (start, end) {
   var len = this.length
   start = ~~start
   end = end === undefined ? len : ~~end
 
   if (start < 0) {
-    start += len
-    if (start < 0) start = 0
+    start += len;
+    if (start < 0)
+      start = 0
   } else if (start > len) {
     start = len
   }
 
   if (end < 0) {
     end += len
-    if (end < 0) end = 0
+    if (end < 0)
+      end = 0
   } else if (end > len) {
     end = len
   }
 
-  if (end < start) end = start
+  if (end < start)
+    end = start
 
-  var newBuf
   if (Buffer.TYPED_ARRAY_SUPPORT) {
-    newBuf = this.subarray(start, end)
-    newBuf.__proto__ = Buffer.prototype
+    return Buffer._augment(this.subarray(start, end))
   } else {
     var sliceLen = end - start
-    newBuf = new Buffer(sliceLen, undefined)
+    var newBuf = new Buffer(sliceLen, undefined, true)
     for (var i = 0; i < sliceLen; i++) {
       newBuf[i] = this[i + start]
     }
+    return newBuf
   }
-
-  if (newBuf.length) newBuf.parent = this.parent || this
-
-  return newBuf
 }
 
 /*
  * Need to make sure that buffer isn't trying to write out of bounds.
  */
 function checkOffset (offset, ext, length) {
-  if ((offset % 1) !== 0 || offset < 0) throw new RangeError('offset is not uint')
-  if (offset + ext > length) throw new RangeError('Trying to access beyond buffer length')
+  if ((offset % 1) !== 0 || offset < 0)
+    throw new RangeError('offset is not uint')
+  if (offset + ext > length)
+    throw new RangeError('Trying to access beyond buffer length')
 }
 
-Buffer.prototype.readUIntLE = function readUIntLE (offset, byteLength, noAssert) {
-  offset = offset | 0
-  byteLength = byteLength | 0
-  if (!noAssert) checkOffset(offset, byteLength, this.length)
-
-  var val = this[offset]
-  var mul = 1
-  var i = 0
-  while (++i < byteLength && (mul *= 0x100)) {
-    val += this[offset + i] * mul
-  }
-
-  return val
-}
-
-Buffer.prototype.readUIntBE = function readUIntBE (offset, byteLength, noAssert) {
-  offset = offset | 0
-  byteLength = byteLength | 0
-  if (!noAssert) {
-    checkOffset(offset, byteLength, this.length)
-  }
-
-  var val = this[offset + --byteLength]
-  var mul = 1
-  while (byteLength > 0 && (mul *= 0x100)) {
-    val += this[offset + --byteLength] * mul
-  }
-
-  return val
-}
-
-Buffer.prototype.readUInt8 = function readUInt8 (offset, noAssert) {
-  if (!noAssert) checkOffset(offset, 1, this.length)
+Buffer.prototype.readUInt8 = function (offset, noAssert) {
+  if (!noAssert)
+    checkOffset(offset, 1, this.length)
   return this[offset]
 }
 
-Buffer.prototype.readUInt16LE = function readUInt16LE (offset, noAssert) {
-  if (!noAssert) checkOffset(offset, 2, this.length)
+Buffer.prototype.readUInt16LE = function (offset, noAssert) {
+  if (!noAssert)
+    checkOffset(offset, 2, this.length)
   return this[offset] | (this[offset + 1] << 8)
 }
 
-Buffer.prototype.readUInt16BE = function readUInt16BE (offset, noAssert) {
-  if (!noAssert) checkOffset(offset, 2, this.length)
+Buffer.prototype.readUInt16BE = function (offset, noAssert) {
+  if (!noAssert)
+    checkOffset(offset, 2, this.length)
   return (this[offset] << 8) | this[offset + 1]
 }
 
-Buffer.prototype.readUInt32LE = function readUInt32LE (offset, noAssert) {
-  if (!noAssert) checkOffset(offset, 4, this.length)
+Buffer.prototype.readUInt32LE = function (offset, noAssert) {
+  if (!noAssert)
+    checkOffset(offset, 4, this.length)
 
   return ((this[offset]) |
       (this[offset + 1] << 8) |
@@ -8864,151 +8552,95 @@ Buffer.prototype.readUInt32LE = function readUInt32LE (offset, noAssert) {
       (this[offset + 3] * 0x1000000)
 }
 
-Buffer.prototype.readUInt32BE = function readUInt32BE (offset, noAssert) {
-  if (!noAssert) checkOffset(offset, 4, this.length)
+Buffer.prototype.readUInt32BE = function (offset, noAssert) {
+  if (!noAssert)
+    checkOffset(offset, 4, this.length)
 
   return (this[offset] * 0x1000000) +
-    ((this[offset + 1] << 16) |
-    (this[offset + 2] << 8) |
-    this[offset + 3])
+      ((this[offset + 1] << 16) |
+      (this[offset + 2] << 8) |
+      this[offset + 3])
 }
 
-Buffer.prototype.readIntLE = function readIntLE (offset, byteLength, noAssert) {
-  offset = offset | 0
-  byteLength = byteLength | 0
-  if (!noAssert) checkOffset(offset, byteLength, this.length)
-
-  var val = this[offset]
-  var mul = 1
-  var i = 0
-  while (++i < byteLength && (mul *= 0x100)) {
-    val += this[offset + i] * mul
-  }
-  mul *= 0x80
-
-  if (val >= mul) val -= Math.pow(2, 8 * byteLength)
-
-  return val
-}
-
-Buffer.prototype.readIntBE = function readIntBE (offset, byteLength, noAssert) {
-  offset = offset | 0
-  byteLength = byteLength | 0
-  if (!noAssert) checkOffset(offset, byteLength, this.length)
-
-  var i = byteLength
-  var mul = 1
-  var val = this[offset + --i]
-  while (i > 0 && (mul *= 0x100)) {
-    val += this[offset + --i] * mul
-  }
-  mul *= 0x80
-
-  if (val >= mul) val -= Math.pow(2, 8 * byteLength)
-
-  return val
-}
-
-Buffer.prototype.readInt8 = function readInt8 (offset, noAssert) {
-  if (!noAssert) checkOffset(offset, 1, this.length)
-  if (!(this[offset] & 0x80)) return (this[offset])
+Buffer.prototype.readInt8 = function (offset, noAssert) {
+  if (!noAssert)
+    checkOffset(offset, 1, this.length)
+  if (!(this[offset] & 0x80))
+    return (this[offset])
   return ((0xff - this[offset] + 1) * -1)
 }
 
-Buffer.prototype.readInt16LE = function readInt16LE (offset, noAssert) {
-  if (!noAssert) checkOffset(offset, 2, this.length)
+Buffer.prototype.readInt16LE = function (offset, noAssert) {
+  if (!noAssert)
+    checkOffset(offset, 2, this.length)
   var val = this[offset] | (this[offset + 1] << 8)
   return (val & 0x8000) ? val | 0xFFFF0000 : val
 }
 
-Buffer.prototype.readInt16BE = function readInt16BE (offset, noAssert) {
-  if (!noAssert) checkOffset(offset, 2, this.length)
+Buffer.prototype.readInt16BE = function (offset, noAssert) {
+  if (!noAssert)
+    checkOffset(offset, 2, this.length)
   var val = this[offset + 1] | (this[offset] << 8)
   return (val & 0x8000) ? val | 0xFFFF0000 : val
 }
 
-Buffer.prototype.readInt32LE = function readInt32LE (offset, noAssert) {
-  if (!noAssert) checkOffset(offset, 4, this.length)
+Buffer.prototype.readInt32LE = function (offset, noAssert) {
+  if (!noAssert)
+    checkOffset(offset, 4, this.length)
 
   return (this[offset]) |
-    (this[offset + 1] << 8) |
-    (this[offset + 2] << 16) |
-    (this[offset + 3] << 24)
+      (this[offset + 1] << 8) |
+      (this[offset + 2] << 16) |
+      (this[offset + 3] << 24)
 }
 
-Buffer.prototype.readInt32BE = function readInt32BE (offset, noAssert) {
-  if (!noAssert) checkOffset(offset, 4, this.length)
+Buffer.prototype.readInt32BE = function (offset, noAssert) {
+  if (!noAssert)
+    checkOffset(offset, 4, this.length)
 
   return (this[offset] << 24) |
-    (this[offset + 1] << 16) |
-    (this[offset + 2] << 8) |
-    (this[offset + 3])
+      (this[offset + 1] << 16) |
+      (this[offset + 2] << 8) |
+      (this[offset + 3])
 }
 
-Buffer.prototype.readFloatLE = function readFloatLE (offset, noAssert) {
-  if (!noAssert) checkOffset(offset, 4, this.length)
+Buffer.prototype.readFloatLE = function (offset, noAssert) {
+  if (!noAssert)
+    checkOffset(offset, 4, this.length)
   return ieee754.read(this, offset, true, 23, 4)
 }
 
-Buffer.prototype.readFloatBE = function readFloatBE (offset, noAssert) {
-  if (!noAssert) checkOffset(offset, 4, this.length)
+Buffer.prototype.readFloatBE = function (offset, noAssert) {
+  if (!noAssert)
+    checkOffset(offset, 4, this.length)
   return ieee754.read(this, offset, false, 23, 4)
 }
 
-Buffer.prototype.readDoubleLE = function readDoubleLE (offset, noAssert) {
-  if (!noAssert) checkOffset(offset, 8, this.length)
+Buffer.prototype.readDoubleLE = function (offset, noAssert) {
+  if (!noAssert)
+    checkOffset(offset, 8, this.length)
   return ieee754.read(this, offset, true, 52, 8)
 }
 
-Buffer.prototype.readDoubleBE = function readDoubleBE (offset, noAssert) {
-  if (!noAssert) checkOffset(offset, 8, this.length)
+Buffer.prototype.readDoubleBE = function (offset, noAssert) {
+  if (!noAssert)
+    checkOffset(offset, 8, this.length)
   return ieee754.read(this, offset, false, 52, 8)
 }
 
 function checkInt (buf, value, offset, ext, max, min) {
   if (!Buffer.isBuffer(buf)) throw new TypeError('buffer must be a Buffer instance')
-  if (value > max || value < min) throw new RangeError('value is out of bounds')
-  if (offset + ext > buf.length) throw new RangeError('index out of range')
+  if (value > max || value < min) throw new TypeError('value is out of bounds')
+  if (offset + ext > buf.length) throw new TypeError('index out of range')
 }
 
-Buffer.prototype.writeUIntLE = function writeUIntLE (value, offset, byteLength, noAssert) {
+Buffer.prototype.writeUInt8 = function (value, offset, noAssert) {
   value = +value
-  offset = offset | 0
-  byteLength = byteLength | 0
-  if (!noAssert) checkInt(this, value, offset, byteLength, Math.pow(2, 8 * byteLength), 0)
-
-  var mul = 1
-  var i = 0
-  this[offset] = value & 0xFF
-  while (++i < byteLength && (mul *= 0x100)) {
-    this[offset + i] = (value / mul) & 0xFF
-  }
-
-  return offset + byteLength
-}
-
-Buffer.prototype.writeUIntBE = function writeUIntBE (value, offset, byteLength, noAssert) {
-  value = +value
-  offset = offset | 0
-  byteLength = byteLength | 0
-  if (!noAssert) checkInt(this, value, offset, byteLength, Math.pow(2, 8 * byteLength), 0)
-
-  var i = byteLength - 1
-  var mul = 1
-  this[offset + i] = value & 0xFF
-  while (--i >= 0 && (mul *= 0x100)) {
-    this[offset + i] = (value / mul) & 0xFF
-  }
-
-  return offset + byteLength
-}
-
-Buffer.prototype.writeUInt8 = function writeUInt8 (value, offset, noAssert) {
-  value = +value
-  offset = offset | 0
-  if (!noAssert) checkInt(this, value, offset, 1, 0xff, 0)
+  offset = offset >>> 0
+  if (!noAssert)
+    checkInt(this, value, offset, 1, 0xff, 0)
   if (!Buffer.TYPED_ARRAY_SUPPORT) value = Math.floor(value)
-  this[offset] = (value & 0xff)
+  this[offset] = value
   return offset + 1
 }
 
@@ -9020,29 +8652,27 @@ function objectWriteUInt16 (buf, value, offset, littleEndian) {
   }
 }
 
-Buffer.prototype.writeUInt16LE = function writeUInt16LE (value, offset, noAssert) {
+Buffer.prototype.writeUInt16LE = function (value, offset, noAssert) {
   value = +value
-  offset = offset | 0
-  if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
+  offset = offset >>> 0
+  if (!noAssert)
+    checkInt(this, value, offset, 2, 0xffff, 0)
   if (Buffer.TYPED_ARRAY_SUPPORT) {
-    this[offset] = (value & 0xff)
+    this[offset] = value
     this[offset + 1] = (value >>> 8)
-  } else {
-    objectWriteUInt16(this, value, offset, true)
-  }
+  } else objectWriteUInt16(this, value, offset, true)
   return offset + 2
 }
 
-Buffer.prototype.writeUInt16BE = function writeUInt16BE (value, offset, noAssert) {
+Buffer.prototype.writeUInt16BE = function (value, offset, noAssert) {
   value = +value
-  offset = offset | 0
-  if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
+  offset = offset >>> 0
+  if (!noAssert)
+    checkInt(this, value, offset, 2, 0xffff, 0)
   if (Buffer.TYPED_ARRAY_SUPPORT) {
     this[offset] = (value >>> 8)
-    this[offset + 1] = (value & 0xff)
-  } else {
-    objectWriteUInt16(this, value, offset, false)
-  }
+    this[offset + 1] = value
+  } else objectWriteUInt16(this, value, offset, false)
   return offset + 2
 }
 
@@ -9053,244 +8683,183 @@ function objectWriteUInt32 (buf, value, offset, littleEndian) {
   }
 }
 
-Buffer.prototype.writeUInt32LE = function writeUInt32LE (value, offset, noAssert) {
+Buffer.prototype.writeUInt32LE = function (value, offset, noAssert) {
   value = +value
-  offset = offset | 0
-  if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0)
+  offset = offset >>> 0
+  if (!noAssert)
+    checkInt(this, value, offset, 4, 0xffffffff, 0)
   if (Buffer.TYPED_ARRAY_SUPPORT) {
     this[offset + 3] = (value >>> 24)
     this[offset + 2] = (value >>> 16)
     this[offset + 1] = (value >>> 8)
-    this[offset] = (value & 0xff)
-  } else {
-    objectWriteUInt32(this, value, offset, true)
-  }
+    this[offset] = value
+  } else objectWriteUInt32(this, value, offset, true)
   return offset + 4
 }
 
-Buffer.prototype.writeUInt32BE = function writeUInt32BE (value, offset, noAssert) {
+Buffer.prototype.writeUInt32BE = function (value, offset, noAssert) {
   value = +value
-  offset = offset | 0
-  if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0)
+  offset = offset >>> 0
+  if (!noAssert)
+    checkInt(this, value, offset, 4, 0xffffffff, 0)
   if (Buffer.TYPED_ARRAY_SUPPORT) {
     this[offset] = (value >>> 24)
     this[offset + 1] = (value >>> 16)
     this[offset + 2] = (value >>> 8)
-    this[offset + 3] = (value & 0xff)
-  } else {
-    objectWriteUInt32(this, value, offset, false)
-  }
+    this[offset + 3] = value
+  } else objectWriteUInt32(this, value, offset, false)
   return offset + 4
 }
 
-Buffer.prototype.writeIntLE = function writeIntLE (value, offset, byteLength, noAssert) {
+Buffer.prototype.writeInt8 = function (value, offset, noAssert) {
   value = +value
-  offset = offset | 0
-  if (!noAssert) {
-    var limit = Math.pow(2, 8 * byteLength - 1)
-
-    checkInt(this, value, offset, byteLength, limit - 1, -limit)
-  }
-
-  var i = 0
-  var mul = 1
-  var sub = value < 0 ? 1 : 0
-  this[offset] = value & 0xFF
-  while (++i < byteLength && (mul *= 0x100)) {
-    this[offset + i] = ((value / mul) >> 0) - sub & 0xFF
-  }
-
-  return offset + byteLength
-}
-
-Buffer.prototype.writeIntBE = function writeIntBE (value, offset, byteLength, noAssert) {
-  value = +value
-  offset = offset | 0
-  if (!noAssert) {
-    var limit = Math.pow(2, 8 * byteLength - 1)
-
-    checkInt(this, value, offset, byteLength, limit - 1, -limit)
-  }
-
-  var i = byteLength - 1
-  var mul = 1
-  var sub = value < 0 ? 1 : 0
-  this[offset + i] = value & 0xFF
-  while (--i >= 0 && (mul *= 0x100)) {
-    this[offset + i] = ((value / mul) >> 0) - sub & 0xFF
-  }
-
-  return offset + byteLength
-}
-
-Buffer.prototype.writeInt8 = function writeInt8 (value, offset, noAssert) {
-  value = +value
-  offset = offset | 0
-  if (!noAssert) checkInt(this, value, offset, 1, 0x7f, -0x80)
+  offset = offset >>> 0
+  if (!noAssert)
+    checkInt(this, value, offset, 1, 0x7f, -0x80)
   if (!Buffer.TYPED_ARRAY_SUPPORT) value = Math.floor(value)
   if (value < 0) value = 0xff + value + 1
-  this[offset] = (value & 0xff)
+  this[offset] = value
   return offset + 1
 }
 
-Buffer.prototype.writeInt16LE = function writeInt16LE (value, offset, noAssert) {
+Buffer.prototype.writeInt16LE = function (value, offset, noAssert) {
   value = +value
-  offset = offset | 0
-  if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
+  offset = offset >>> 0
+  if (!noAssert)
+    checkInt(this, value, offset, 2, 0x7fff, -0x8000)
   if (Buffer.TYPED_ARRAY_SUPPORT) {
-    this[offset] = (value & 0xff)
+    this[offset] = value
     this[offset + 1] = (value >>> 8)
-  } else {
-    objectWriteUInt16(this, value, offset, true)
-  }
+  } else objectWriteUInt16(this, value, offset, true)
   return offset + 2
 }
 
-Buffer.prototype.writeInt16BE = function writeInt16BE (value, offset, noAssert) {
+Buffer.prototype.writeInt16BE = function (value, offset, noAssert) {
   value = +value
-  offset = offset | 0
-  if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
+  offset = offset >>> 0
+  if (!noAssert)
+    checkInt(this, value, offset, 2, 0x7fff, -0x8000)
   if (Buffer.TYPED_ARRAY_SUPPORT) {
     this[offset] = (value >>> 8)
-    this[offset + 1] = (value & 0xff)
-  } else {
-    objectWriteUInt16(this, value, offset, false)
-  }
+    this[offset + 1] = value
+  } else objectWriteUInt16(this, value, offset, false)
   return offset + 2
 }
 
-Buffer.prototype.writeInt32LE = function writeInt32LE (value, offset, noAssert) {
+Buffer.prototype.writeInt32LE = function (value, offset, noAssert) {
   value = +value
-  offset = offset | 0
-  if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
+  offset = offset >>> 0
+  if (!noAssert)
+    checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
   if (Buffer.TYPED_ARRAY_SUPPORT) {
-    this[offset] = (value & 0xff)
+    this[offset] = value
     this[offset + 1] = (value >>> 8)
     this[offset + 2] = (value >>> 16)
     this[offset + 3] = (value >>> 24)
-  } else {
-    objectWriteUInt32(this, value, offset, true)
-  }
+  } else objectWriteUInt32(this, value, offset, true)
   return offset + 4
 }
 
-Buffer.prototype.writeInt32BE = function writeInt32BE (value, offset, noAssert) {
+Buffer.prototype.writeInt32BE = function (value, offset, noAssert) {
   value = +value
-  offset = offset | 0
-  if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
+  offset = offset >>> 0
+  if (!noAssert)
+    checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
   if (value < 0) value = 0xffffffff + value + 1
   if (Buffer.TYPED_ARRAY_SUPPORT) {
     this[offset] = (value >>> 24)
     this[offset + 1] = (value >>> 16)
     this[offset + 2] = (value >>> 8)
-    this[offset + 3] = (value & 0xff)
-  } else {
-    objectWriteUInt32(this, value, offset, false)
-  }
+    this[offset + 3] = value
+  } else objectWriteUInt32(this, value, offset, false)
   return offset + 4
 }
 
 function checkIEEE754 (buf, value, offset, ext, max, min) {
-  if (value > max || value < min) throw new RangeError('value is out of bounds')
-  if (offset + ext > buf.length) throw new RangeError('index out of range')
-  if (offset < 0) throw new RangeError('index out of range')
+  if (value > max || value < min) throw new TypeError('value is out of bounds')
+  if (offset + ext > buf.length) throw new TypeError('index out of range')
 }
 
 function writeFloat (buf, value, offset, littleEndian, noAssert) {
-  if (!noAssert) {
+  if (!noAssert)
     checkIEEE754(buf, value, offset, 4, 3.4028234663852886e+38, -3.4028234663852886e+38)
-  }
   ieee754.write(buf, value, offset, littleEndian, 23, 4)
   return offset + 4
 }
 
-Buffer.prototype.writeFloatLE = function writeFloatLE (value, offset, noAssert) {
+Buffer.prototype.writeFloatLE = function (value, offset, noAssert) {
   return writeFloat(this, value, offset, true, noAssert)
 }
 
-Buffer.prototype.writeFloatBE = function writeFloatBE (value, offset, noAssert) {
+Buffer.prototype.writeFloatBE = function (value, offset, noAssert) {
   return writeFloat(this, value, offset, false, noAssert)
 }
 
 function writeDouble (buf, value, offset, littleEndian, noAssert) {
-  if (!noAssert) {
+  if (!noAssert)
     checkIEEE754(buf, value, offset, 8, 1.7976931348623157E+308, -1.7976931348623157E+308)
-  }
   ieee754.write(buf, value, offset, littleEndian, 52, 8)
   return offset + 8
 }
 
-Buffer.prototype.writeDoubleLE = function writeDoubleLE (value, offset, noAssert) {
+Buffer.prototype.writeDoubleLE = function (value, offset, noAssert) {
   return writeDouble(this, value, offset, true, noAssert)
 }
 
-Buffer.prototype.writeDoubleBE = function writeDoubleBE (value, offset, noAssert) {
+Buffer.prototype.writeDoubleBE = function (value, offset, noAssert) {
   return writeDouble(this, value, offset, false, noAssert)
 }
 
 // copy(targetBuffer, targetStart=0, sourceStart=0, sourceEnd=buffer.length)
-Buffer.prototype.copy = function copy (target, targetStart, start, end) {
+Buffer.prototype.copy = function (target, target_start, start, end) {
+  var source = this
+
   if (!start) start = 0
   if (!end && end !== 0) end = this.length
-  if (targetStart >= target.length) targetStart = target.length
-  if (!targetStart) targetStart = 0
-  if (end > 0 && end < start) end = start
+  if (!target_start) target_start = 0
 
   // Copy 0 bytes; we're done
-  if (end === start) return 0
-  if (target.length === 0 || this.length === 0) return 0
+  if (end === start) return
+  if (target.length === 0 || source.length === 0) return
 
   // Fatal error conditions
-  if (targetStart < 0) {
-    throw new RangeError('targetStart out of bounds')
-  }
-  if (start < 0 || start >= this.length) throw new RangeError('sourceStart out of bounds')
-  if (end < 0) throw new RangeError('sourceEnd out of bounds')
+  if (end < start) throw new TypeError('sourceEnd < sourceStart')
+  if (target_start < 0 || target_start >= target.length)
+    throw new TypeError('targetStart out of bounds')
+  if (start < 0 || start >= source.length) throw new TypeError('sourceStart out of bounds')
+  if (end < 0 || end > source.length) throw new TypeError('sourceEnd out of bounds')
 
   // Are we oob?
-  if (end > this.length) end = this.length
-  if (target.length - targetStart < end - start) {
-    end = target.length - targetStart + start
-  }
+  if (end > this.length)
+    end = this.length
+  if (target.length - target_start < end - start)
+    end = target.length - target_start + start
 
   var len = end - start
-  var i
 
-  if (this === target && start < targetStart && targetStart < end) {
-    // descending copy from end
-    for (i = len - 1; i >= 0; i--) {
-      target[i + targetStart] = this[i + start]
-    }
-  } else if (len < 1000 || !Buffer.TYPED_ARRAY_SUPPORT) {
-    // ascending copy from start
-    for (i = 0; i < len; i++) {
-      target[i + targetStart] = this[i + start]
+  if (len < 1000 || !Buffer.TYPED_ARRAY_SUPPORT) {
+    for (var i = 0; i < len; i++) {
+      target[i + target_start] = this[i + start]
     }
   } else {
-    Uint8Array.prototype.set.call(
-      target,
-      this.subarray(start, start + len),
-      targetStart
-    )
+    target._set(this.subarray(start, start + len), target_start)
   }
-
-  return len
 }
 
 // fill(value, start=0, end=buffer.length)
-Buffer.prototype.fill = function fill (value, start, end) {
+Buffer.prototype.fill = function (value, start, end) {
   if (!value) value = 0
   if (!start) start = 0
   if (!end) end = this.length
 
-  if (end < start) throw new RangeError('end < start')
+  if (end < start) throw new TypeError('end < start')
 
   // Fill 0 bytes; we're done
   if (end === start) return
   if (this.length === 0) return
 
-  if (start < 0 || start >= this.length) throw new RangeError('start out of bounds')
-  if (end < 0 || end > this.length) throw new RangeError('end out of bounds')
+  if (start < 0 || start >= this.length) throw new TypeError('start out of bounds')
+  if (end < 0 || end > this.length) throw new TypeError('end out of bounds')
 
   var i
   if (typeof value === 'number') {
@@ -9308,16 +8877,94 @@ Buffer.prototype.fill = function fill (value, start, end) {
   return this
 }
 
+/**
+ * Creates a new `ArrayBuffer` with the *copied* memory of the buffer instance.
+ * Added in Node 0.12. Only available in browsers that support ArrayBuffer.
+ */
+Buffer.prototype.toArrayBuffer = function () {
+  if (typeof Uint8Array !== 'undefined') {
+    if (Buffer.TYPED_ARRAY_SUPPORT) {
+      return (new Buffer(this)).buffer
+    } else {
+      var buf = new Uint8Array(this.length)
+      for (var i = 0, len = buf.length; i < len; i += 1) {
+        buf[i] = this[i]
+      }
+      return buf.buffer
+    }
+  } else {
+    throw new TypeError('Buffer.toArrayBuffer not supported in this browser')
+  }
+}
+
 // HELPER FUNCTIONS
 // ================
 
-var INVALID_BASE64_RE = /[^+\/0-9A-Za-z-_]/g
+var BP = Buffer.prototype
+
+/**
+ * Augment a Uint8Array *instance* (not the Uint8Array class!) with Buffer methods
+ */
+Buffer._augment = function (arr) {
+  arr.constructor = Buffer
+  arr._isBuffer = true
+
+  // save reference to original Uint8Array get/set methods before overwriting
+  arr._get = arr.get
+  arr._set = arr.set
+
+  // deprecated, will be removed in node 0.13+
+  arr.get = BP.get
+  arr.set = BP.set
+
+  arr.write = BP.write
+  arr.toString = BP.toString
+  arr.toLocaleString = BP.toString
+  arr.toJSON = BP.toJSON
+  arr.equals = BP.equals
+  arr.compare = BP.compare
+  arr.copy = BP.copy
+  arr.slice = BP.slice
+  arr.readUInt8 = BP.readUInt8
+  arr.readUInt16LE = BP.readUInt16LE
+  arr.readUInt16BE = BP.readUInt16BE
+  arr.readUInt32LE = BP.readUInt32LE
+  arr.readUInt32BE = BP.readUInt32BE
+  arr.readInt8 = BP.readInt8
+  arr.readInt16LE = BP.readInt16LE
+  arr.readInt16BE = BP.readInt16BE
+  arr.readInt32LE = BP.readInt32LE
+  arr.readInt32BE = BP.readInt32BE
+  arr.readFloatLE = BP.readFloatLE
+  arr.readFloatBE = BP.readFloatBE
+  arr.readDoubleLE = BP.readDoubleLE
+  arr.readDoubleBE = BP.readDoubleBE
+  arr.writeUInt8 = BP.writeUInt8
+  arr.writeUInt16LE = BP.writeUInt16LE
+  arr.writeUInt16BE = BP.writeUInt16BE
+  arr.writeUInt32LE = BP.writeUInt32LE
+  arr.writeUInt32BE = BP.writeUInt32BE
+  arr.writeInt8 = BP.writeInt8
+  arr.writeInt16LE = BP.writeInt16LE
+  arr.writeInt16BE = BP.writeInt16BE
+  arr.writeInt32LE = BP.writeInt32LE
+  arr.writeInt32BE = BP.writeInt32BE
+  arr.writeFloatLE = BP.writeFloatLE
+  arr.writeFloatBE = BP.writeFloatBE
+  arr.writeDoubleLE = BP.writeDoubleLE
+  arr.writeDoubleBE = BP.writeDoubleBE
+  arr.fill = BP.fill
+  arr.inspect = BP.inspect
+  arr.toArrayBuffer = BP.toArrayBuffer
+
+  return arr
+}
+
+var INVALID_BASE64_RE = /[^+\/0-9A-z]/g
 
 function base64clean (str) {
   // Node strips out invalid characters like \n and \t from the string, base64-js does not
   str = stringtrim(str).replace(INVALID_BASE64_RE, '')
-  // Node converts strings with length < 2 to ''
-  if (str.length < 2) return ''
   // Node allows for non-padded base64 strings (missing trailing ===), base64-js does not
   while (str.length % 4 !== 0) {
     str = str + '='
@@ -9330,89 +8977,33 @@ function stringtrim (str) {
   return str.replace(/^\s+|\s+$/g, '')
 }
 
+function isArrayish (subject) {
+  return isArray(subject) || Buffer.isBuffer(subject) ||
+      subject && typeof subject === 'object' &&
+      typeof subject.length === 'number'
+}
+
 function toHex (n) {
   if (n < 16) return '0' + n.toString(16)
   return n.toString(16)
 }
 
-function utf8ToBytes (string, units) {
-  units = units || Infinity
-  var codePoint
-  var length = string.length
-  var leadSurrogate = null
-  var bytes = []
-
-  for (var i = 0; i < length; i++) {
-    codePoint = string.charCodeAt(i)
-
-    // is surrogate component
-    if (codePoint > 0xD7FF && codePoint < 0xE000) {
-      // last char was a lead
-      if (!leadSurrogate) {
-        // no lead yet
-        if (codePoint > 0xDBFF) {
-          // unexpected trail
-          if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-          continue
-        } else if (i + 1 === length) {
-          // unpaired lead
-          if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-          continue
-        }
-
-        // valid lead
-        leadSurrogate = codePoint
-
-        continue
-      }
-
-      // 2 leads in a row
-      if (codePoint < 0xDC00) {
-        if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-        leadSurrogate = codePoint
-        continue
-      }
-
-      // valid surrogate pair
-      codePoint = (leadSurrogate - 0xD800 << 10 | codePoint - 0xDC00) + 0x10000
-    } else if (leadSurrogate) {
-      // valid bmp char, but last char was a lead
-      if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-    }
-
-    leadSurrogate = null
-
-    // encode utf8
-    if (codePoint < 0x80) {
-      if ((units -= 1) < 0) break
-      bytes.push(codePoint)
-    } else if (codePoint < 0x800) {
-      if ((units -= 2) < 0) break
-      bytes.push(
-        codePoint >> 0x6 | 0xC0,
-        codePoint & 0x3F | 0x80
-      )
-    } else if (codePoint < 0x10000) {
-      if ((units -= 3) < 0) break
-      bytes.push(
-        codePoint >> 0xC | 0xE0,
-        codePoint >> 0x6 & 0x3F | 0x80,
-        codePoint & 0x3F | 0x80
-      )
-    } else if (codePoint < 0x110000) {
-      if ((units -= 4) < 0) break
-      bytes.push(
-        codePoint >> 0x12 | 0xF0,
-        codePoint >> 0xC & 0x3F | 0x80,
-        codePoint >> 0x6 & 0x3F | 0x80,
-        codePoint & 0x3F | 0x80
-      )
+function utf8ToBytes (str) {
+  var byteArray = []
+  for (var i = 0; i < str.length; i++) {
+    var b = str.charCodeAt(i)
+    if (b <= 0x7F) {
+      byteArray.push(b)
     } else {
-      throw new Error('Invalid code point')
+      var start = i
+      if (b >= 0xD800 && b <= 0xDFFF) i++
+      var h = encodeURIComponent(str.slice(start, i+1)).substr(1).split('%')
+      for (var j = 0; j < h.length; j++) {
+        byteArray.push(parseInt(h[j], 16))
+      }
     }
   }
-
-  return bytes
+  return byteArray
 }
 
 function asciiToBytes (str) {
@@ -9424,12 +9015,10 @@ function asciiToBytes (str) {
   return byteArray
 }
 
-function utf16leToBytes (str, units) {
+function utf16leToBytes (str) {
   var c, hi, lo
   var byteArray = []
   for (var i = 0; i < str.length; i++) {
-    if ((units -= 2) < 0) break
-
     c = str.charCodeAt(i)
     hi = c >> 8
     lo = c % 256
@@ -9441,136 +9030,147 @@ function utf16leToBytes (str, units) {
 }
 
 function base64ToBytes (str) {
-  return base64.toByteArray(base64clean(str))
+  return base64.toByteArray(str)
 }
 
-function blitBuffer (src, dst, offset, length) {
+function blitBuffer (src, dst, offset, length, unitSize) {
+  if (unitSize) length -= length % unitSize;
   for (var i = 0; i < length; i++) {
-    if ((i + offset >= dst.length) || (i >= src.length)) break
+    if ((i + offset >= dst.length) || (i >= src.length))
+      break
     dst[i + offset] = src[i]
   }
   return i
 }
 
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"base64-js":62,"ieee754":63,"isarray":64}],62:[function(require,module,exports){
-;(function (exports) {
-  'use strict'
+function decodeUtf8Char (str) {
+  try {
+    return decodeURIComponent(str)
+  } catch (err) {
+    return String.fromCharCode(0xFFFD) // UTF 8 invalid char
+  }
+}
 
-  var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+},{"base64-js":62,"ieee754":63,"is-array":64}],62:[function(require,module,exports){
+var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
+
+;(function (exports) {
+	'use strict';
 
   var Arr = (typeof Uint8Array !== 'undefined')
     ? Uint8Array
     : Array
 
-  var PLUS = '+'.charCodeAt(0)
-  var SLASH = '/'.charCodeAt(0)
-  var NUMBER = '0'.charCodeAt(0)
-  var LOWER = 'a'.charCodeAt(0)
-  var UPPER = 'A'.charCodeAt(0)
-  var PLUS_URL_SAFE = '-'.charCodeAt(0)
-  var SLASH_URL_SAFE = '_'.charCodeAt(0)
+	var PLUS   = '+'.charCodeAt(0)
+	var SLASH  = '/'.charCodeAt(0)
+	var NUMBER = '0'.charCodeAt(0)
+	var LOWER  = 'a'.charCodeAt(0)
+	var UPPER  = 'A'.charCodeAt(0)
 
-  function decode (elt) {
-    var code = elt.charCodeAt(0)
-    if (code === PLUS || code === PLUS_URL_SAFE) return 62 // '+'
-    if (code === SLASH || code === SLASH_URL_SAFE) return 63 // '/'
-    if (code < NUMBER) return -1 // no match
-    if (code < NUMBER + 10) return code - NUMBER + 26 + 26
-    if (code < UPPER + 26) return code - UPPER
-    if (code < LOWER + 26) return code - LOWER + 26
-  }
+	function decode (elt) {
+		var code = elt.charCodeAt(0)
+		if (code === PLUS)
+			return 62 // '+'
+		if (code === SLASH)
+			return 63 // '/'
+		if (code < NUMBER)
+			return -1 //no match
+		if (code < NUMBER + 10)
+			return code - NUMBER + 26 + 26
+		if (code < UPPER + 26)
+			return code - UPPER
+		if (code < LOWER + 26)
+			return code - LOWER + 26
+	}
 
-  function b64ToByteArray (b64) {
-    var i, j, l, tmp, placeHolders, arr
+	function b64ToByteArray (b64) {
+		var i, j, l, tmp, placeHolders, arr
 
-    if (b64.length % 4 > 0) {
-      throw new Error('Invalid string. Length must be a multiple of 4')
-    }
+		if (b64.length % 4 > 0) {
+			throw new Error('Invalid string. Length must be a multiple of 4')
+		}
 
-    // the number of equal signs (place holders)
-    // if there are two placeholders, than the two characters before it
-    // represent one byte
-    // if there is only one, then the three characters before it represent 2 bytes
-    // this is just a cheap hack to not do indexOf twice
-    var len = b64.length
-    placeHolders = b64.charAt(len - 2) === '=' ? 2 : b64.charAt(len - 1) === '=' ? 1 : 0
+		// the number of equal signs (place holders)
+		// if there are two placeholders, than the two characters before it
+		// represent one byte
+		// if there is only one, then the three characters before it represent 2 bytes
+		// this is just a cheap hack to not do indexOf twice
+		var len = b64.length
+		placeHolders = '=' === b64.charAt(len - 2) ? 2 : '=' === b64.charAt(len - 1) ? 1 : 0
 
-    // base64 is 4/3 + up to two characters of the original data
-    arr = new Arr(b64.length * 3 / 4 - placeHolders)
+		// base64 is 4/3 + up to two characters of the original data
+		arr = new Arr(b64.length * 3 / 4 - placeHolders)
 
-    // if there are placeholders, only get up to the last complete 4 chars
-    l = placeHolders > 0 ? b64.length - 4 : b64.length
+		// if there are placeholders, only get up to the last complete 4 chars
+		l = placeHolders > 0 ? b64.length - 4 : b64.length
 
-    var L = 0
+		var L = 0
 
-    function push (v) {
-      arr[L++] = v
-    }
+		function push (v) {
+			arr[L++] = v
+		}
 
-    for (i = 0, j = 0; i < l; i += 4, j += 3) {
-      tmp = (decode(b64.charAt(i)) << 18) | (decode(b64.charAt(i + 1)) << 12) | (decode(b64.charAt(i + 2)) << 6) | decode(b64.charAt(i + 3))
-      push((tmp & 0xFF0000) >> 16)
-      push((tmp & 0xFF00) >> 8)
-      push(tmp & 0xFF)
-    }
+		for (i = 0, j = 0; i < l; i += 4, j += 3) {
+			tmp = (decode(b64.charAt(i)) << 18) | (decode(b64.charAt(i + 1)) << 12) | (decode(b64.charAt(i + 2)) << 6) | decode(b64.charAt(i + 3))
+			push((tmp & 0xFF0000) >> 16)
+			push((tmp & 0xFF00) >> 8)
+			push(tmp & 0xFF)
+		}
 
-    if (placeHolders === 2) {
-      tmp = (decode(b64.charAt(i)) << 2) | (decode(b64.charAt(i + 1)) >> 4)
-      push(tmp & 0xFF)
-    } else if (placeHolders === 1) {
-      tmp = (decode(b64.charAt(i)) << 10) | (decode(b64.charAt(i + 1)) << 4) | (decode(b64.charAt(i + 2)) >> 2)
-      push((tmp >> 8) & 0xFF)
-      push(tmp & 0xFF)
-    }
+		if (placeHolders === 2) {
+			tmp = (decode(b64.charAt(i)) << 2) | (decode(b64.charAt(i + 1)) >> 4)
+			push(tmp & 0xFF)
+		} else if (placeHolders === 1) {
+			tmp = (decode(b64.charAt(i)) << 10) | (decode(b64.charAt(i + 1)) << 4) | (decode(b64.charAt(i + 2)) >> 2)
+			push((tmp >> 8) & 0xFF)
+			push(tmp & 0xFF)
+		}
 
-    return arr
-  }
+		return arr
+	}
 
-  function uint8ToBase64 (uint8) {
-    var i
-    var extraBytes = uint8.length % 3 // if we have 1 byte left, pad 2 bytes
-    var output = ''
-    var temp, length
+	function uint8ToBase64 (uint8) {
+		var i,
+			extraBytes = uint8.length % 3, // if we have 1 byte left, pad 2 bytes
+			output = "",
+			temp, length
 
-    function encode (num) {
-      return lookup.charAt(num)
-    }
+		function encode (num) {
+			return lookup.charAt(num)
+		}
 
-    function tripletToBase64 (num) {
-      return encode(num >> 18 & 0x3F) + encode(num >> 12 & 0x3F) + encode(num >> 6 & 0x3F) + encode(num & 0x3F)
-    }
+		function tripletToBase64 (num) {
+			return encode(num >> 18 & 0x3F) + encode(num >> 12 & 0x3F) + encode(num >> 6 & 0x3F) + encode(num & 0x3F)
+		}
 
-    // go through the array every three bytes, we'll deal with trailing stuff later
-    for (i = 0, length = uint8.length - extraBytes; i < length; i += 3) {
-      temp = (uint8[i] << 16) + (uint8[i + 1] << 8) + (uint8[i + 2])
-      output += tripletToBase64(temp)
-    }
+		// go through the array every three bytes, we'll deal with trailing stuff later
+		for (i = 0, length = uint8.length - extraBytes; i < length; i += 3) {
+			temp = (uint8[i] << 16) + (uint8[i + 1] << 8) + (uint8[i + 2])
+			output += tripletToBase64(temp)
+		}
 
-    // pad the end with zeros, but make sure to not forget the extra bytes
-    switch (extraBytes) {
-      case 1:
-        temp = uint8[uint8.length - 1]
-        output += encode(temp >> 2)
-        output += encode((temp << 4) & 0x3F)
-        output += '=='
-        break
-      case 2:
-        temp = (uint8[uint8.length - 2] << 8) + (uint8[uint8.length - 1])
-        output += encode(temp >> 10)
-        output += encode((temp >> 4) & 0x3F)
-        output += encode((temp << 2) & 0x3F)
-        output += '='
-        break
-      default:
-        break
-    }
+		// pad the end with zeros, but make sure to not forget the extra bytes
+		switch (extraBytes) {
+			case 1:
+				temp = uint8[uint8.length - 1]
+				output += encode(temp >> 2)
+				output += encode((temp << 4) & 0x3F)
+				output += '=='
+				break
+			case 2:
+				temp = (uint8[uint8.length - 2] << 8) + (uint8[uint8.length - 1])
+				output += encode(temp >> 10)
+				output += encode((temp >> 4) & 0x3F)
+				output += encode((temp << 2) & 0x3F)
+				output += '='
+				break
+		}
 
-    return output
-  }
+		return output
+	}
 
-  exports.toByteArray = b64ToByteArray
-  exports.fromByteArray = uint8ToBase64
+	exports.toByteArray = b64ToByteArray
+	exports.fromByteArray = uint8ToBase64
 }(typeof exports === 'undefined' ? (this.base64js = {}) : exports))
 
 },{}],63:[function(require,module,exports){
@@ -9660,10 +9260,38 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 }
 
 },{}],64:[function(require,module,exports){
-var toString = {}.toString;
 
-module.exports = Array.isArray || function (arr) {
-  return toString.call(arr) == '[object Array]';
+/**
+ * isArray
+ */
+
+var isArray = Array.isArray;
+
+/**
+ * toString
+ */
+
+var str = Object.prototype.toString;
+
+/**
+ * Whether or not the given `val`
+ * is an array.
+ *
+ * example:
+ *
+ *        isArray([]);
+ *        // > true
+ *        isArray(arguments);
+ *        // > false
+ *        isArray('');
+ *        // > false
+ *
+ * @param {mixed} val
+ * @return {bool}
+ */
+
+module.exports = isArray || function (val) {
+  return !! val && '[object Array]' == str.call(val);
 };
 
 },{}],65:[function(require,module,exports){
@@ -9750,11 +9378,18 @@ EventEmitter.prototype.emit = function(type) {
         break;
       // slower
       default:
-        args = Array.prototype.slice.call(arguments, 1);
+        len = arguments.length;
+        args = new Array(len - 1);
+        for (i = 1; i < len; i++)
+          args[i - 1] = arguments[i];
         handler.apply(this, args);
     }
   } else if (isObject(handler)) {
-    args = Array.prototype.slice.call(arguments, 1);
+    len = arguments.length;
+    args = new Array(len - 1);
+    for (i = 1; i < len; i++)
+      args[i - 1] = arguments[i];
+
     listeners = handler.slice();
     len = listeners.length;
     for (i = 0; i < len; i++)
@@ -9792,6 +9427,7 @@ EventEmitter.prototype.addListener = function(type, listener) {
 
   // Check for listener leak
   if (isObject(this._events[type]) && !this._events[type].warned) {
+    var m;
     if (!isUndefined(this._maxListeners)) {
       m = this._maxListeners;
     } else {
@@ -9913,7 +9549,7 @@ EventEmitter.prototype.removeAllListeners = function(type) {
 
   if (isFunction(listeners)) {
     this.removeListener(type, listeners);
-  } else if (listeners) {
+  } else {
     // LIFO order
     while (listeners.length)
       this.removeListener(type, listeners[listeners.length - 1]);
@@ -9934,20 +9570,15 @@ EventEmitter.prototype.listeners = function(type) {
   return ret;
 };
 
-EventEmitter.prototype.listenerCount = function(type) {
-  if (this._events) {
-    var evlistener = this._events[type];
-
-    if (isFunction(evlistener))
-      return 1;
-    else if (evlistener)
-      return evlistener.length;
-  }
-  return 0;
-};
-
 EventEmitter.listenerCount = function(emitter, type) {
-  return emitter.listenerCount(type);
+  var ret;
+  if (!emitter._events || !emitter._events[type])
+    ret = 0;
+  else if (isFunction(emitter._events[type]))
+    ret = 1;
+  else
+    ret = emitter._events[type].length;
+  return ret;
 };
 
 function isFunction(arg) {
@@ -9995,74 +9626,69 @@ if (typeof Object.create === 'function') {
 // shim for using process in browser
 
 var process = module.exports = {};
-var queue = [];
-var draining = false;
-var currentQueue;
-var queueIndex = -1;
 
-function cleanUpNextTick() {
-    draining = false;
-    if (currentQueue.length) {
-        queue = currentQueue.concat(queue);
-    } else {
-        queueIndex = -1;
-    }
-    if (queue.length) {
-        drainQueue();
-    }
-}
+process.nextTick = (function () {
+    var canSetImmediate = typeof window !== 'undefined'
+    && window.setImmediate;
+    var canMutationObserver = typeof window !== 'undefined'
+    && window.MutationObserver;
+    var canPost = typeof window !== 'undefined'
+    && window.postMessage && window.addEventListener
+    ;
 
-function drainQueue() {
-    if (draining) {
-        return;
+    if (canSetImmediate) {
+        return function (f) { return window.setImmediate(f) };
     }
-    var timeout = setTimeout(cleanUpNextTick);
-    draining = true;
 
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        while (++queueIndex < len) {
-            if (currentQueue) {
-                currentQueue[queueIndex].run();
+    var queue = [];
+
+    if (canMutationObserver) {
+        var hiddenDiv = document.createElement("div");
+        var observer = new MutationObserver(function () {
+            var queueList = queue.slice();
+            queue.length = 0;
+            queueList.forEach(function (fn) {
+                fn();
+            });
+        });
+
+        observer.observe(hiddenDiv, { attributes: true });
+
+        return function nextTick(fn) {
+            if (!queue.length) {
+                hiddenDiv.setAttribute('yes', 'no');
             }
-        }
-        queueIndex = -1;
-        len = queue.length;
+            queue.push(fn);
+        };
     }
-    currentQueue = null;
-    draining = false;
-    clearTimeout(timeout);
-}
 
-process.nextTick = function (fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) {
-        for (var i = 1; i < arguments.length; i++) {
-            args[i - 1] = arguments[i];
-        }
-    }
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) {
-        setTimeout(drainQueue, 0);
-    }
-};
+    if (canPost) {
+        window.addEventListener('message', function (ev) {
+            var source = ev.source;
+            if ((source === window || source === null) && ev.data === 'process-tick') {
+                ev.stopPropagation();
+                if (queue.length > 0) {
+                    var fn = queue.shift();
+                    fn();
+                }
+            }
+        }, true);
 
-// v8 likes predictible objects
-function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-}
-Item.prototype.run = function () {
-    this.fun.apply(null, this.array);
-};
+        return function nextTick(fn) {
+            queue.push(fn);
+            window.postMessage('process-tick', '*');
+        };
+    }
+
+    return function nextTick(fn) {
+        setTimeout(fn, 0);
+    };
+})();
+
 process.title = 'browser';
 process.browser = true;
 process.env = {};
 process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-process.versions = {};
 
 function noop() {}
 
@@ -10078,11 +9704,11 @@ process.binding = function (name) {
     throw new Error('process.binding is not supported');
 };
 
+// TODO(shtylman)
 process.cwd = function () { return '/' };
 process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
-process.umask = function() { return 0; };
 
 },{}],68:[function(require,module,exports){
 module.exports = function isBuffer(arg) {
@@ -12661,16 +12287,16 @@ function Ignore(options) {
 }
 
 // Events:
-// 'warn': , 
+// 'warn': ,
 //      will warn when encounter '`**`' (two consecutive asterisks)
 //      which is not compatible with all platforms (not works on Mac OS for example)
 node_util.inherits(Ignore, EE);
 
 function makeArray(subject) {
   return Array.isArray(subject)
-    ? subject 
+    ? subject
     : subject === undefined || subject === null
-      ? [] 
+      ? []
       : [subject];
 }
 
@@ -12747,10 +12373,10 @@ Ignore.prototype._createRule = function(pattern) {
   return rule_object;
 };
 
-// > If the pattern ends with a slash, 
-// > it is removed for the purpose of the following description, 
-// > but it would only find a match with a directory. 
-// > In other words, foo/ will match a directory foo and paths underneath it, 
+// > If the pattern ends with a slash,
+// > it is removed for the purpose of the following description,
+// > but it would only find a match with a directory.
+// > In other words, foo/ will match a directory foo and paths underneath it,
 // > but will not match a regular file or a symbolic link foo (this is consistent with the way how pathspec works in general in Git).
 // '`foo/`' will not match regular file '`foo`' or symbolic link '`foo`'
 // -> ignore-rules will not deal with it, because it costs extra `fs.stat` call
@@ -12759,22 +12385,22 @@ Ignore.prototype._createRule = function(pattern) {
 // '`foo/`' should not continue with the '`..`'
 var REPLACERS = [
 
-  // Escape metacharacters 
+  // Escape metacharacters
   // which is written down by users but means special for regular expressions.
 
-  // > There are 12 characters with special meanings: 
-  // > - the backslash \, 
-  // > - the caret ^, 
-  // > - the dollar sign $, 
-  // > - the period or dot ., 
-  // > - the vertical bar or pipe symbol |, 
-  // > - the question mark ?, 
-  // > - the asterisk or star *, 
-  // > - the plus sign +, 
-  // > - the opening parenthesis (, 
-  // > - the closing parenthesis ), 
-  // > - and the opening square bracket [, 
-  // > - the opening curly brace {, 
+  // > There are 12 characters with special meanings:
+  // > - the backslash \,
+  // > - the caret ^,
+  // > - the dollar sign $,
+  // > - the period or dot .,
+  // > - the vertical bar or pipe symbol |,
+  // > - the question mark ?,
+  // > - the asterisk or star *,
+  // > - the plus sign +,
+  // > - the opening parenthesis (,
+  // > - the closing parenthesis ),
+  // > - and the opening square bracket [,
+  // > - the opening curly brace {,
   // > These special characters are often called "metacharacters".
   [
     /[\\\^$.|?*+()\[{]/g,
@@ -12786,9 +12412,9 @@ var REPLACERS = [
   // leading slash
   [
 
-    // > A leading slash matches the beginning of the pathname. 
+    // > A leading slash matches the beginning of the pathname.
     // > For example, "/*.c" matches "cat-file.c" but not "mozilla-sha1/sha1.c".
-    // A leading slash matches the beginning of the pathname 
+    // A leading slash matches the beginning of the pathname
     /^\//,
     '^'
   ],
@@ -12799,9 +12425,9 @@ var REPLACERS = [
   ],
 
   [
-    // > A leading "**" followed by a slash means match in all directories. 
-    // > For example, "**/foo" matches file or directory "foo" anywhere, 
-    // > the same as pattern "foo". 
+    // > A leading "**" followed by a slash means match in all directories.
+    // > For example, "**/foo" matches file or directory "foo" anywhere,
+    // > the same as pattern "foo".
     // > "**/foo/bar" matches file or directory "bar" anywhere that is directly under directory "foo".
     // Notice that the '*'s have been replaced as '\\*'
     /^\^*\\\*\\\*\\\//,
@@ -12845,7 +12471,7 @@ var REPLACERS = [
 
   // two globstars
   [
-    // > A slash followed by two consecutive asterisks then a slash matches zero or more directories. 
+    // > A slash followed by two consecutive asterisks then a slash matches zero or more directories.
     // > For example, "a/**/b" matches "a/b", "a/x/b", "a/x/y/b" and so on.
     // '/**/'
     /\\\/\\\*\\\*\\\//g,
@@ -12954,7 +12580,7 @@ Ignore.prototype._addIgnoreFile = function(file) {
 
 Ignore.prototype._checkRuleFile = function(file) {
   return file !== '.'
-    && file !== '..' 
+    && file !== '..'
     && !~this._ignoreFiles.indexOf(file);
 };
 
